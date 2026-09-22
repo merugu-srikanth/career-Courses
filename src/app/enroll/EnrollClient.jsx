@@ -1,0 +1,79 @@
+"use client";
+
+import EnrollmentForm from "@/components/coaching/EnrollmentForm";
+import { Sparkles, Award, CheckCircle } from "lucide-react";
+
+export default function EnrollClient() {
+  return (
+    <div className="min-h-screen bg-slate-50/50 pt-24 sm:pt-28 pb-20">
+
+      {/* Hero Header */}
+      <div className="bg-slate-900 text-white py-10 md:py-14 border-b border-slate-800 mb-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-orange-500/20 text-orange-300 border border-orange-400/30 mb-3">
+            <Sparkles className="w-3.5 h-3.5" /> Direct Admission & Counseling
+          </span>
+          <h1 className="text-3xl sm:text-4xl font-black tracking-tight mb-3">
+            Start Building Your Foundation Today
+          </h1>
+          <p className="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto">
+            Fill in your details below. Our academic counselor will contact you to assist with personalized study roadmaps and batch options.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Main Form */}
+          <div className="lg:col-span-8">
+            <EnrollmentForm />
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-4 flex flex-col gap-6">
+            <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm">
+              <h3 className="text-base font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+                <Award className="w-5 h-5 text-orange-500" />
+                Why Enroll with CareerMitra × Score 99?
+              </h3>
+
+              <div className="space-y-3.5 text-xs text-slate-600">
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>Proven Senior Mentors:</strong> 28+ & 20+ years of institutional coaching mastery.</span>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>One Program, Multi-Exam:</strong> Eliminates the need to buy separate coaching for every notification.</span>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>6 Months LMS Support:</strong> Recorded video backup so you never miss a class.</span>
+                </div>
+                <div className="flex items-start gap-2.5">
+                  <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                  <span><strong>Soft Skills & GD/PI:</strong> Comprehensive interview readiness in Plus Offline package.</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white shadow-md">
+              <div className="text-xs font-black uppercase tracking-widest text-emerald-200 mb-1">
+                Batch Starting Soon
+              </div>
+              <div className="text-xl font-black mb-2">
+                Limited Seats Per Batch
+              </div>
+              <p className="text-xs text-emerald-100 leading-relaxed mb-4">
+                We maintain small batch sizes for both online and offline sessions to ensure direct faculty-student interaction.
+              </p>
+              <div className="p-3 rounded-xl bg-white/10 text-xs font-bold border border-white/20 text-center">
+                🔥 Early Bird Batches Filling Fast
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
