@@ -259,7 +259,7 @@ export default function Register() {
 
   return (
     <>
-      <div className="min-h-screen relative flex items-center justify-center py-20">
+      <div className="min-h-screen relative flex items-center justify-center mt-20 py-20">
         {/* Animated Background */}
         <AnimatedBg />
       

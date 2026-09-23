@@ -1,50 +1,98 @@
 "use client";
 
-import { useState } from "react";
-import { CheckCircle, ShieldCheck, Sparkles, Send, PhoneCall, Loader2, Building2 } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import {
+  CheckCircle,
+  ShieldCheck,
+  Sparkles,
+  Send,
+  PhoneCall,
+  Loader2,
+  Building2,
+  ChevronDown,
+  Search,
+  Check,
+  PlusCircle,
+  X,
+} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { toast } from "react-toastify";
 import axios from "axios";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://www.careermitra.in/api";
 
-// Predefined list of popular colleges / universities - you can easily add more colleges to this array!
+// List of popular colleges & universities across Telangana, AP & Pan-India
 const COLLEGE_OPTIONS = [
-  "JNTU Hyderabad (JNTUH)",
+  "JNTU Hyderabad (JNTUH), Kukatpally",
   "Osmania University (OU), Hyderabad",
   "Andhra University (AU), Visakhapatnam",
   "Sri Venkateswara University (SVU), Tirupati",
-  "CBIT (Chaitanya Bharathi Institute of Technology)",
-  "VNR Vignana Jyothi Institute of Engineering & Technology",
-  "Vasavi College of Engineering, Hyderabad",
+  "CBIT (Chaitanya Bharathi Institute of Technology), Gandipet",
+  "VNR Vignana Jyothi Institute of Engineering & Technology (VNR VJIET)",
+  "Vasavi College of Engineering (VCE), Ibrahimbagh",
   "G. Narayanamma Institute of Technology & Science (GNITS)",
-  "Gokaraju Rangaraju Institute of Engineering & Tech (GRIET)",
-  "CVR College of Engineering, Hyderabad",
-  "BVRIT (BV Raju Institute of Technology), Narsapur/Hyd",
-  "Mahatma Gandhi Institute of Technology (MGIT)",
-  "Anurag University / Anurag Group of Institutions",
-  "Malla Reddy Engineering College (MREC / MRGI)",
-  "Vardhaman College of Engineering, Hyderabad",
-  "Sreenidhi Institute of Science & Technology (SNIST)",
+  "Gokaraju Rangaraju Institute of Engineering & Technology (GRIET)",
+  "CVR College of Engineering, Ibrahimpatnam",
+  "BVRIT (BV Raju Institute of Technology), Narsapur",
+  "BVRIT Hyderabad College of Engineering for Women, Bachupally",
+  "Mahatma Gandhi Institute of Technology (MGIT), Gandipet",
+  "Anurag University (AU) / Anurag Group of Institutions, Ghatkesar",
+  "Malla Reddy Engineering College (MREC), Maisammaguda",
+  "Malla Reddy College of Engineering & Technology (MRCET)",
+  "Vardhaman College of Engineering, Shamshabad",
+  "Sreenidhi Institute of Science & Technology (SNIST), Ghatkesar",
   "Kakatiya Institute of Technology & Science (KITS), Warangal",
-  "KL University (KLEF), Vijayawada / Hyderabad",
-  "GITAM Deemed University, Visakhapatnam / Hyderabad",
-  "SR University, Warangal",
-  "VR Siddhartha Engineering College, Vijayawada",
+  "Kakatiya University (KU), Warangal",
+  "KL University (KLEF Deemed University), Vaddeswaram / Hyderabad",
+  "GITAM Deemed to be University, Visakhapatnam / Hyderabad",
+  "SR University (SRU), Warangal",
+  "VR Siddhartha Engineering College (VRSEC), Vijayawada",
   "GMR Institute of Technology (GMRIT), Rajam",
-  "Gayatri Vidya Parishad (GVP), Visakhapatnam",
+  "Gayatri Vidya Parishad College of Engineering (GVPCE), Visakhapatnam",
   "RVR & JC College of Engineering, Guntur",
-  "Bapatla Engineering College, Bapatla",
-  "IIT Hyderabad / IIT Madras / IIT Tirupati",
-  "NIT Warangal / NIT Tadepalligudem",
-  "IIIT Hyderabad / IIIT Sri City",
-  "Nizam College, Hyderabad",
-  "Bhavan's Vivekananda College, Secunderabad",
-  "Loyola Academy Degree & PG College, Secunderabad",
-  "St. Francis College for Women, Hyderabad",
-  "Badruka College of Commerce & Arts, Hyderabad",
-  "AV College of Arts, Science & Commerce, Hyderabad",
-  "Other College (Enter Manually)",
+  "Bapatla Engineering College (BEC), Bapatla",
+  "Sagi Rama Krishnam Raju Engineering College (SRKR), Bhimavaram",
+  "Maharaj Vijayaram Gajapathi Raj College of Engineering (MVGR), Vizianagaram",
+  "JNTU Kakinada (JNTUK)",
+  "JNTU Anantapur (JNTUA)",
+  "IIT Hyderabad (IITH), Kandi, Sangareddy",
+  "IIT Madras / IIT Bombay / IIT Delhi",
+  "IIT Tirupati",
+  "NIT Warangal (NITW)",
+  "NIT Andhra Pradesh, Tadepalligudem",
+  "IIIT Hyderabad (IIITH), Gachibowli",
+  "IIIT Sri City, Chittoor",
+  "BITS Pilani - Hyderabad Campus, Jawahar Nagar",
+  "University of Hyderabad (HCU), Gachibowli",
+  "Nizam College (Autonomous), Basheerbagh",
+  "Bhavan's Vivekananda College, Sainikpuri, Secunderabad",
+  "Loyola Academy Degree & PG College, Alwal, Secunderabad",
+  "St. Francis College for Women, Begumpet",
+  "Badruka College of Commerce & Arts, Kachiguda",
+  "AV College of Arts, Science & Commerce, Gaganmahal",
+  "St. Ann's College for Women, Mehdipatnam",
+  "Aurora's Degree & PG College, Chikkadpally",
+  "Wesley Degree College, Secunderabad",
+  "Vidyajyothi Institute of Technology (VJIT), Aziznagar",
+  "Guru Nanak Institutions Technical Campus (GNITC), Ibrahimpatnam",
+  "CMR Institute of Technology (CMRIT), Medchal",
+  "CMR College of Engineering & Technology (CMRCET), Kandlakoya",
+  "Keshava Memorial Institute of Technology (KMIT), Narayanguda",
+  "Neil Gogte Institute of Technology (NGIT), Kachiguda",
+  "Matrusri Engineering College, Saidabad",
+  "Deccan College of Engineering & Technology, Nampally",
+  "Muffakham Jah College of Engineering & Technology (MJCET), Banjara Hills",
+  "Stanley College of Engineering and Technology for Women, Chapel Road",
+  "Methodist College of Engineering & Technology, Abids",
+  "Geethanjali College of Engineering and Technology, Keesara",
+  "TKR College of Engineering and Technology, Meerpet",
+  "St. Martin's Engineering College (SMEC), Dhulapally",
+  "Marri Laxman Reddy Institute of Technology and Management (MLRITM)",
+  "MLR Institute of Technology (MLRIT), Dundigal",
+  "KG Reddy College of Engineering & Technology, Moinabad",
+  "Holy Mary Institute of Technology and Science, Bogaram",
+  "JBIET (JB Institute of Engineering & Technology), Yenkapally",
+  "Other College / Institute (Enter Manually)",
 ];
 
 export default function EnrollmentForm() {
@@ -59,25 +107,48 @@ export default function EnrollmentForm() {
     notes: "",
   });
 
-  const [isCustomCollege, setIsCustomCollege] = useState(false);
-  const [customCollegeText, setCustomCollegeText] = useState("");
+  // Custom Dropdown state
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [collegeSearchQuery, setCollegeSearchQuery] = useState("");
+  const [isManualCollege, setIsManualCollege] = useState(false);
+  const [manualCollegeText, setManualCollegeText] = useState("");
+
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleCollegeChange = (e) => {
-    const selected = e.target.value;
-    if (selected === "Other College (Enter Manually)") {
-      setIsCustomCollege(true);
-      setFormData((prev) => ({ ...prev, collegeName: customCollegeText }));
-    } else {
-      setIsCustomCollege(false);
-      setFormData((prev) => ({ ...prev, collegeName: selected }));
+  const dropdownRef = useRef(null);
+
+  // Close dropdown on outside click
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
     }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  // Filter colleges based on user search query inside dropdown
+  const filteredColleges = COLLEGE_OPTIONS.filter((item) =>
+    item.toLowerCase().includes(collegeSearchQuery.toLowerCase().trim())
+  );
+
+  const handleSelectCollege = (college) => {
+    if (college.startsWith("Other College")) {
+      setIsManualCollege(true);
+      setFormData((prev) => ({ ...prev, collegeName: manualCollegeText }));
+    } else {
+      setIsManualCollege(false);
+      setFormData((prev) => ({ ...prev, collegeName: college }));
+    }
+    setIsDropdownOpen(false);
+    setCollegeSearchQuery("");
   };
 
-  const handleCustomCollegeInput = (e) => {
+  const handleManualCollegeChange = (e) => {
     const val = e.target.value;
-    setCustomCollegeText(val);
+    setManualCollegeText(val);
     setFormData((prev) => ({ ...prev, collegeName: val }));
   };
 
@@ -235,35 +306,174 @@ export default function EnrollmentForm() {
                 />
               </div>
 
-              {/* College Name Dropdown */}
-              <div className="sm:col-span-2">
+              {/* Custom div Dropdown for College Name */}
+              <div className="sm:col-span-2 relative" ref={dropdownRef}>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 flex items-center justify-between">
                   <span className="flex items-center gap-1.5">
                     <Building2 className="w-3.5 h-3.5 text-orange-500" /> College / University Name
                   </span>
-                  <span className="text-[11px] text-slate-400 font-normal">Select from list or type custom</span>
+                  <span className="text-[11px] text-slate-400 font-normal">
+                    Interactive scrollable selection
+                  </span>
                 </label>
-                <select
-                  value={isCustomCollege ? "Other College (Enter Manually)" : formData.collegeName}
-                  onChange={handleCollegeChange}
-                  className="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all cursor-pointer"
-                >
-                  <option value="">-- Select Your College / University --</option>
-                  {COLLEGE_OPTIONS.map((col, idx) => (
-                    <option key={idx} value={col}>
-                      {col}
-                    </option>
-                  ))}
-                </select>
 
-                {/* If "Other" chosen, show manual input field */}
-                {isCustomCollege && (
+                {/* Dropdown Trigger Box (Clean Div) */}
+                <div
+                  onClick={() => setIsDropdownOpen((prev) => !prev)}
+                  className={`w-full px-4 py-3 rounded-2xl bg-slate-50 border text-sm transition-all cursor-pointer flex items-center justify-between select-none ${
+                    isDropdownOpen
+                      ? "bg-white border-orange-500 ring-2 ring-orange-500/20 shadow-sm"
+                      : "border-slate-200 hover:border-slate-300 hover:bg-slate-100/60"
+                  }`}
+                >
+                  <div className="flex items-center gap-2.5 min-w-0 pr-2">
+                    <Building2
+                      className={`w-4 h-4 shrink-0 transition-colors ${
+                        formData.collegeName ? "text-orange-600" : "text-slate-400"
+                      }`}
+                    />
+                    <span
+                      className={`truncate ${
+                        formData.collegeName
+                          ? "text-slate-900 font-semibold"
+                          : "text-slate-400 font-normal"
+                      }`}
+                    >
+                      {formData.collegeName || "Click to select your College / University..."}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    {formData.collegeName && (
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setFormData((prev) => ({ ...prev, collegeName: "" }));
+                          setIsManualCollege(false);
+                          setManualCollegeText("");
+                        }}
+                        className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-200/70 transition-colors"
+                        title="Clear selection"
+                      >
+                        <X className="w-3.5 h-3.5" />
+                      </button>
+                    )}
+                    <ChevronDown
+                      className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${
+                        isDropdownOpen ? "rotate-180 text-orange-500" : ""
+                      }`}
+                    />
+                  </div>
+                </div>
+
+                {/* Floating Div Dropdown Menu (max-h-[60vh] scrollable) */}
+                {isDropdownOpen && (
+                  <div className="absolute left-0 right-0 top-full mt-2 z-50 rounded-2xl bg-white border border-slate-200/90 shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150">
+                    {/* Search Input Box */}
+                    <div className="p-3 bg-slate-50/80 border-b border-slate-100 flex items-center gap-2">
+                      <Search className="w-4 h-4 text-slate-400 shrink-0" />
+                      <input
+                        type="text"
+                        autoFocus
+                        placeholder="Search college by name, area, or code (e.g. CBIT, OU, JNTU, VNR)..."
+                        value={collegeSearchQuery}
+                        onChange={(e) => setCollegeSearchQuery(e.target.value)}
+                        className="w-full bg-transparent text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none"
+                      />
+                      {collegeSearchQuery && (
+                        <button
+                          type="button"
+                          onClick={() => setCollegeSearchQuery("")}
+                          className="p-1 text-slate-400 hover:text-slate-600 rounded-full"
+                        >
+                          <X className="w-3.5 h-3.5" />
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Scrollable Colleges List (height up to 60vh) */}
+                    <div className="max-h-[60vh] overflow-y-auto divide-y divide-slate-50 custom-college-scrollbar">
+                      {filteredColleges.length > 0 ? (
+                        filteredColleges.map((college, idx) => {
+                          const isSelected =
+                            formData.collegeName === college ||
+                            (college.startsWith("Other College") && isManualCollege);
+                          const isOtherOption = college.startsWith("Other College");
+
+                          return (
+                            <div
+                              key={idx}
+                              onClick={() => handleSelectCollege(college)}
+                              className={`px-4 py-3 flex items-center justify-between text-xs sm:text-sm transition-all cursor-pointer select-none ${
+                                isSelected
+                                  ? "bg-orange-50 text-orange-700 font-bold"
+                                  : isOtherOption
+                                  ? "bg-amber-50/40 text-amber-900 font-semibold hover:bg-amber-100/60"
+                                  : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+                              }`}
+                            >
+                              <div className="flex items-center gap-2.5 min-w-0 pr-3">
+                                {isOtherOption ? (
+                                  <PlusCircle className="w-4 h-4 text-orange-500 shrink-0" />
+                                ) : (
+                                  <Building2
+                                    className={`w-3.5 h-3.5 shrink-0 ${
+                                      isSelected ? "text-orange-600" : "text-slate-400"
+                                    }`}
+                                  />
+                                )}
+                                <span className="truncate leading-snug">{college}</span>
+                              </div>
+
+                              {isSelected && (
+                                <Check className="w-4 h-4 text-orange-600 shrink-0" />
+                              )}
+                            </div>
+                          );
+                        })
+                      ) : (
+                        <div className="p-6 text-center text-xs text-slate-500 space-y-2">
+                          <div>No matching colleges found for &ldquo;{collegeSearchQuery}&rdquo;</div>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setIsManualCollege(true);
+                              setManualCollegeText(collegeSearchQuery);
+                              setFormData((prev) => ({ ...prev, collegeName: collegeSearchQuery }));
+                              setIsDropdownOpen(false);
+                            }}
+                            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-orange-600 text-white font-bold text-xs shadow-xs hover:bg-orange-500 cursor-pointer"
+                          >
+                            <PlusCircle className="w-3.5 h-3.5" />
+                            Use &ldquo;{collegeSearchQuery}&rdquo; as my College
+                          </button>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Bottom Helper Bar */}
+                    <div className="p-2.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 px-4">
+                      <span>Can&apos;t find your college? Select &ldquo;Other College&rdquo;</span>
+                      <button
+                        type="button"
+                        onClick={() => handleSelectCollege("Other College / Institute (Enter Manually)")}
+                        className="font-bold text-orange-600 hover:underline cursor-pointer"
+                      >
+                        Enter Manually
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* If manual entry is active, show the input field */}
+                {isManualCollege && (
                   <div className="mt-2.5">
                     <input
                       type="text"
-                      placeholder="Please enter your full College / Institute name..."
-                      value={customCollegeText}
-                      onChange={handleCustomCollegeInput}
+                      placeholder="Type your full College / University / Institute name..."
+                      value={manualCollegeText}
+                      onChange={handleManualCollegeChange}
                       className="w-full px-4 py-2.5 rounded-xl bg-orange-50/40 border border-orange-200 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
                     />
                   </div>

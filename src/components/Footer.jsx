@@ -9,7 +9,7 @@ import { ShieldCheck, PhoneCall, ArrowRight } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-white border-t border-slate-800/80 pt-16 pb-12">
-      <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
+      <div className="w-full max-w-7xl mx-auto px-[2%] md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-14">
           
           {/* Brand & Collaboration - 4 cols on large screens */}
