@@ -23,8 +23,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN" className={poppins.variable}>
-      <body className="min-h-screen flex flex-col justify-between">
+    <html lang="en-IN" className={`${poppins.variable} ${poppins.className}`}>
+      <body className={`${poppins.className} min-h-screen flex flex-col justify-between font-sans antialiased`}>
         <AuthProvider>
           <ToastContainer position="top-right" autoClose={5000} />
           <Navbar />
