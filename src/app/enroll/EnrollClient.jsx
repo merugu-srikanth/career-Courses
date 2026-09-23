@@ -9,15 +9,15 @@ export default function EnrollClient() {
     <div className="min-h-screen bg-slate-50/50 pt-24 sm:pt-28 pb-20">
 
       {/* Hero Header */}
-      <div className="bg-slate-900 text-white py-10 md:py-14 border-b border-slate-800 mb-10">
+      <div className="text-slate-900  py-10 md:py-14 border-b border-slate-800 mb-10">
         <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0 text-center">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-orange-500/20 text-orange-300 border border-orange-400/30 mb-3">
-            <Sparkles className="w-3.5 h-3.5" /> Direct Admission & Counseling
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-orange-500/20 text-orange-500 border border-orange-400/30 mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-orange-500" /> Direct Admission & Counseling
           </span>
           <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
             Start Building Your Foundation Today
           </h1>
-          <p className="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto">
+          <p className="text-slate-700 text-xs sm:text-sm max-w-2xl mx-auto">
             Fill in your details below. Our academic counselor will contact you to assist with personalized study roadmaps and batch options.
           </p>
         </div>

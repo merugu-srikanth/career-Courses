@@ -16,7 +16,6 @@ export default function EnrollmentForm() {
     qualification: "",
     currentYear: "",
     targetExam: "",
-    subjects: "",
     notes: "",
   });
 
@@ -30,7 +29,7 @@ export default function EnrollmentForm() {
       return;
     }
 
-    if (!formData.qualification.trim() || !formData.currentYear.trim() || !formData.targetExam.trim() || !formData.subjects.trim()) {
+    if (!formData.qualification.trim() || !formData.currentYear.trim() || !formData.targetExam.trim()) {
       toast.error("Please fill in all required fields marked with *");
       return;
     }
@@ -55,7 +54,7 @@ export default function EnrollmentForm() {
 
   const openWhatsAppInquiry = () => {
     const text = encodeURIComponent(
-      `Hello CareerMitra & Score 99 Team! I am interested in the Foundation Coaching Program.\n\nName: ${formData.fullName || "Candidate"}\nPhone: ${formData.mobile || "N/A"}\nEmail: ${formData.email || "N/A"}\nQualification: ${formData.qualification || "N/A"}\nCurrent Year: ${formData.currentYear || "N/A"}\nSubjects: ${formData.subjects || "N/A"}\nTarget Exam: ${formData.targetExam || "N/A"}\nNotes: ${formData.notes || "None"}`
+      `Hello CareerMitra & Score 99 Team! I am interested in the Foundation Coaching Program.\n\nName: ${formData.fullName || "Candidate"}\nPhone: ${formData.mobile || "N/A"}\nEmail: ${formData.email || "N/A"}\nQualification: ${formData.qualification || "N/A"}\nCurrent Year: ${formData.currentYear || "N/A"}\nTarget Exam: ${formData.targetExam || "N/A"}\nNotes: ${formData.notes || "None"}`
     );
     window.open(`https://wa.me/917794045533?text=${text}`, "_blank");
   };
@@ -80,7 +79,6 @@ export default function EnrollmentForm() {
             <div><strong>Qualification:</strong> {formData.qualification || "N/A"}</div>
             <div><strong>Current Year:</strong> {formData.currentYear || "N/A"}</div>
             <div><strong>Target Exam:</strong> {formData.targetExam || "General Foundation"}</div>
-            <div><strong>Subjects:</strong> {formData.subjects || "All Foundation Subjects"}</div>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -201,21 +199,6 @@ export default function EnrollmentForm() {
                   placeholder="e.g. SSC CGL, TGPSC Group 1, IBPS PO, RRB"
                   value={formData.targetExam}
                   onChange={(e) => setFormData({ ...formData, targetExam: e.target.value })}
-                  className="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
-                />
-              </div>
-
-              {/* Subjects */}
-              <div className="sm:col-span-2">
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
-                  Subjects *
-                </label>
-                <input
-                  type="text"
-                  required
-                  placeholder="e.g. Quant, Reasoning, English, General Awareness"
-                  value={formData.subjects}
-                  onChange={(e) => setFormData({ ...formData, subjects: e.target.value })}
                   className="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
                 />
               </div>
