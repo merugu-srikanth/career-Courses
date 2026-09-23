@@ -18,10 +18,10 @@ export default function CoachingClient() {
       {/* Bottom CTA */}
       <section className="py-14 bg-slate-900 text-white text-center">
         <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
-          <span className="inline-block px-3 py-1 bg-emerald-500/20 border border-emerald-400/30 text-emerald-400 text-xs font-black uppercase tracking-widest rounded-full mb-4">
+          <span className="inline-block px-3 py-1 bg-emerald-500/20 border border-emerald-400/30 text-emerald-400 text-xs font-bold uppercase tracking-widest rounded-full mb-4">
             Admissions Open • Flexible Batches
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
             Ready to Build Your Unstoppable Foundation?
           </h2>
           {/* <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8">
@@ -31,7 +31,7 @@ export default function CoachingClient() {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/plans-pricing"
-              className="px-8 py-3.5 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-extrabold text-sm shadow-lg transition-all flex items-center gap-2"
+              className="px-8 py-3.5 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-sm shadow-lg transition-all flex items-center gap-2"
             >
               View Plans & Enroll <ArrowRight className="w-4 h-4" />
             </Link>

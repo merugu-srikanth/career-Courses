@@ -31,10 +31,10 @@ export default function PricingClient() {
       {/* Header */}
       <div className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
         <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0 text-center">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 mb-4">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 mb-4">
             <Sparkles className="w-3.5 h-3.5" /> All-Inclusive Foundation Pricing
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
             One Program. One Pricing. <span className="text-orange-400">Complete Coverage.</span>
           </h1>
           <p className="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
@@ -50,10 +50,10 @@ export default function PricingClient() {
       <section className="py-16 bg-slate-50 border-t border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-extrabold text-orange-600 uppercase tracking-wider">
+            <span className="text-xs font-bold text-orange-600 uppercase tracking-wider">
               Got Questions?
             </span>
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-1">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
               Frequently Asked Questions
             </h2>
           </div>
@@ -61,7 +61,7 @@ export default function PricingClient() {
           <div className="space-y-4 mb-10">
             {faqs.map((faq, idx) => (
               <div key={idx} className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs">
-                <h3 className="text-base font-extrabold text-slate-900 mb-2 flex items-start gap-2">
+                <h3 className="text-base font-bold text-slate-900 mb-2 flex items-start gap-2">
                   <HelpCircle className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
                   {faq.q}
                 </h3>
@@ -74,7 +74,7 @@ export default function PricingClient() {
 
           <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <div className="text-base font-extrabold text-slate-900">
+              <div className="text-base font-bold text-slate-900">
                 Still have questions or need custom batch assistance?
               </div>
               <div className="text-xs text-slate-500">

@@ -73,14 +73,14 @@ export default function CoreSkillsGrid() {
           <span className="inline-block px-3 py-1 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3">
             The Foundation: 6 Core Skill Areas
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-4">
             Five Subjects. <span className="text-emerald-600">One Strong Foundation.</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
             Every competitive examination evaluates a candidate across these identical cognitive pillars. We train you from the absolute basics to mastery level.
           </p>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, idx) => {
             const Icon = skill.icon;
@@ -94,13 +94,13 @@ export default function CoreSkillsGrid() {
                     <div className={`w-12 h-12 rounded-2xl ${skill.accentBg} flex items-center justify-center font-bold shadow-xs group-hover:scale-105 transition-transform`}>
                       <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-xs font-black px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">
+                    <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700">
                       Module {skill.number}
                     </span>
                   </div>
 
                   <div className="flex items-center gap-2 mb-2">
-                    <h3 className="text-lg font-extrabold text-slate-900">
+                    <h3 className="text-lg font-bold text-slate-900">
                       {skill.title}
                     </h3>
                   </div>
@@ -110,14 +110,14 @@ export default function CoreSkillsGrid() {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                {/* <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
                   <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                     Included in All Plans
                   </span>
                   <span className="text-xs font-bold px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200">
                     ✓ Full Coverage
                   </span>
-                </div>
+                </div> */}
               </div>
             );
           })}

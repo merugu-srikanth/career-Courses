@@ -182,11 +182,11 @@ export default function CareerPathwaysGrid() {
       <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-extrabold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-orange-500 shrink-0" />
             1 Single Foundation Course • Covers All 5 Career Domains
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-4">
             This Single Foundation Program Covers All{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">
               5 High-Demand Pathways
@@ -210,7 +210,7 @@ export default function CareerPathwaysGrid() {
                 <div>
                   {/* Card Top Badges */}
                   <div className="flex items-center justify-between gap-2 mb-5">
-                    <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-[11px] font-black uppercase tracking-wider ${pathway.badgePillBg}`}>
+                    <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-[11px] font-bold uppercase tracking-wider ${pathway.badgePillBg}`}>
                       <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center shadow-2xs">
                         <Icon className={`w-3 h-3 ${pathway.iconColor}`} />
                       </div>
@@ -226,7 +226,7 @@ export default function CareerPathwaysGrid() {
                   {/* Card Body: Title + Checklist (Left) & 3D Artwork (Right) */}
                   <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center mb-6">
                     <div className="sm:col-span-7">
-                      <h3 className="text-lg sm:text-xl font-black text-slate-900 mb-0.5 tracking-tight">
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-0.5 tracking-tight">
                         {pathway.title}
                       </h3>
                       <p className="text-[12px] text-slate-500 font-normal mb-3.5 leading-snug">
@@ -257,7 +257,7 @@ export default function CareerPathwaysGrid() {
                         />
                       </div>
                       {pathway.tagline && (
-                        <span className={`inline-flex items-center gap-1 text-[11px] font-extrabold tracking-tight italic mt-1 text-center ${pathway.taglineColor}`}>
+                        <span className={`inline-flex items-center gap-1 text-[11px] font-bold tracking-tight italic mt-1 text-center ${pathway.taglineColor}`}>
                           <Sparkles className="w-2.5 h-2.5 text-amber-500 shrink-0" />
                           <span>{pathway.tagline}</span>
                         </span>
@@ -273,7 +273,7 @@ export default function CareerPathwaysGrid() {
                       <BookOpen className="w-4 h-4 text-slate-600" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-xs font-black text-slate-900 leading-tight">
+                      <div className="text-xs font-bold text-slate-900 leading-tight">
                         85–100% Syllabus Covered
                       </div>
                       <div className="text-[10px] text-slate-500 truncate leading-tight">
@@ -303,7 +303,7 @@ export default function CareerPathwaysGrid() {
             <div className="relative z-10">
               {/* Top Badges */}
               <div className="flex items-center justify-between gap-2 mb-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/40 bg-orange-500/15 text-orange-300 text-[11px] font-black uppercase tracking-wider">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-500/40 bg-orange-500/15 text-orange-300 text-[11px] font-bold uppercase tracking-wider">
                   <Sparkles className="w-3.5 h-3.5 text-orange-400" />
                   <span>ALL-IN-ONE GATEWAY</span>
                 </div>
@@ -316,7 +316,7 @@ export default function CareerPathwaysGrid() {
               {/* Body: Left Info + Right Artwork */}
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center mb-6">
                 <div className="sm:col-span-7">
-                  <h3 className="text-lg sm:text-xl font-black text-white mb-1 tracking-tight leading-snug">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 tracking-tight leading-snug">
                     One Unified Foundation • Maximum Career Opportunities
                   </h3>
                   <p className="text-[12px] text-orange-400 font-semibold mb-3.5 leading-tight">
@@ -329,15 +329,15 @@ export default function CareerPathwaysGrid() {
 
                   <ul className="space-y-1.5 text-xs text-slate-300 font-medium">
                     <li className="flex items-center gap-1.5">
-                      <span className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-black">✓</span>
+                      <span className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
                       <span>Comprehensive Aptitude &amp; Reasoning</span>
                     </li>
                     <li className="flex items-center gap-1.5">
-                      <span className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-black">✓</span>
+                      <span className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
                       <span>75–90 Hours Live &amp; Offline Coaching</span>
                     </li>
                     <li className="flex items-center gap-1.5">
-                      <span className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-black">✓</span>
+                      <span className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[10px] font-bold">✓</span>
                       <span>6 Months Unlimited LMS Access</span>
                     </li>
                   </ul>
@@ -365,7 +365,7 @@ export default function CareerPathwaysGrid() {
                   <Layers className="w-4 h-4 text-orange-400" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-xs font-black text-white leading-tight">
+                  <div className="text-xs font-bold text-white leading-tight">
                     Complete Exam Matrix
                   </div>
                   <div className="text-[10px] text-slate-400 truncate leading-tight">
@@ -376,7 +376,7 @@ export default function CareerPathwaysGrid() {
 
               <Link
                 href="/curriculum"
-                className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white font-black text-xs shadow-md shadow-orange-950/50 transition-all hover:scale-[1.03]"
+                className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white font-bold text-xs shadow-md shadow-orange-950/50 transition-all hover:scale-[1.03]"
               >
                 <span>Explore Detailed Syllabus &amp; Exam Matrix</span>
                 <ArrowRight className="w-3.5 h-3.5" />

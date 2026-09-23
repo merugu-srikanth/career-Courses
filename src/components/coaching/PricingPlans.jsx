@@ -116,10 +116,10 @@ export default function PricingPlans() {
       <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200 text-orange-700 text-xs font-extrabold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200 text-orange-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5" /> All-in-One Comprehensive Program
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-4">
             One Program. One Pricing. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">
               Complete Syllabus & Topic Coverage.
@@ -140,7 +140,7 @@ export default function PricingPlans() {
               {/* Left Side: Program Overview & Inclusions */}
               <div className="lg:col-span-7 space-y-6">
                 <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-extrabold uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider">
                     <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
                     <span>All-Inclusive Foundation Package</span>
                   </span>
@@ -150,7 +150,7 @@ export default function PricingPlans() {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-black text-slate-900">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-slate-900">
                     Government Job Foundation Complete Program
                   </h3>
                   <p className="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
@@ -160,13 +160,13 @@ export default function PricingPlans() {
 
                 {/* Key Inclusions List */}
                 <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
-                  <div className="text-xs font-extrabold uppercase tracking-wider text-slate-900 flex items-center gap-2">
+                  <div className="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-600" /> Everything Included in This Program:
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
                     {courseInclusions.map((inc, idx) => (
                       <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
-                        <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5">
+                        <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">
                           ✓
                         </span>
                         <span>{inc}</span>
@@ -185,14 +185,14 @@ export default function PricingPlans() {
                     <span className="text-xs font-bold text-orange-400 uppercase tracking-widest">
                       Special Launch Pricing
                     </span>
-                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[11px] font-extrabold">
+                    <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[11px] font-bold">
                       Admissions Open 2026-27
                     </span>
                   </div>
 
                   <div className="mb-5">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl sm:text-5xl font-black text-white">₹9,999</span>
+                      <span className="text-4xl sm:text-5xl font-bold text-white">₹9,999</span>
                       <span className="text-slate-400 text-sm font-normal">all-inclusive</span>
                     </div>
                     <div className="flex items-center gap-2 mt-2 text-xs text-slate-300">
@@ -221,7 +221,7 @@ export default function PricingPlans() {
                 <div className="space-y-3">
                   <Link
                     href="/enroll"
-                    className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white font-black text-sm shadow-lg shadow-orange-600/30 hover:shadow-xl transition-all flex items-center justify-center gap-2"
+                    className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white font-bold text-sm shadow-lg shadow-orange-600/30 hover:shadow-xl transition-all flex items-center justify-center gap-2"
                   >
                     <span>Enroll Now / Book Free Counseling</span>
                     <ArrowRight className="w-4 h-4" />
@@ -250,10 +250,10 @@ export default function PricingPlans() {
         {/* Detailed User Topic Coverage Breakdown Section */}
         <div>
           <div className="text-center max-w-3xl mx-auto mb-10">
-            <span className="text-xs font-extrabold uppercase tracking-widest text-orange-600">
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-600">
               Exhaustive Curriculum Modules
             </span>
-            <h3 className="text-2xl sm:text-3xl font-black text-slate-900 mt-1">
+            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
               Complete List of Topics Covered in This Course
             </h3>
             <p className="text-slate-500 text-xs sm:text-sm mt-1">
@@ -274,7 +274,7 @@ export default function PricingPlans() {
                       <div className={`w-11 h-11 rounded-2xl ${item.color} flex items-center justify-center border shadow-xs shrink-0`}>
                         <Icon className="w-5 h-5" />
                       </div>
-                      <h4 className="text-base font-extrabold text-slate-900 leading-tight">
+                      <h4 className="text-base font-bold text-slate-900 leading-tight">
                         {item.category}
                       </h4>
                     </div>

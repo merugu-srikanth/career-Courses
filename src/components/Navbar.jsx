@@ -51,7 +51,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-18 sm:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0">
-              <div className="relative w-36 sm:w-44 h-12">
+              <div className="relative w-36 sm:w-44 h-15">
                 <Image
                   src={LogoImg}
                   alt="Career Mitra"
@@ -78,7 +78,7 @@ export default function Navbar() {
                   >
                     <span>{link.name}</span>
                     {link.badge && !active && (
-                      <span className="px-2 py-0.5 text-[9px] font-black rounded-full bg-orange-500 text-white uppercase tracking-wider leading-none">
+                      <span className="px-2 py-0.5 text-[9px] font-bold rounded-full bg-orange-500 text-white uppercase tracking-wider leading-none">
                         {link.badge}
                       </span>
                     )}
@@ -224,7 +224,7 @@ export default function Navbar() {
                     >
                       <span>{link.name}</span>
                       {link.badge && (
-                        <span className="px-2 py-0.5 text-[9px] font-black rounded-full bg-orange-500 text-white">
+                        <span className="px-2 py-0.5 text-[9px] font-bold rounded-full bg-orange-500 text-white">
                           {link.badge}
                         </span>
                       )}

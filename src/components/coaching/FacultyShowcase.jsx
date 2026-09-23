@@ -44,7 +44,7 @@ export default function FacultyShowcase() {
           <span className="inline-block px-3 py-1 bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-widest rounded-full mb-3">
             Mentorship That Transforms
           </span>
-          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4">
             Experience Behind <span className="text-orange-600">Your Preparation</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
@@ -60,14 +60,14 @@ export default function FacultyShowcase() {
             >
               <div>
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`w-16 h-16 rounded-2xl ${fac.avatarBg} flex items-center justify-center font-black text-2xl shadow-md shrink-0`}>
+                  <div className={`w-16 h-16 rounded-2xl ${fac.avatarBg} flex items-center justify-center font-bold text-2xl shadow-md shrink-0`}>
                     {fac.initials}
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <h3 className="text-2xl font-black text-slate-900">{fac.name}</h3>
+                      <h3 className="text-2xl font-bold text-slate-900">{fac.name}</h3>
                     </div>
-                    <div className="text-sm font-black text-orange-600">
+                    <div className="text-sm font-bold text-orange-600">
                       {fac.experience} EXPERIENCE
                     </div>
                     <div className="text-xs font-semibold text-slate-500">
@@ -90,7 +90,7 @@ export default function FacultyShowcase() {
                 <span className="text-xs font-bold text-slate-500 flex items-center gap-1">
                   <GraduationCap className="w-4 h-4 text-slate-400" /> Senior Faculty & Mentor
                 </span>
-                <span className="text-xs font-extrabold px-3 py-1 rounded-full bg-slate-900 text-white">
+                <span className="text-xs font-bold px-3 py-1 rounded-full bg-slate-900 text-white">
                   Live Masterclasses
                 </span>
               </div>
@@ -98,7 +98,7 @@ export default function FacultyShowcase() {
           ))}
         </div>
 
-        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center shrink-0">
               <Quote className="w-6 h-6 text-white" />
@@ -119,7 +119,7 @@ export default function FacultyShowcase() {
           >
             Start Building Your Foundation →
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

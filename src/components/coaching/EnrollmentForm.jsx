@@ -67,7 +67,7 @@ export default function EnrollmentForm() {
           <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-6 shadow-sm">
             <CheckCircle className="w-10 h-10" />
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
             Inquiry Request Received!
           </h2>
           <p className="text-slate-600 max-w-lg mx-auto text-sm sm:text-base mb-6">
@@ -105,7 +105,7 @@ export default function EnrollmentForm() {
             <div className="flex items-center gap-2 text-xs font-bold text-orange-600 uppercase tracking-wider mb-2">
               <Sparkles className="w-4 h-4" /> Quick Admission & Counseling Form
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black text-slate-900">
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
               Inquire / Enroll for Foundation Coaching
             </h1>
             <p className="text-slate-500 text-xs sm:text-sm mt-1">
@@ -241,7 +241,7 @@ export default function EnrollmentForm() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full sm:w-auto flex-1 py-4 px-8 rounded-2xl bg-orange-600 hover:bg-orange-500 disabled:opacity-70 disabled:cursor-not-allowed text-white font-extrabold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto flex-1 py-4 px-8 rounded-2xl bg-orange-600 hover:bg-orange-500 disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold text-sm shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               {loading ? (
                 <>
@@ -257,7 +257,7 @@ export default function EnrollmentForm() {
             <button
               type="button"
               onClick={openWhatsAppInquiry}
-              className="w-full sm:w-auto py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto py-4 px-6 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <FaWhatsapp className="w-5 h-5" /> Instant WhatsApp
             </button>

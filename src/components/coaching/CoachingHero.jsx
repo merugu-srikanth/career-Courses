@@ -55,7 +55,7 @@ export default function CoachingHero() {
               GOVERNMENT JOB FOUNDATION PROGRAMME
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.15] mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.15] mb-4">
               DON&apos;T WAIT FOR THE NOTIFICATION.{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">
                 START PREPARING.
@@ -155,7 +155,7 @@ export default function CoachingHero() {
               <div className="space-y-2.5 pt-1">
                 <Link
                   href="/enroll"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white font-extrabold text-sm sm:text-base shadow-md shadow-orange-600/25 hover:shadow-lg transition-all"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white font-bold text-sm sm:text-base shadow-md shadow-orange-600/25 hover:shadow-lg transition-all"
                 >
                   <span>Book Free Consultation</span>
                   <ArrowRight className="w-4 h-4" />

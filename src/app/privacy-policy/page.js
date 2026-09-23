@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-emerald-400 mb-2">
             <ShieldCheck className="w-4 h-4" /> Transparency & Trust
           </div>
-          <h1 className="text-3xl sm:text-4xl font-black tracking-tight mb-2">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
             Privacy Policy
           </h1>
           <p className="text-slate-400 text-xs sm:text-sm">
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
       <div className="w-full max-w-[90%] lg:max-w-4xl mx-auto px-[2%] md:px-0 mt-10">
         <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-sm space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
           <section className="space-y-3">
-            <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
               <Lock className="w-5 h-5 text-orange-500" /> 1. Information We Collect
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
@@ -40,7 +40,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="space-y-3 pt-6 border-t border-slate-100">
-            <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
               <UserCheck className="w-5 h-5 text-emerald-600" /> 2. How We Use Your Information
             </h2>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-600">
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="space-y-3 pt-6 border-t border-slate-100">
-            <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">
+            <h2 className="text-xl font-bold text-slate-900 flex items-center gap-2">
               <FileText className="w-5 h-5 text-blue-600" /> 3. Data Protection & Security
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="space-y-3 pt-6 border-t border-slate-100">
-            <h2 className="text-xl font-black text-slate-900">
+            <h2 className="text-xl font-bold text-slate-900">
               4. Contact Our Privacy Officer
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">

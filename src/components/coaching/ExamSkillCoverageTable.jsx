@@ -155,7 +155,7 @@ export default function ExamSkillCoverageTable() {
           <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3">
             Indicative Exam-Skill Coverage Matrix
           </span>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-4">
             Percentage Coverage of <span className="text-blue-600">Key Skill Areas</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
@@ -212,7 +212,7 @@ export default function ExamSkillCoverageTable() {
                 <th className="py-4 px-3 text-center">Logic & DI</th>
                 <th className="py-4 px-3 text-center">Computer</th>
                 <th className="py-4 px-3 text-center">General Awareness</th>
-                <th className="py-4 px-5 text-center rounded-tr-3xl bg-orange-600 text-white font-black">
+                <th className="py-4 px-5 text-center rounded-tr-3xl bg-orange-600 text-white font-bold">
                   Overall Coverage
                 </th>
               </tr>
@@ -226,7 +226,7 @@ export default function ExamSkillCoverageTable() {
                         <row.icon className="w-4 h-4" />
                       </div>
                       <div>
-                        <div className="font-extrabold text-slate-900">{row.name}</div>
+                        <div className="font-bold text-slate-900">{row.name}</div>
                         <div className="text-[11px] text-slate-500 font-medium">{row.subtext}</div>
                       </div>
                     </div>
@@ -262,7 +262,7 @@ export default function ExamSkillCoverageTable() {
                     </span>
                   </td>
                   <td className="py-4 px-5 text-center bg-orange-50/50">
-                    <span className="inline-block px-3 py-1 rounded-xl bg-emerald-600 text-white font-extrabold text-xs shadow-xs">
+                    <span className="inline-block px-3 py-1 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-xs">
                       {row.overall}
                     </span>
                   </td>
@@ -276,7 +276,7 @@ export default function ExamSkillCoverageTable() {
         <div className="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white shadow-xl">
           <div className="flex items-center gap-2 mb-4">
             <Sparkles className="w-5 h-5 text-orange-400" />
-            <h3 className="text-lg font-extrabold text-white">
+            <h3 className="text-lg font-bold text-white">
               Key Strategic Takeaways:
             </h3>
           </div>
