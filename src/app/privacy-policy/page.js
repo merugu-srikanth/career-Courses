@@ -8,7 +8,7 @@ export default function PrivacyPolicyPage() {
     <div className="min-h-screen bg-slate-50 pt-24 sm:pt-28 pb-20">
       {/* Header */}
       <div className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[90%] lg:max-w-4xl mx-auto px-[2%] md:px-0">
           <Link
             href="/"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-400 hover:text-orange-300 transition-colors mb-4"
@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
       </div>
 
       {/* Content */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+      <div className="w-full max-w-[90%] lg:max-w-4xl mx-auto px-[2%] md:px-0 mt-10">
         <div className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200/90 shadow-sm space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
           <section className="space-y-3">
             <h2 className="text-xl font-black text-slate-900 flex items-center gap-2">

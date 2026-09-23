@@ -30,7 +30,7 @@ export default function PricingClient() {
     <div className="min-h-screen bg-white pt-24 sm:pt-28">
       {/* Header */}
       <div className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0 text-center">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 mb-4">
             <Sparkles className="w-3.5 h-3.5" /> All-Inclusive Foundation Pricing
           </span>

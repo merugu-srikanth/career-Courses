@@ -142,7 +142,7 @@ export default function ExamSkillCoverageTable() {
 
   return (
     <section className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="inline-block px-3 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3">
             Indicative Exam-Skill Coverage Matrix

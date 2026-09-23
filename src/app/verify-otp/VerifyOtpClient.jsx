@@ -183,7 +183,8 @@ export default function VerifyOtp() {
         <AnimatedBg />
       
         {/* Main Container */}
-        <div className="max-w-6xl bg-white rounded-2xl shadow-xl grid md:grid-cols-2 overflow-hidden relative z-10 w-full mx-4">
+        <div className="w-full max-w-[90%] lg:max-w-5xl mx-auto px-[2%] md:px-0">
+          <div className="bg-white rounded-2xl shadow-xl grid md:grid-cols-2 overflow-hidden relative z-10 border border-slate-100">
           
           {/* LEFT SIDE FORM */}
           <div className="p-10 flex flex-col justify-center bg-white border-b md:border-b-0 md:border-r border-slate-100">
@@ -315,6 +316,7 @@ export default function VerifyOtp() {
           </div>
 
         </div>
+      </div>
       </div>
     </>
   );

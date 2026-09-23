@@ -9,7 +9,7 @@ export default function EnrollClient() {
 
       {/* Hero Header */}
       <div className="bg-slate-900 text-white py-10 md:py-14 border-b border-slate-800 mb-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0 text-center">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-orange-500/20 text-orange-300 border border-orange-400/30 mb-3">
             <Sparkles className="w-3.5 h-3.5" /> Direct Admission & Counseling
           </span>
@@ -22,7 +22,7 @@ export default function EnrollClient() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           {/* Main Form */}
           <div className="lg:col-span-8">

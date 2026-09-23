@@ -263,7 +263,8 @@ export default function Register() {
         <AnimatedBg />
       
       {/* Main Container */}
-      <div className="max-w-7xl bg-white rounded-2xl shadow-xl grid md:grid-cols-2 overflow-hidden relative z-10">
+      <div className="w-full max-w-[90%] lg:max-w-5xl mx-auto px-[2%] md:px-0">
+        <div className="bg-white rounded-2xl shadow-xl grid md:grid-cols-2 overflow-hidden relative z-10 border border-slate-100">
         
         {/* LEFT SIDE IMAGE */}
         <div className="hidden md:flex items-center justify-center p-8">
@@ -521,12 +522,13 @@ export default function Register() {
           </p>
         </div>
       </div>
+      </div>
 
       {/* OTP Modal Overlay */}
       {showOtpModal && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-3 sm:p-4">
           {/* Modal card — fixed height, no scroll */}
-          <div className="bg-white rounded-2xl max-w-7xl w-full h-[88vh] overflow-hidden relative animate-fadeIn shadow-2xl flex flex-col">
+          <div className="bg-white rounded-2xl w-full max-w-[90%] lg:max-w-4xl h-[88vh] overflow-hidden relative animate-fadeIn shadow-2xl flex flex-col">
 
             {/* Close button */}
             <button

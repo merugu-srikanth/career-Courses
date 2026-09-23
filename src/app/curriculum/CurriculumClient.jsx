@@ -11,7 +11,7 @@ export default function CurriculumClient() {
 
       {/* Header */}
       <div className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0 text-center">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-blue-500/20 text-blue-300 border border-blue-400/30 mb-4">
             <Sparkles className="w-3.5 h-3.5" /> Structured Syllabus & Coverage
           </span>

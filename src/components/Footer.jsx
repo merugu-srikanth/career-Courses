@@ -9,7 +9,7 @@ import { ShieldCheck, PhoneCall, ArrowRight } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-white border-t border-slate-800/80 pt-16 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-14">
           
           {/* Brand & Collaboration - 4 cols on large screens */}
@@ -48,7 +48,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/plans-pricing" className="hover:text-white transition-colors duration-150">
-                  Plans & Pricing (₹7,999)
+                  Plans & Pricing (₹9,999)
                 </Link>
               </li>
               <li>

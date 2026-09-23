@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* Top accent line */}
         <div className="h-0.5 w-full bg-gradient-to-r from-orange-400 via-amber-500 to-emerald-500" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
           <div className="flex items-center justify-between h-18 sm:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 shrink-0">

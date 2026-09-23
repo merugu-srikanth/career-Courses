@@ -113,7 +113,7 @@ export default function PricingPlans() {
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 via-white to-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200 text-orange-700 text-xs font-extrabold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
@@ -202,10 +202,10 @@ export default function PricingPlans() {
                   </div>
 
                   <div className="space-y-2.5 p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700/80 text-xs mb-6">
-                    <div className="flex items-center justify-between text-slate-200">
+                    {/* <div className="flex items-center justify-between text-slate-200">
                       <span className="flex items-center gap-1.5 font-medium"><Monitor className="w-3.5 h-3.5 text-orange-400" /> Live Online Batch:</span>
                       <span className="font-bold text-white">₹9,999 (75h)</span>
-                    </div>
+                    </div> */}
                     <div className="flex items-center justify-between text-slate-200 pt-1 border-t border-slate-700/60">
                       <span className="flex items-center gap-1.5 font-medium"><BookOpen className="w-3.5 h-3.5 text-emerald-400" /> Offline Classroom:</span>
                       <span className="font-bold text-white">₹8,999 (75h)</span>

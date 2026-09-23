@@ -94,7 +94,7 @@ export default function CareerPathwaysGrid() {
 
   return (
     <section className="py-16 md:py-24 bg-white border-b border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-extrabold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
