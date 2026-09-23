@@ -193,7 +193,7 @@ export default function EnrollmentForm() {
               {/* Target Competitive Exam */}
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
-                  Target Competitive Exam *
+                  What is your specific target competitive exam ? *
                 </label>
                 <input
                   type="text"

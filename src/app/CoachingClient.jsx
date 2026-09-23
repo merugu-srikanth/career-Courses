@@ -25,7 +25,7 @@ export default function CoachingClient() {
             Ready to Build Your Unstoppable Foundation?
           </h2>
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8">
-            Choose from Live Online (75h - ₹7,999), Offline Classroom (75h - ₹8,999), or Plus Offline (90h - ₹9,999).
+            Choose from Live Online (75h - ₹9,999), Offline Classroom (75h - ₹8,999), or Plus Offline (90h - ₹9,999).
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">

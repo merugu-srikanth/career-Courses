@@ -32,13 +32,13 @@ export default function PricingClient() {
       <div className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 mb-4">
-            <Sparkles className="w-3.5 h-3.5" /> Transparent & Value-Packed Packages
+            <Sparkles className="w-3.5 h-3.5" /> All-Inclusive Foundation Pricing
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-4">
-            Course Plans, Pricing & <span className="text-orange-400">Faculty Mentors</span>
+            One Program. One Pricing. <span className="text-orange-400">Complete Coverage.</span>
           </h1>
           <p className="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
-            Choose the format that fits your learning journey. Every single package includes complete 5-subject coaching, 6 months LMS platform access, and dedicated faculty mentorship.
+            Everything you need to master Quantitative Aptitude, Logical Reasoning, English, General Awareness, Computer Literacy, and Soft Skills in one single comprehensive course.
           </p>
         </div>
       </div>

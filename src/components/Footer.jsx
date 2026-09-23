@@ -3,88 +3,151 @@
 import Link from "next/link";
 import Image from "next/image";
 import LogoImg from "@/assets/NewLogo.png";
-import { FaWhatsapp, FaYoutube, FaLinkedin, FaInstagram, FaFacebook, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaYoutube, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { ShieldCheck, PhoneCall, ArrowRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white border-t border-slate-800 pt-16 pb-12">
+    <footer className="bg-slate-900 text-white border-t border-slate-800 pt-14 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand Col */}
-          <div>
-            <div className="relative w-40 h-12 mb-4">
-              <Image src={LogoImg} alt="Career Mitra" fill className="object-contain brightness-0 invert" />
-            </div>
-            <p className="text-xs text-slate-400 leading-relaxed mb-6">
-              Government Job Foundation Programme in collaboration with <strong>Score 99 Percentile</strong>. One foundation course for SSC, Banking, Railways, State PSCs, PSUs, and Campus Placements.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-12">
+          {/* Brand & Collaboration */}
+          <div className="space-y-4">
+            <Link href="/" className="inline-block relative w-40 h-11">
+              <Image
+                src={LogoImg}
+                alt="Career Mitra"
+                fill
+                className="object-contain brightness-0 invert"
+              />
+            </Link>
+            <p className="text-xs text-slate-400 leading-relaxed font-normal">
+              Government Job Foundation Coaching in collaboration with <strong className="text-slate-200">Score 99 Percentile</strong>. One unified foundation for SSC, Banking, Railways, State PSCs, PSUs & Placements.
             </p>
-            <div className="flex items-center gap-3">
-              <a href="https://whatsapp.com/channel/0029Vb7zTcp7j6g6O0OHfn37" target="_blank" rel="noreferrer" className="w-8 h-8 rounded-lg bg-white/10 hover:bg-emerald-600 flex items-center justify-center text-slate-300 hover:text-white transition-all">
+            <div className="flex items-center gap-2.5 pt-1">
+              <a
+                href="https://wa.me/919999999999"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 h-8 rounded-xl bg-white/10 hover:bg-emerald-600 flex items-center justify-center text-slate-300 hover:text-white transition-all shadow-xs"
+                title="WhatsApp"
+              >
                 <FaWhatsapp size={14} />
               </a>
-              <a href="https://www.youtube.com/@CareerMitraaa" target="_blank" rel="noreferrer" className="w-8 h-8 rounded-lg bg-white/10 hover:bg-red-600 flex items-center justify-center text-slate-300 hover:text-white transition-all">
+              <a
+                href="https://www.youtube.com/@CareerMitraaa"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 h-8 rounded-xl bg-white/10 hover:bg-red-600 flex items-center justify-center text-slate-300 hover:text-white transition-all shadow-xs"
+                title="YouTube"
+              >
                 <FaYoutube size={14} />
               </a>
-              <a href="#" className="w-8 h-8 rounded-lg bg-white/10 hover:bg-blue-600 flex items-center justify-center text-slate-300 hover:text-white transition-all">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-8 h-8 rounded-xl bg-white/10 hover:bg-blue-600 flex items-center justify-center text-slate-300 hover:text-white transition-all shadow-xs"
+                title="LinkedIn"
+              >
                 <FaLinkedin size={14} />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Navigation */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-orange-400 mb-4">
-              Course Structure
+            <h4 className="text-xs font-black uppercase tracking-widest text-orange-400 mb-4">
+              Foundation Course
             </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400">
-              <li><Link href="/" className="hover:text-white transition-colors">Program Overview</Link></li>
-              <li><Link href="/curriculum" className="hover:text-white transition-colors">6 Core Skill Modules</Link></li>
-              <li><Link href="/curriculum" className="hover:text-white transition-colors">Exam-Skill Coverage Matrix</Link></li>
-              <li><Link href="/plans-pricing" className="hover:text-white transition-colors">Live Online (75h - ₹7,999)</Link></li>
-              <li><Link href="/plans-pricing" className="hover:text-white transition-colors">Offline Classroom (75h - ₹8,999)</Link></li>
-              <li><Link href="/plans-pricing" className="hover:text-white transition-colors">Plus Offline (90h - ₹9,999)</Link></li>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li>
+                <Link href="/" className="hover:text-white transition-colors">Program Overview</Link>
+              </li>
+              <li>
+                <Link href="/curriculum" className="hover:text-white transition-colors">Curriculum & Exam Matrix</Link>
+              </li>
+              <li>
+                <Link href="/plans-pricing" className="hover:text-white transition-colors">Plans & Pricing (₹7,999)</Link>
+              </li>
+              <li>
+                <Link href="/enroll" className="hover:text-white transition-colors">Enroll & Counseling Form</Link>
+              </li>
             </ul>
           </div>
 
-          {/* Faculty & Features */}
+          {/* Student Legal & Trust */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-orange-400 mb-4">
-              Mentors & Support
+            <h4 className="text-xs font-black uppercase tracking-widest text-orange-400 mb-4">
+              Policies & Trust
             </h4>
-            <ul className="space-y-2.5 text-xs text-slate-400">
-              <li><span className="text-slate-200 font-semibold">Gautam Murthy</span> (28+ Yrs Exp - CS & Math)</li>
-              <li><span className="text-slate-200 font-semibold">Raghavender J</span> (20+ Yrs Exp - Ex T.I.M.E. / FIITJEE)</li>
-              <li><span>6 Months LMS & Recorded Lectures</span></li>
-              <li><span>Weekly Live Doubt Clearing Webinars</span></li>
-              <li><Link href="/enroll" className="text-emerald-400 font-bold hover:underline">Book Free Counseling Call →</Link></li>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li>
+                <Link href="/privacy-policy" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                  <span>Privacy Policy</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms-conditions" className="hover:text-white transition-colors">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <span className="text-slate-500">6 Months LMS Access Included</span>
+              </li>
+              <li>
+                <span className="text-slate-500">100% Data Privacy Guarantee</span>
+              </li>
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Admissions Helpdesk */}
           <div>
-            <h4 className="text-sm font-extrabold uppercase tracking-wider text-orange-400 mb-4">
+            <h4 className="text-xs font-black uppercase tracking-widest text-orange-400 mb-4">
               Admissions Helpdesk
             </h4>
-            <div className="space-y-3 text-xs text-slate-400">
+            <div className="space-y-2.5 text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <FaEnvelope className="text-orange-400 shrink-0" />
-                <span>support@careermitra.in</span>
+                <a href="mailto:support@careermitra.in" className="hover:text-white transition-colors">
+                  support@careermitra.in
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <FaWhatsapp className="text-emerald-400 shrink-0" />
-                <span>+91 99999 99999</span>
+                <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                  +91 99999 99999
+                </a>
               </div>
-              <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 text-slate-300 mt-4">
-                <strong>Admissions Open:</strong> 2026-27 Batches filling fast for Online & Offline sessions.
+              <div className="pt-2">
+                <Link
+                  href="/enroll"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs transition-all shadow-sm"
+                >
+                  <PhoneCall className="w-3.5 h-3.5" />
+                  <span>Book Free Counselor Call</span>
+                </Link>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-800 text-center text-xs text-slate-500">
-          <p>© 2026 CareerMitra & Score 99 Percentile. All rights reserved.</p>
+        {/* Bottom Bar */}
+        <div className="pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+          <p>© {new Date().getFullYear()} CareerMitra & Score 99 Percentile. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="hover:text-slate-400 transition-colors">
+              Privacy Policy
+            </Link>
+            <span>•</span>
+            <Link href="/terms-conditions" className="hover:text-slate-400 transition-colors">
+              Terms & Conditions
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
+

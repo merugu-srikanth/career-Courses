@@ -93,21 +93,26 @@ export default function CareerPathwaysGrid() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-white border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 bg-orange-50 border border-orange-200 text-orange-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3">
-            One Coaching Program. A World of Opportunities.
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-extrabold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
+            ✨ 1 Single Foundation Course • Covers All 5 Career Domains
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mb-4">
-            Well Prepared for a Wide Range of <span className="text-orange-600">Exams & Career Paths</span>
+            This Single Foundation Program Covers All{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">
+              5 High-Demand Pathways
+            </span>
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base">
-            Why prepare separately for every single exam? Our unified curriculum builds foundational aptitude, English, data interpretation, and GK that powers your success across all these sectors.
+          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Why spend time and money joining multiple coaching institutes? Our unified, expert-designed curriculum builds the core aptitude, reasoning, English, and analytical foundation that directly prepares you for <strong>all 5 major sectors below simultaneously</strong>.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 5 Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {pathways.map((pathway, idx) => {
             const Icon = pathway.icon;
             return (
@@ -121,7 +126,7 @@ export default function CareerPathwaysGrid() {
                       <Icon className={`w-6 h-6 ${pathway.accent}`} />
                     </div>
                     <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${pathway.badgeBg}`}>
-                      Pathway #{idx + 1}
+                      Covered • Domain #{idx + 1}
                     </span>
                   </div>
 
@@ -143,7 +148,10 @@ export default function CareerPathwaysGrid() {
                 </div>
 
                 <div className="pt-4 border-t border-slate-200/60 flex items-center justify-between">
-                  <span className="text-xs font-bold text-slate-500">80–90% Skill Alignment</span>
+                  <span className="text-xs font-bold text-slate-600 flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                    85–100% Syllabus Covered
+                  </span>
                   <Link
                     href="/curriculum"
                     className="inline-flex items-center gap-1 text-xs font-bold text-orange-600 group-hover:translate-x-1 transition-transform"
@@ -154,6 +162,24 @@ export default function CareerPathwaysGrid() {
               </div>
             );
           })}
+        </div>
+
+        {/* Bottom Banner Note */}
+        <div className="p-6 rounded-3xl bg-slate-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-lg">
+          <div>
+            <div className="text-sm sm:text-base font-black text-white">
+              One Unified Foundation • Maximum Career Opportunities
+            </div>
+            <p className="text-xs sm:text-sm text-slate-300 mt-0.5">
+              Build your aptitude, logic & communication once — and qualify for central, state, banking, tech & PSU exams!
+            </p>
+          </div>
+          <Link
+            href="/curriculum"
+            className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs sm:text-sm shadow-md transition-all"
+          >
+            Explore Detailed Syllabus & Exam Matrix <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>
