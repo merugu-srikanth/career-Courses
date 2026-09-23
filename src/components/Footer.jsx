@@ -12,21 +12,22 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-12">
           {/* Brand & Collaboration */}
-          <div className="space-y-4">
-            <Link href="/" className="inline-block relative w-40 h-11">
+          <div className="space-y-3.5">
+            <Link href="/" className="inline-block relative w-44 h-12">
               <Image
                 src={LogoImg}
                 alt="Career Mitra"
                 fill
-                className="object-contain brightness-0 invert"
+                className="object-contain"
+                priority
               />
             </Link>
-            <p className="text-xs text-slate-400 leading-relaxed font-normal">
+            <p className="text-xs text-slate-400 leading-relaxed font-normal max-w-sm">
               Government Job Foundation Coaching in collaboration with <strong className="text-slate-200">Score 99 Percentile</strong>. One unified foundation for SSC, Banking, Railways, State PSCs, PSUs & Placements.
             </p>
             <div className="flex items-center gap-2.5 pt-1">
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/917794045533"
                 target="_blank"
                 rel="noreferrer"
                 className="w-8 h-8 rounded-xl bg-white/10 hover:bg-emerald-600 flex items-center justify-center text-slate-300 hover:text-white transition-all shadow-xs"
@@ -110,14 +111,14 @@ export default function Footer() {
             <div className="space-y-2.5 text-xs text-slate-400">
               <div className="flex items-center gap-2">
                 <FaEnvelope className="text-orange-400 shrink-0" />
-                <a href="mailto:support@careermitra.in" className="hover:text-white transition-colors">
-                  support@careermitra.in
+                <a href="mailto:info@careermitra.in" className="hover:text-white transition-colors">
+                  info@careermitra.in
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <FaWhatsapp className="text-emerald-400 shrink-0" />
-                <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
-                  +91 99999 99999
+                <a href="https://wa.me/+917794045533" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+                  +917794045533
                 </a>
               </div>
               <div className="pt-2">
