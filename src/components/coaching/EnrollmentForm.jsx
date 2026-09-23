@@ -1,12 +1,51 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle, ShieldCheck, Sparkles, Send, PhoneCall, Loader2 } from "lucide-react";
+import { CheckCircle, ShieldCheck, Sparkles, Send, PhoneCall, Loader2, Building2 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { toast } from "react-toastify";
 import axios from "axios";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://www.careermitra.in/api";
+
+// Predefined list of popular colleges / universities - you can easily add more colleges to this array!
+const COLLEGE_OPTIONS = [
+  "JNTU Hyderabad (JNTUH)",
+  "Osmania University (OU), Hyderabad",
+  "Andhra University (AU), Visakhapatnam",
+  "Sri Venkateswara University (SVU), Tirupati",
+  "CBIT (Chaitanya Bharathi Institute of Technology)",
+  "VNR Vignana Jyothi Institute of Engineering & Technology",
+  "Vasavi College of Engineering, Hyderabad",
+  "G. Narayanamma Institute of Technology & Science (GNITS)",
+  "Gokaraju Rangaraju Institute of Engineering & Tech (GRIET)",
+  "CVR College of Engineering, Hyderabad",
+  "BVRIT (BV Raju Institute of Technology), Narsapur/Hyd",
+  "Mahatma Gandhi Institute of Technology (MGIT)",
+  "Anurag University / Anurag Group of Institutions",
+  "Malla Reddy Engineering College (MREC / MRGI)",
+  "Vardhaman College of Engineering, Hyderabad",
+  "Sreenidhi Institute of Science & Technology (SNIST)",
+  "Kakatiya Institute of Technology & Science (KITS), Warangal",
+  "KL University (KLEF), Vijayawada / Hyderabad",
+  "GITAM Deemed University, Visakhapatnam / Hyderabad",
+  "SR University, Warangal",
+  "VR Siddhartha Engineering College, Vijayawada",
+  "GMR Institute of Technology (GMRIT), Rajam",
+  "Gayatri Vidya Parishad (GVP), Visakhapatnam",
+  "RVR & JC College of Engineering, Guntur",
+  "Bapatla Engineering College, Bapatla",
+  "IIT Hyderabad / IIT Madras / IIT Tirupati",
+  "NIT Warangal / NIT Tadepalligudem",
+  "IIIT Hyderabad / IIIT Sri City",
+  "Nizam College, Hyderabad",
+  "Bhavan's Vivekananda College, Secunderabad",
+  "Loyola Academy Degree & PG College, Secunderabad",
+  "St. Francis College for Women, Hyderabad",
+  "Badruka College of Commerce & Arts, Hyderabad",
+  "AV College of Arts, Science & Commerce, Hyderabad",
+  "Other College (Enter Manually)",
+];
 
 export default function EnrollmentForm() {
   const [formData, setFormData] = useState({
@@ -14,13 +53,33 @@ export default function EnrollmentForm() {
     email: "",
     mobile: "",
     qualification: "",
+    collegeName: "",
     currentYear: "",
     targetExam: "",
     notes: "",
   });
 
+  const [isCustomCollege, setIsCustomCollege] = useState(false);
+  const [customCollegeText, setCustomCollegeText] = useState("");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  const handleCollegeChange = (e) => {
+    const selected = e.target.value;
+    if (selected === "Other College (Enter Manually)") {
+      setIsCustomCollege(true);
+      setFormData((prev) => ({ ...prev, collegeName: customCollegeText }));
+    } else {
+      setIsCustomCollege(false);
+      setFormData((prev) => ({ ...prev, collegeName: selected }));
+    }
+  };
+
+  const handleCustomCollegeInput = (e) => {
+    const val = e.target.value;
+    setCustomCollegeText(val);
+    setFormData((prev) => ({ ...prev, collegeName: val }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,7 +113,7 @@ export default function EnrollmentForm() {
 
   const openWhatsAppInquiry = () => {
     const text = encodeURIComponent(
-      `Hello CareerMitra & Score 99 Team! I am interested in the Foundation Coaching Program.\n\nName: ${formData.fullName || "Candidate"}\nPhone: ${formData.mobile || "N/A"}\nEmail: ${formData.email || "N/A"}\nQualification: ${formData.qualification || "N/A"}\nCurrent Year: ${formData.currentYear || "N/A"}\nTarget Exam: ${formData.targetExam || "N/A"}\nNotes: ${formData.notes || "None"}`
+      `Hello CareerMitra & Score 99 Team! I am interested in the Foundation Coaching Program.\n\nName: ${formData.fullName || "Candidate"}\nPhone: ${formData.mobile || "N/A"}\nEmail: ${formData.email || "N/A"}\nQualification: ${formData.qualification || "N/A"}\nCollege Name: ${formData.collegeName || "N/A"}\nCurrent Year: ${formData.currentYear || "N/A"}\nTarget Exam: ${formData.targetExam || "N/A"}\nNotes: ${formData.notes || "None"}`
     );
     window.open(`https://wa.me/917794045533?text=${text}`, "_blank");
   };
@@ -77,6 +136,9 @@ export default function EnrollmentForm() {
             <div><strong>Name:</strong> {formData.fullName}</div>
             <div><strong>Phone:</strong> {formData.mobile}</div>
             <div><strong>Qualification:</strong> {formData.qualification || "N/A"}</div>
+            {formData.collegeName && (
+              <div><strong>College Name:</strong> {formData.collegeName}</div>
+            )}
             <div><strong>Current Year:</strong> {formData.currentYear || "N/A"}</div>
             <div><strong>Target Exam:</strong> {formData.targetExam || "General Foundation"}</div>
           </div>
@@ -171,6 +233,41 @@ export default function EnrollmentForm() {
                   onChange={(e) => setFormData({ ...formData, qualification: e.target.value })}
                   className="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
                 />
+              </div>
+
+              {/* College Name Dropdown */}
+              <div className="sm:col-span-2">
+                <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 flex items-center justify-between">
+                  <span className="flex items-center gap-1.5">
+                    <Building2 className="w-3.5 h-3.5 text-orange-500" /> College / University Name
+                  </span>
+                  <span className="text-[11px] text-slate-400 font-normal">Select from list or type custom</span>
+                </label>
+                <select
+                  value={isCustomCollege ? "Other College (Enter Manually)" : formData.collegeName}
+                  onChange={handleCollegeChange}
+                  className="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all cursor-pointer"
+                >
+                  <option value="">-- Select Your College / University --</option>
+                  {COLLEGE_OPTIONS.map((col, idx) => (
+                    <option key={idx} value={col}>
+                      {col}
+                    </option>
+                  ))}
+                </select>
+
+                {/* If "Other" chosen, show manual input field */}
+                {isCustomCollege && (
+                  <div className="mt-2.5">
+                    <input
+                      type="text"
+                      placeholder="Please enter your full College / Institute name..."
+                      value={customCollegeText}
+                      onChange={handleCustomCollegeInput}
+                      className="w-full px-4 py-2.5 rounded-xl bg-orange-50/40 border border-orange-200 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
+                    />
+                  </div>
+                )}
               </div>
 
               {/* Current Year of Study */}
