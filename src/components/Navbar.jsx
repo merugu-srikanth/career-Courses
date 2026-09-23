@@ -40,9 +40,8 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-xs" : "bg-white border-b border-slate-100"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-xs" : "bg-white border-b border-slate-100"
+          }`}
       >
         {/* Top accent line */}
         <div className="h-0.5 w-full bg-gradient-to-r from-orange-400 via-amber-500 to-emerald-500" />
@@ -70,11 +69,10 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.path}
-                    className={`group relative flex items-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${
-                      active
-                        ? "text-orange-600"
-                        : "text-slate-700 hover:text-orange-600"
-                    }`}
+                    className={`group relative flex items-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-semibold transition-colors duration-200 ${active
+                      ? "text-orange-600"
+                      : "text-slate-700 hover:text-orange-600"
+                      }`}
                   >
                     <span>{link.name}</span>
                     {link.badge && !active && (
@@ -85,9 +83,8 @@ export default function Navbar() {
 
                     {/* Animated underline starting from center moving left and right */}
                     <span
-                      className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full transition-all duration-300 ease-out ${
-                        active ? "w-full" : "w-0 group-hover:w-full"
-                      }`}
+                      className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full transition-all duration-300 ease-out ${active ? "w-full" : "w-0 group-hover:w-full"
+                        }`}
                     />
                   </Link>
                 );
@@ -218,9 +215,8 @@ export default function Navbar() {
                       key={link.name}
                       href={link.path}
                       onClick={() => setDrawerOpen(false)}
-                      className={`flex items-center justify-between p-3 rounded-xl text-sm font-semibold transition-all ${
-                        active ? "bg-orange-50 text-orange-600 font-bold" : "text-slate-700 hover:bg-slate-50"
-                      }`}
+                      className={`flex items-center justify-between p-3 rounded-xl text-sm font-semibold transition-all ${active ? "bg-orange-50 text-orange-600 font-bold" : "text-slate-700 hover:bg-slate-50"
+                        }`}
                     >
                       <span>{link.name}</span>
                       {link.badge && (

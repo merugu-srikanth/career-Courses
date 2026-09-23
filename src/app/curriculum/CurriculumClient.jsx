@@ -10,7 +10,7 @@ export default function CurriculumClient() {
     <div className="min-h-screen bg-white pt-24 sm:pt-28">
 
       {/* Header */}
-      <div className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
+      {/* <div className="bg-slate-900 text-white py-12 md:py-16 border-b border-slate-800">
         <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0 text-center">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-400/30 mb-4">
             <Sparkles className="w-3.5 h-3.5" /> Structured Syllabus & Coverage
@@ -22,7 +22,7 @@ export default function CurriculumClient() {
             Gain complete clarity on the 6 Core Skill Areas and see how thoroughly each individual subject maps into the question patterns of top central, state, and corporate recruitment exams.
           </p>
         </div>
-      </div>
+      </div> */}
 
       <CoreSkillsGrid />
       <ExamSkillCoverageTable />
