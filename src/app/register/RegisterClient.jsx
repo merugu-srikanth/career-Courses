@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 import image from '@/assets/IMAGESPAM.png';
 
 import { generateWebPageSchema } from '@/utils/schemaHelpers';
+import { Sparkles, QrCode } from "lucide-react";
 
 
 export default function Register() {
@@ -288,7 +289,9 @@ export default function Register() {
                 />
               </div>
               <div className="min-w-0">
-                <p className="text-xl font-bold text-gray-800 mb-0.5">📱 Scan to Register</p>
+                <p className="text-xl font-bold text-gray-800 mb-0.5 flex items-center gap-1.5">
+                  <QrCode className="w-5 h-5 text-orange-500" /> Scan to Register
+                </p>
               
 
                 <p className="text- text-gray-400 leading-snug mb-1">Open your phone camera, scan this QR code and fill your registration instantly — no typing needed!
@@ -653,7 +656,7 @@ export default function Register() {
 
           <div className="relative bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 flex flex-col items-center text-center animate-[fadeInUp_0.3s_ease]">
             <div className="w-20 h-20 rounded-full bg-orange-100 flex items-center justify-center mb-5 shadow-inner">
-              <span className="text-4xl">🎉</span>
+              <Sparkles className="w-10 h-10 text-orange-600" />
             </div>
 
             <h2 className="text-2xl font-bold text-gray-800 mb-3">

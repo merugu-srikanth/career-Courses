@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2, Sparkles, Monitor, BookOpen, Clock, ShieldCheck, ArrowRight, Layers, Calculator, Brain, Globe, Laptop, MessageSquare } from "lucide-react";
+import { CheckCircle2, Sparkles, Monitor, BookOpen, Clock, ShieldCheck, ArrowRight, Layers, Calculator, Brain, Globe, Laptop, MessageSquare, Star } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function PricingPlans() {
@@ -140,8 +140,9 @@ export default function PricingPlans() {
               {/* Left Side: Program Overview & Inclusions */}
               <div className="lg:col-span-7 space-y-6">
                 <div className="flex flex-wrap items-center gap-2.5">
-                  <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-extrabold uppercase tracking-wider">
-                    ⭐ All-Inclusive Foundation Package
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-extrabold uppercase tracking-wider">
+                    <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+                    <span>All-Inclusive Foundation Package</span>
                   </span>
                   <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
                     Flexible Online & Offline Batches

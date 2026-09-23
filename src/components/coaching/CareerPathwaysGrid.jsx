@@ -14,6 +14,11 @@ import {
   Sparkles,
   Layers,
   Award,
+  Flame,
+  TrendingUp,
+  Briefcase,
+  Compass,
+  Star,
 } from "lucide-react";
 
 import GovtImg from "@/assets/domains/govt_illustration.png";
@@ -28,8 +33,10 @@ export default function CareerPathwaysGrid() {
     {
       id: "govt-jobs",
       domainNum: "DOMAIN #1",
-      tag: "🔥 Most Popular",
-      tagStyle: "bg-amber-50 text-amber-800 border-amber-200/80",
+      tagText: "Most Popular",
+      tagIcon: Flame,
+      tagIconColor: "text-amber-600",
+      tagStyle: "bg-amber-50 text-amber-900 border-amber-200/80",
       icon: Landmark,
       iconColor: "text-emerald-600",
       title: "Government Jobs",
@@ -55,8 +62,10 @@ export default function CareerPathwaysGrid() {
     {
       id: "psu-sector",
       domainNum: "DOMAIN #2",
-      tag: "📊 High Demand",
-      tagStyle: "bg-blue-50 text-blue-800 border-blue-200/80",
+      tagText: "High Demand",
+      tagIcon: TrendingUp,
+      tagIconColor: "text-blue-600",
+      tagStyle: "bg-blue-50 text-blue-900 border-blue-200/80",
       icon: Factory,
       iconColor: "text-blue-600",
       title: "Public Sector (PSUs)",
@@ -82,8 +91,10 @@ export default function CareerPathwaysGrid() {
     {
       id: "corporate-sector",
       domainNum: "DOMAIN #3",
-      tag: "💼 Growing Opportunities",
-      tagStyle: "bg-purple-50 text-purple-800 border-purple-200/80",
+      tagText: "Growing Opportunities",
+      tagIcon: Briefcase,
+      tagIconColor: "text-purple-600",
+      tagStyle: "bg-purple-50 text-purple-900 border-purple-200/80",
       icon: Building2,
       iconColor: "text-purple-600",
       title: "Corporate Sector",
@@ -109,8 +120,10 @@ export default function CareerPathwaysGrid() {
     {
       id: "higher-education",
       domainNum: "DOMAIN #4",
-      tag: "🎯 Future Focused",
-      tagStyle: "bg-orange-50 text-orange-800 border-orange-200/80",
+      tagText: "Future Focused",
+      tagIcon: Compass,
+      tagIconColor: "text-orange-600",
+      tagStyle: "bg-orange-50 text-orange-900 border-orange-200/80",
       icon: GraduationCap,
       iconColor: "text-orange-600",
       title: "Higher Education Exams",
@@ -136,8 +149,10 @@ export default function CareerPathwaysGrid() {
     {
       id: "soft-skills",
       domainNum: "DOMAIN #5",
-      tag: "⭐ Career Advantage",
-      tagStyle: "bg-teal-50 text-teal-800 border-teal-200/80",
+      tagText: "Career Advantage",
+      tagIcon: Star,
+      tagIconColor: "text-teal-600 fill-teal-500",
+      tagStyle: "bg-teal-50 text-teal-900 border-teal-200/80",
       icon: Target,
       iconColor: "text-teal-600",
       title: "Professional & Soft Skills",
@@ -168,7 +183,8 @@ export default function CareerPathwaysGrid() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-extrabold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
-            ✨ 1 Single Foundation Course • Covers All 5 Career Domains
+            <Sparkles className="w-3.5 h-3.5 text-orange-500 shrink-0" />
+            1 Single Foundation Course • Covers All 5 Career Domains
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight mb-4">
             This Single Foundation Program Covers All{" "}
@@ -185,6 +201,7 @@ export default function CareerPathwaysGrid() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {allPathways.map((pathway) => {
             const Icon = pathway.icon;
+            const TagIcon = pathway.tagIcon;
             return (
               <div
                 key={pathway.id}
@@ -201,7 +218,8 @@ export default function CareerPathwaysGrid() {
                     </div>
 
                     <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border ${pathway.tagStyle}`}>
-                      {pathway.tag}
+                      <TagIcon className={`w-3.5 h-3.5 ${pathway.tagIconColor}`} />
+                      <span>{pathway.tagText}</span>
                     </span>
                   </div>
 
@@ -239,8 +257,9 @@ export default function CareerPathwaysGrid() {
                         />
                       </div>
                       {pathway.tagline && (
-                        <span className={`text-[11px] font-extrabold tracking-tight italic mt-1 text-center ${pathway.taglineColor}`}>
-                          ✨ {pathway.tagline}
+                        <span className={`inline-flex items-center gap-1 text-[11px] font-extrabold tracking-tight italic mt-1 text-center ${pathway.taglineColor}`}>
+                          <Sparkles className="w-2.5 h-2.5 text-amber-500 shrink-0" />
+                          <span>{pathway.tagline}</span>
                         </span>
                       )}
                     </div>

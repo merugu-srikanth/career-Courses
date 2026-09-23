@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, CheckCircle, Sparkles, ArrowRight } from "lucide-react";
+import { Search, CheckCircle, Sparkles, ArrowRight, Landmark, Building2, Train, Factory, Briefcase, GraduationCap } from "lucide-react";
 import Link from "next/link";
 
 export default function ExamSkillCoverageTable() {
@@ -12,7 +12,8 @@ export default function ExamSkillCoverageTable() {
     {
       id: "govt-jobs",
       category: "govt",
-      icon: "🏛️",
+      icon: Landmark,
+      iconColor: "text-emerald-600 bg-emerald-50 border-emerald-200",
       name: "Government Jobs",
       subtext: "SSC CGL, CHSL, MTS, CPO",
       quant: 90,
@@ -26,7 +27,8 @@ export default function ExamSkillCoverageTable() {
     {
       id: "state-psc",
       category: "govt",
-      icon: "🏛️",
+      icon: Landmark,
+      iconColor: "text-emerald-600 bg-emerald-50 border-emerald-200",
       name: "State PSC Exams",
       subtext: "TGPSC, APPSC, State Recruitment",
       quant: 85,
@@ -40,7 +42,8 @@ export default function ExamSkillCoverageTable() {
     {
       id: "banking",
       category: "banking",
-      icon: "🏦",
+      icon: Building2,
+      iconColor: "text-blue-600 bg-blue-50 border-blue-200",
       name: "Banking Sector",
       subtext: "IBPS PO/Clerk, SBI PO/Clerk, RBI",
       quant: 90,
@@ -54,7 +57,8 @@ export default function ExamSkillCoverageTable() {
     {
       id: "railways",
       category: "govt",
-      icon: "🚆",
+      icon: Train,
+      iconColor: "text-orange-600 bg-orange-50 border-orange-200",
       name: "Railways (RRB)",
       subtext: "RRB NTPC, Group D, ALP & Tech",
       quant: 90,
@@ -68,7 +72,8 @@ export default function ExamSkillCoverageTable() {
     {
       id: "psu-tech",
       category: "psu",
-      icon: "🏭",
+      icon: Factory,
+      iconColor: "text-indigo-600 bg-indigo-50 border-indigo-200",
       name: "PSU & Technical Recruitment",
       subtext: "ONGC, IOCL, BHEL, NTPC, SAIL",
       quant: 90,
@@ -82,7 +87,8 @@ export default function ExamSkillCoverageTable() {
     {
       id: "corporate",
       category: "corporate",
-      icon: "💼",
+      icon: Briefcase,
+      iconColor: "text-purple-600 bg-purple-50 border-purple-200",
       name: "Corporate & Campus Placements",
       subtext: "TCS, Infosys, Wipro, Deloitte, BFSI",
       quant: 95,
@@ -96,7 +102,8 @@ export default function ExamSkillCoverageTable() {
     {
       id: "mba-cat",
       category: "mba",
-      icon: "🎓",
+      icon: GraduationCap,
+      iconColor: "text-amber-600 bg-amber-50 border-amber-200",
       name: "MBA Entrance – CAT & XAT",
       subtext: "IIMs & Premier B-Schools",
       quant: 60,
@@ -110,7 +117,8 @@ export default function ExamSkillCoverageTable() {
     {
       id: "mba-other",
       category: "mba",
-      icon: "🎓",
+      icon: GraduationCap,
+      iconColor: "text-amber-600 bg-amber-50 border-amber-200",
       name: "MBA – SNAP / NMAT / CMAT / MAT",
       subtext: "Top National Management Institutes",
       quant: 70,
@@ -214,7 +222,9 @@ export default function ExamSkillCoverageTable() {
                 <tr key={row.id} className="hover:bg-slate-50/80 transition-colors">
                   <td className="py-4 px-5">
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl">{row.icon}</span>
+                      <div className={`w-8 h-8 rounded-xl flex items-center justify-center border shrink-0 ${row.iconColor}`}>
+                        <row.icon className="w-4 h-4" />
+                      </div>
                       <div>
                         <div className="font-extrabold text-slate-900">{row.name}</div>
                         <div className="text-[11px] text-slate-500 font-medium">{row.subtext}</div>

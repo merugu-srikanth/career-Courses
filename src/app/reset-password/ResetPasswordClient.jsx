@@ -57,7 +57,7 @@ export default function ResetPassword() {
       });
 
       if (res?.success) {
-        toast.success("Password reset successfully! Please login. 🎉");
+        toast.success("Password reset successfully! Please login.");
         navigate("/login");
       } else {
         setError(res?.message || "Failed to reset password. OTP may be invalid or expired.");

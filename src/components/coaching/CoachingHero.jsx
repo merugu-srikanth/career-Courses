@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Sparkles, ArrowRight, Monitor, BookOpen, Calendar, CheckCircle2 } from "lucide-react";
+import { Sparkles, ArrowRight, Monitor, BookOpen, Calendar, CheckCircle2, UserCheck } from "lucide-react";
 import LogoImg from "@/assets/NewLogo.png";
 import CoursesHeroImg from "@/assets/courses1.png";
 
@@ -163,15 +163,21 @@ export default function CoachingHero() {
 
                 <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-xs font-semibold text-slate-600 pt-0.5">
                   <span className="inline-flex items-center gap-1.5 text-emerald-700">
-                    <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-[10px] font-black">✓</span>
+                    <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                      <CheckCircle2 className="w-3.5 h-3.5" />
+                    </span>
                     100% Free
                   </span>
                   <span className="inline-flex items-center gap-1.5 text-orange-700">
-                    <span className="w-4 h-4 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center text-[10px] font-black">👤</span>
+                    <span className="w-5 h-5 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center">
+                      <UserCheck className="w-3.5 h-3.5" />
+                    </span>
                     Expert Guidance
                   </span>
                   <span className="inline-flex items-center gap-1.5 text-blue-700">
-                    <span className="w-4 h-4 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] font-black">📅</span>
+                    <span className="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+                      <Calendar className="w-3.5 h-3.5" />
+                    </span>
                     Flexible Time
                   </span>
                 </div>

@@ -108,8 +108,9 @@ export default function Navbar() {
 
               {token ? (
                 <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-slate-700">
-                    👤 {user?.name || "Student"}
+                  <span className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                    <User className="w-3.5 h-3.5 text-slate-500" />
+                    <span>{user?.name || "Student"}</span>
                   </span>
                   <button
                     onClick={() => logout()}
