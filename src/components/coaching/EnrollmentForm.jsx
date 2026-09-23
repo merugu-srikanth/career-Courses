@@ -57,7 +57,7 @@ export default function EnrollmentForm() {
     const text = encodeURIComponent(
       `Hello CareerMitra & Score 99 Team! I am interested in the Foundation Coaching Program.\n\nName: ${formData.fullName || "Candidate"}\nPhone: ${formData.mobile || "N/A"}\nEmail: ${formData.email || "N/A"}\nQualification: ${formData.qualification || "N/A"}\nCurrent Year: ${formData.currentYear || "N/A"}\nSubjects: ${formData.subjects || "N/A"}\nTarget Exam: ${formData.targetExam || "N/A"}\nNotes: ${formData.notes || "None"}`
     );
-    window.open(`https://wa.me/919999999999?text=${text}`, "_blank");
+    window.open(`https://wa.me/917794045533?text=${text}`, "_blank");
   };
 
   return (

@@ -89,12 +89,12 @@ export default function PricingClient() {
                 Request Callback
               </Link>
               <a
-                href="https://wa.me/919999999999?text=Hi%20CareerMitra,%20I%20have%20questions%20about%20Foundation%20Coaching%20pricing"
+                href="https://wa.me/917794045533?text=Hi%20CareerMitra,%20I%20have%20questions%20about%20Foundation%20Coaching%20pricing"
                 target="_blank"
                 rel="noreferrer"
                 className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-1.5 shadow-xs"
               >
-                <FaWhatsapp className="w-4 h-4" /> WhatsApp
+                <FaWhatsapp className="w-4 h-4" /> WhatsApp (+91 77940 45533)
               </a>
             </div>
           </div>

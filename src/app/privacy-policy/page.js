@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
               4. Contact Our Privacy Officer
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              If you have any questions regarding your inquiry data or wish to update your registered contact details, please write to our academic helpdesk at <strong className="text-slate-900">support@careermitra.in</strong>.
+              If you have any questions regarding your inquiry data or wish to update your registered contact details, please write to our academic helpdesk at <a href="mailto:info@careermitra.in" className="text-orange-600 font-bold hover:underline">info@careermitra.in</a> or call / WhatsApp us at <a href="https://wa.me/917794045533" target="_blank" rel="noreferrer" className="text-emerald-600 font-bold hover:underline">+91 77940 45533</a>.
             </p>
           </section>
         </div>

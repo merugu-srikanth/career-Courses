@@ -227,12 +227,12 @@ export default function PricingPlans() {
                   </Link>
 
                   <a
-                    href="https://wa.me/919999999999?text=Hello%20CareerMitra%20Team!%20I%20want%20to%20enroll%20in%20the%20Foundation%20Coaching%20Course."
+                    href="https://wa.me/917794045533?text=Hello%20CareerMitra%20Team!%20I%20want%20to%20enroll%20in%20the%20Foundation%20Coaching%20Course."
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full py-3 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all"
+                    className="w-full py-3 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all shadow-sm"
                   >
-                    <FaWhatsapp className="w-4 h-4" /> Chat on WhatsApp with Counselor
+                    <FaWhatsapp className="w-4 h-4" /> Chat on WhatsApp (+91 77940 45533)
                   </a>
 
                   <div className="flex items-center justify-center gap-4 text-[11px] text-slate-400 pt-1">

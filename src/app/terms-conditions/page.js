@@ -62,7 +62,7 @@ export default function TermsConditionsPage() {
               4. Support & Academic Inquiries
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              For any schedule changes, technical assistance, or admission queries, reach out to our team at <strong className="text-slate-900">support@careermitra.in</strong> or through our official WhatsApp admissions line.
+              For any schedule changes, technical assistance, or admission queries, reach out to our team at <a href="mailto:info@careermitra.in" className="text-orange-600 font-bold hover:underline">info@careermitra.in</a> or through our official WhatsApp admissions line at <a href="https://wa.me/917794045533" target="_blank" rel="noreferrer" className="text-emerald-600 font-bold hover:underline">+91 77940 45533</a>.
             </p>
           </section>
         </div>

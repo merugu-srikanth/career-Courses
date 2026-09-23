@@ -97,13 +97,13 @@ export default function Navbar() {
             {/* Right Actions */}
             <div className="hidden sm:flex items-center gap-3">
               <a
-                href="https://wa.me/919999999999?text=Hi%20CareerMitra%20Team!%20I%20have%20inquiry%20regarding%20Foundation%20Coaching%20Course."
+                href="https://wa.me/917794045533?text=Hi%20CareerMitra%20Team!%20I%20have%20an%20inquiry%20regarding%20the%20Foundation%20Coaching%20Course."
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-emerald-500/30 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 text-xs font-bold transition-all"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-emerald-500/30 bg-emerald-50 text-emerald-700 hover:bg-emerald-100 text-xs font-bold transition-all shadow-2xs"
               >
                 <FaWhatsapp className="w-4 h-4 text-emerald-600" />
-                <span>WhatsApp</span>
+                <span>+91 77940 45533</span>
               </a>
 
               {token ? (
@@ -235,12 +235,19 @@ export default function Navbar() {
 
             <div className="pt-6 border-t border-slate-100 space-y-3">
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/917794045533?text=Hi%20CareerMitra%20Team!%20I%20have%20an%20inquiry%20regarding%20the%20Foundation%20Coaching%20Course."
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl bg-emerald-600 text-white font-bold text-xs"
+                className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl bg-emerald-600 text-white font-bold text-xs shadow-sm"
               >
-                <FaWhatsapp className="w-4 h-4" /> WhatsApp Counselor
+                <FaWhatsapp className="w-4 h-4" /> +91 77940 45533 (WhatsApp)
+              </a>
+
+              <a
+                href="mailto:info@careermitra.in"
+                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-colors"
+              >
+                <FaEnvelope className="w-3.5 h-3.5 text-orange-500" /> info@careermitra.in
               </a>
 
               {token ? (

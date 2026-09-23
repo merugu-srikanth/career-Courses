@@ -2,6 +2,7 @@
 
 import EnrollmentForm from "@/components/coaching/EnrollmentForm";
 import { Sparkles, Award, CheckCircle } from "lucide-react";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 export default function EnrollClient() {
   return (
@@ -64,11 +65,36 @@ export default function EnrollClient() {
               <div className="text-xl font-black mb-2">
                 Limited Seats Per Batch
               </div>
-              <p className="text-xs text-emerald-100 leading-relaxed mb-4">
+              <p className="text-xs text-emerald-100 leading-relaxed">
                 We maintain small batch sizes for both online and offline sessions to ensure direct faculty-student interaction.
               </p>
-              <div className="p-3 rounded-xl bg-white/10 text-xs font-bold border border-white/20 text-center">
-                🔥 Early Bird Batches Filling Fast
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm space-y-3">
+              <div className="text-xs font-black uppercase tracking-wider text-orange-600">
+                Direct Admissions Helpdesk
+              </div>
+              <p className="text-xs text-slate-500">
+                Prefer talking directly to a counselor before filling out the form?
+              </p>
+              <div className="space-y-2 pt-1">
+                <a
+                  href="https://wa.me/917794045533?text=Hi%20CareerMitra%20Team!%20I%20have%20an%20inquiry%20regarding%20the%20Foundation%20Coaching%20Course."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2.5 p-3 rounded-2xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-bold transition-all"
+                >
+                  <FaWhatsapp className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>+91 77940 45533 (WhatsApp)</span>
+                </a>
+
+                <a
+                  href="mailto:info@careermitra.in"
+                  className="flex items-center gap-2.5 p-3 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold transition-all"
+                >
+                  <FaEnvelope className="w-4 h-4 text-orange-500 shrink-0" />
+                  <span>info@careermitra.in</span>
+                </a>
               </div>
             </div>
           </div>
