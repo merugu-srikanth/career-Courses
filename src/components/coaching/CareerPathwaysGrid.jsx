@@ -40,6 +40,8 @@ export default function CareerPathwaysGrid() {
       checkIconColor: "text-emerald-600",
       subCoverage: "Comprehensive preparation",
       btnStyle: "bg-emerald-600 hover:bg-emerald-500 text-white shadow-emerald-700/20",
+      tagline: "Serve the Nation",
+      taglineColor: "text-emerald-800",
       image: GovtImg,
       items: [
         "UPSC (Civil Services CSE)",
@@ -65,6 +67,8 @@ export default function CareerPathwaysGrid() {
       checkIconColor: "text-blue-600",
       subCoverage: "Technical + Aptitude + Domain Knowledge",
       btnStyle: "bg-blue-600 hover:bg-blue-500 text-white shadow-blue-700/20",
+      tagline: "Build a Secure Career",
+      taglineColor: "text-blue-800",
       image: PsuImg,
       items: [
         "ONGC (Oil & Natural Gas Corp)",
@@ -90,6 +94,8 @@ export default function CareerPathwaysGrid() {
       checkIconColor: "text-purple-600",
       subCoverage: "Aptitude + Technical + Soft Skills",
       btnStyle: "bg-purple-600 hover:bg-purple-500 text-white shadow-purple-700/20",
+      tagline: "Get Industry Ready",
+      taglineColor: "text-purple-800",
       image: CorporateImg,
       items: [
         "Campus Placement Drives",
@@ -115,6 +121,8 @@ export default function CareerPathwaysGrid() {
       checkIconColor: "text-orange-600",
       subCoverage: "Quant + Reasoning + Verbal + Domain",
       btnStyle: "bg-orange-600 hover:bg-orange-500 text-white shadow-orange-700/20",
+      tagline: "Higher Goals • Brighter Future",
+      taglineColor: "text-orange-800",
       image: EducationImg,
       items: [
         "CAT (IIMs & Top Business Schools)",
@@ -140,6 +148,8 @@ export default function CareerPathwaysGrid() {
       checkIconColor: "text-teal-600",
       subCoverage: "Practical Learning + Real-World Preparation",
       btnStyle: "bg-teal-600 hover:bg-teal-500 text-white shadow-teal-700/20",
+      tagline: "Skills for a Brighter Tomorrow",
+      taglineColor: "text-teal-800",
       image: SoftskillsImg,
       items: [
         "Job Interview Mastery & Mock Interviews",
@@ -217,16 +227,22 @@ export default function CareerPathwaysGrid() {
                       </ul>
                     </div>
 
-                    <div className="sm:col-span-5 flex items-center justify-center py-2 sm:py-0">
-                      <div className="relative w-full max-w-[150px] sm:max-w-[170px] aspect-square flex items-center justify-center">
+                    <div className="sm:col-span-5 flex flex-col items-center justify-center py-2 sm:py-0">
+                      <div className="relative w-full max-w-[150px] sm:max-w-[175px] aspect-square flex items-center justify-center">
                         <Image
                           src={pathway.image}
                           alt={pathway.title}
                           fill
-                          className="object-contain drop-shadow-sm transition-transform duration-300 group-hover:scale-105"
-                          sizes="(max-width: 768px) 150px, 170px"
+                          className="object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105"
+                          sizes="(max-width: 768px) 150px, 175px"
+                          priority
                         />
                       </div>
+                      {pathway.tagline && (
+                        <span className={`text-[11px] font-extrabold tracking-tight italic mt-1 text-center ${pathway.taglineColor}`}>
+                          ✨ {pathway.tagline}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -309,13 +325,14 @@ export default function CareerPathwaysGrid() {
                 </div>
 
                 <div className="sm:col-span-5 flex items-center justify-center py-2 sm:py-0">
-                  <div className="relative w-full max-w-[150px] sm:max-w-[170px] aspect-square flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 p-2 shadow-inner group-hover:scale-105 transition-transform duration-300">
+                  <div className="relative w-full max-w-[150px] sm:max-w-[175px] aspect-square flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 p-2 shadow-inner group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src={CoursesHeroImg}
                       alt="One Unified Foundation"
                       fill
                       className="object-contain drop-shadow-md"
-                      sizes="(max-width: 768px) 150px, 170px"
+                      sizes="(max-width: 768px) 150px, 175px"
+                      priority
                     />
                   </div>
                 </div>
