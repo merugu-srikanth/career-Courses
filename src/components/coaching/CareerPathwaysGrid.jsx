@@ -246,7 +246,7 @@ export default function CareerPathwaysGrid() {
                       </ul>
                     </div>
 
-                    <div className="sm:col-span-5 flex flex-col items-center justify-center py-2 sm:py-0">
+                    <div className="hidden sm:flex sm:col-span-5 flex-col items-center justify-center py-2 sm:py-0">
                       <div className="relative w-full max-w-[150px] sm:max-w-[175px] aspect-square flex items-center justify-center">
                         <Image
                           src={pathway.image}
@@ -344,7 +344,7 @@ export default function CareerPathwaysGrid() {
                   </ul>
                 </div>
 
-                <div className="sm:col-span-5 flex items-center justify-center py-2 sm:py-0">
+                <div className="hidden sm:flex sm:col-span-5 items-center justify-center py-2 sm:py-0">
                   <div className="relative w-full max-w-[150px] sm:max-w-[175px] aspect-square flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 p-2 shadow-inner group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src={CoursesHeroImg}
