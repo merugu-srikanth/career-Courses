@@ -112,8 +112,8 @@ export default function CareerPathwaysGrid() {
       items: [
         "Campus Placement Drives",
         "Off-Campus Aptitude Tests",
-        "TCS NQT, Infosys, Wipro, Cognizant",
-        "Deloitte, PwC, Accenture Assessments",
+        // "TCS NQT, Infosys, Wipro, Cognizant",
+        // "Deloitte, PwC, Accenture Assessments",
         "Banking & Financial Services (BFSI)",
         "Core Analytical Problem Solving",
       ],
@@ -159,12 +159,12 @@ export default function CareerPathwaysGrid() {
       title: "And Many More...",
       subtitle: "Endless Career Opportunities",
       description:
-        "Build an unshakeable foundation in quantitative aptitude, logical reasoning, and verbal ability — empowering you to qualify for 50+ central, state, banking, and recruitment exams.",
+        "",
       cardBorder: "border-teal-200/90 hover:border-teal-400 bg-white",
       cardBgGlow: "from-teal-500/5 via-transparent to-transparent",
       badgePillBg: "bg-teal-50/80 text-teal-800 border-teal-200/60",
       checkIconColor: "text-teal-600",
-      subCoverage: "Aptitude + Logic + English + General Awareness",
+      subCoverage: "",
       btnStyle: "bg-teal-600 hover:bg-teal-500 text-white shadow-teal-700/20",
       btnText: "Enquiry",
       btnLink: "/enroll",
@@ -234,14 +234,14 @@ export default function CareerPathwaysGrid() {
                           <p className="text-xs sm:text-[12.5px] text-slate-600 leading-relaxed font-normal mb-3.5">
                             {pathway.description}
                           </p>
-                          <div className="flex flex-wrap items-center gap-1.5">
+                          {/* <div className="flex flex-wrap items-center gap-1.5">
                             <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-teal-50 text-teal-800 text-[11px] font-bold border border-teal-200/80 shadow-2xs">
                               <Sparkles className="w-3 h-3 text-teal-600" /> 50+ Exams Covered
                             </span>
                             <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200/80 shadow-2xs">
                               <CheckCircle2 className="w-3 h-3 text-emerald-600" /> 100% Unified
                             </span>
-                          </div>
+                          </div> */}
                         </div>
                       ) : (
                         <div>

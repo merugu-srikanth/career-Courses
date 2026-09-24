@@ -8,12 +8,17 @@ import CoursesHeroImg from "@/assets/courses1.png";
 
 export default function CoachingHero() {
   const targetExams = [
-    "SSC (CGL, CHSL, MTS)",
-    "Railways (RRB)",
-    "Banking (IBPS, SBI)",
+    // "SSC (CGL, CHSL, MTS)",
+    // "Railways (RRB)",
+    // "Banking (IBPS, SBI)",
     // "UPSC & State PSC CSAT",
     // "PSUs & Placements",
-    "And many more.."
+    // "And many more.."
+    "Government Jobs",
+    "PSUs",
+    "Corporate Sector",
+    "Higher Education Exams",
+    "More..."
   ];
 
   const highlights = [
@@ -50,7 +55,7 @@ export default function CoachingHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-4 sm:mb-8 md:mb-14">
           {/* Left Content */}
           <div className="lg:col-span-7 text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-100/70 text-emerald-800 border border-emerald-300/60 mb-5">
+            <div className="inline-flex items-center gap-2 px-2 md:px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-100/70 text-emerald-800 border border-emerald-300/60 mb-5">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
               GOVERNMENT JOB FOUNDATION PROGRAMME
             </div>
@@ -63,8 +68,9 @@ export default function CoachingHero() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6 font-normal">
-              One unified foundation to put dozens of prestigious central & state recruitment exams within your reach. Build unshakable aptitude, English, logic, and awareness before the official countdown begins.
-            </p>
+One Foundation. Multiple Career Pathways.
+Build core skills that open doors to Government Jobs, Banking & PSUs, Corporate Placements and Higher Education Entrance Exams - all through one comprehensive foundation programme.
+Learn Once. Prepare for Many.            </p>
 
             {/* Target Exam Chips */}
             <div className="mb-8">

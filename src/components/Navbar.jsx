@@ -193,9 +193,16 @@ export default function Navbar() {
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="flex items-center gap-3 sm:gap-5 shrink-0 pr-6 sm:pr-8 text-xs">
                 {/* Career Mitra Programme Partner Pill */}
-                <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-900 text-white text-[11px] font-semibold shrink-0 shadow-2xs">
-                  <span className="text-orange-400 font-bold">CAREER MITRA</span>
-                  <span className="text-slate-400 text-[9px] uppercase">• Programme Partner</span>
+                <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-slate-200/90 text-slate-800 shadow-2xs shrink-0">
+                  <div className="relative w-20 h-4">
+                    <Image
+                      src={LogoImg}
+                      alt="Career Mitra"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <span className="text-[9px] font-bold text-orange-600 uppercase">Programme Partner</span>
                 </div>
 
                 {/* Score 99 Academic Partner Pill */}
@@ -218,7 +225,7 @@ export default function Navbar() {
 
                 {/* Govt Job Foundation */}
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-amber-50/70 text-amber-700 border border-amber-100 whitespace-nowrap shrink-0">
-                  ⭐ Govt Job Foundation 2026-27
+                  ⭐ Career Foundation Programme 26-27
                 </span>
 
                 {/* Admissions Open */}
@@ -300,17 +307,17 @@ export default function Navbar() {
             </div>
 
             {/* Career Mitra Programme Partner Card */}
-            <div className="mt-4 p-3 rounded-xl bg-slate-900 text-white border border-slate-800 shadow-xs">
-              <div className="flex items-center justify-between mb-1">
-                <span className="text-[10px] font-bold tracking-wider uppercase text-orange-400">CAREER MITRA</span>
-                <span className="text-[9px] font-bold text-emerald-400 bg-emerald-500/20 px-1.5 py-0.5 rounded border border-emerald-400/30">Official</span>
+            <div className="mt-4 p-3 rounded-xl bg-slate-50 border border-slate-200/80 shadow-2xs">
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="text-[10px] font-bold uppercase text-orange-600">Programme Partner</span>
+                <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">Official</span>
               </div>
-              <div className="text-xs font-bold text-white leading-tight">
-                Programme Partner
+              <div className="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+                <div className="relative w-28 h-6">
+                  <Image src={LogoImg} alt="Career Mitra" fill className="object-contain object-left" />
+                </div>
+                <span className="text-[10px] font-medium text-slate-500">Career Guidance</span>
               </div>
-              <p className="text-[11px] text-slate-300 mt-0.5 leading-snug font-normal">
-                Career Guidance &amp; Student Support
-              </p>
             </div>
 
             {/* Score 99 Academic Partner Card */}
