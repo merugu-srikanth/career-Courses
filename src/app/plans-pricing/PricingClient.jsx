@@ -10,7 +10,7 @@ export default function PricingClient() {
   const faqs = [
     {
       q: "What is included in the 6 Months LMS Access?",
-      a: "The LMS includes full chapter-wise recorded lectures, topic-wise practice quiz sets, downloadable PDFs, class notes, and mock tests with All-India percentile scoring.",
+      a: "The LMS includes full chapter-wise recorded lectures, topic-wise practice quiz sets, downloadable PDFs, class notes, Online Practice Exercises, and Mock Tests with detailed performance analytics.",
     },
     {
       q: "What makes Foundation Plus Offline special?",

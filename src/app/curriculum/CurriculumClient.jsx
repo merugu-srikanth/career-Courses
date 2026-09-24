@@ -46,7 +46,7 @@ export default function CurriculumClient() {
               href="/enroll"
               className="px-6 py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-md transition-all"
             >
-              Enroll Now
+              Enquiry
             </Link>
           </div>
         </div>

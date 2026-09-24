@@ -11,9 +11,9 @@ export default function CoachingHero() {
     "SSC (CGL, CHSL, MTS)",
     "Railways (RRB)",
     "Banking (IBPS, SBI)",
-    "TGPSC",
-    "APPSC",
+    // "UPSC & State PSC CSAT",
     // "PSUs & Placements",
+    "And many more.."
   ];
 
   const highlights = [
@@ -41,7 +41,7 @@ export default function CoachingHero() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/60 pt-6 pb-14 md:pt-10 md:pb-18 border-b border-slate-200/60">
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/60 pt-6 pb-14 md:pt-10 md:pb-8 border-b border-slate-200/60">
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl pointer-events-none -z-10" />
 
@@ -89,7 +89,7 @@ export default function CoachingHero() {
                 href="/plans-pricing"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
               >
-                Choose Your Plan & Enroll <ArrowRight className="w-4 h-4" />
+                View Plans &amp; Enquiry <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/curriculum"
@@ -157,7 +157,7 @@ export default function CoachingHero() {
                   href="/enroll"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-orange-600 via-orange-500 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white font-bold text-sm sm:text-base shadow-md shadow-orange-600/25 hover:shadow-lg transition-all"
                 >
-                  <span>Book Free Consultation</span>
+                  <span>Enquire Now / Free Guidance</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 

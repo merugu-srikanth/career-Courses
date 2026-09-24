@@ -32,7 +32,7 @@ export default function Navbar() {
     { name: "Program Overview", path: "/", icon: Sparkles },
     { name: "Curriculum & Matrix", path: "/curriculum", icon: Layers },
     { name: "Plans & Pricing", path: "/plans-pricing", icon: BookOpen },
-    { name: "Enroll / Inquire", path: "/enroll", },
+    { name: "Enquiry", path: "/enroll", icon: UserCheck },
   ];
 
   const isActive = (path) => (path === "/" ? pathname === "/" : pathname.startsWith(path));
@@ -134,7 +134,7 @@ export default function Navbar() {
                 href="/enroll"
                 className="px-3 py-1.5 rounded-xl bg-orange-500 text-white text-xs font-bold sm:hidden"
               >
-                Enroll
+                Enquiry
               </Link>
               <button
                 onClick={() => setDrawerOpen(!drawerOpen)}

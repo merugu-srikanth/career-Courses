@@ -48,12 +48,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/plans-pricing" className="hover:text-white transition-colors duration-150">
-                  Plans & Pricing (₹9,999)
+                  Plans & Pricing
                 </Link>
               </li>
               <li>
                 <Link href="/enroll" className="hover:text-white transition-colors duration-150">
-                  Enroll & Counseling Form
+                  Enquiry
                 </Link>
               </li>
             </ul>
@@ -108,8 +108,8 @@ export default function Footer() {
                   href="/enroll"
                   className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-xs transition-all shadow-md shadow-orange-950/40 hover:shadow-orange-900/50 hover:-translate-y-0.5"
                 >
-                  <PhoneCall className="w-3.5 h-3.5" />
-                  <span>Book Free Counselor Call</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Enquiry</span>
                 </Link>
               </div>
             </div>

@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import EnrollClient from "./EnrollClient";
 
 export const metadata = {
-  title: "Enroll in Foundation Coaching Program - Career Mitra × Score 99",
-  description: "Reserve your seat for Foundation Online, Offline, or Plus Offline batches. Instant admission inquiry and academic counseling.",
+  title: "Course Enquiry - Career Mitra × Score 99",
+  description: "Submit an inquiry for Foundation Online, Offline, or Plus Offline batches. Instant academic counseling.",
 };
 
 export default function EnrollPage() {

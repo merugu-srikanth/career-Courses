@@ -311,7 +311,7 @@ export default function ExamSkillCoverageTable() {
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-white/10 text-xs text-slate-400">
-            <span>* Percentages indicate skill coverage extent through our foundation program.</span>
+            <span>* Indicative List. Percentages indicate representative skill coverage — and many more topics as per syllabus.</span>
             <Link
               href="/plans-pricing"
               className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-400 hover:text-orange-300"

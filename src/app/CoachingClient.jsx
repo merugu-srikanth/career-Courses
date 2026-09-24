@@ -24,16 +24,16 @@ export default function CoachingClient() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
             Ready to Build Your Unstoppable Foundation?
           </h2>
-          {/* <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8">
-            Choose from Live Online (75h - ₹9,999), Offline Classroom (75h - ₹8,999), or Plus Offline (90h - ₹9,999).
-          </p> */}
+          <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+            Choose from Foundation Online (75h - ₹7,999), Foundation Offline (75h - ₹8,999), or Foundation Plus Offline (90h - ₹9,999).
+          </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href="/plans-pricing"
               className="px-8 py-3.5 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-sm shadow-lg transition-all flex items-center gap-2"
             >
-              View Plans & Enroll <ArrowRight className="w-4 h-4" />
+              View Plans &amp; Enquiry <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               href="/curriculum"

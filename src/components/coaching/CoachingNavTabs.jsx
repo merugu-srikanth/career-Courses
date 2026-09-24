@@ -27,7 +27,7 @@ export default function CoachingNavTabs() {
       active: pathname === "/plans-pricing",
     },
     {
-      label: "Enroll / Inquire Now",
+      label: "Enquiry",
       href: "/enroll",
       icon: UserCheck,
       active: pathname === "/enroll",

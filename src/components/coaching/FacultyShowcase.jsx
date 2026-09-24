@@ -1,6 +1,8 @@
 "use client";
 
-import { CheckCircle2, GraduationCap, Quote } from "lucide-react";
+import Image from "next/image";
+import Score99Logo from "@/assets/score99logo.png";
+import { CheckCircle2, GraduationCap, ExternalLink, Sparkles, Award } from "lucide-react";
 import Link from "next/link";
 
 export default function FacultyShowcase() {
@@ -48,11 +50,11 @@ export default function FacultyShowcase() {
             Experience Behind <span className="text-orange-600">Your Preparation</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Learn directly from national academic leaders who have guided thousands of successful selections across UPSC, SSC, Banking, Railways, and CAT.
+            Learn directly from national academic leaders who have guided thousands of successful selections across UPSC CSAT, SSC, Banking, Railways, and CAT.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           {faculties.map((fac, idx) => (
             <div
               key={idx}
@@ -98,28 +100,52 @@ export default function FacultyShowcase() {
           ))}
         </div>
 
-        {/* <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center shrink-0">
-              <Quote className="w-6 h-6 text-white" />
-            </div>
+        {/* Score99Percentile Association Banner */}
+        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
+            {/* Official Score99Percentile Logo Image */}
+            <a
+              href="https://score99percentile.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 px-4 py-2.5 rounded-2xl bg-white shadow-md border border-slate-100 flex items-center justify-center hover:scale-105 transition-transform"
+              title="Visit Score99Percentile Website"
+            >
+              <div className="relative w-44 sm:w-52 h-12 sm:h-14">
+                <Image
+                  src={Score99Logo}
+                  alt="Score 99 Percentile"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 176px, 208px"
+                  priority
+                />
+              </div>
+            </a>
+
             <div>
-              <div className="text-lg sm:text-xl font-black leading-snug">
-                &ldquo;Prepare with purpose. Approach opportunity with confidence.&rdquo;
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30 mb-1">
+                <Sparkles className="w-3 h-3 text-amber-400" /> Academic Partnership
               </div>
-              <div className="text-xs sm:text-sm text-orange-100 font-medium">
-                Same Preparation. A Brighter Tomorrow.
-              </div>
+              <h4 className="text-base sm:text-lg font-bold text-white leading-snug">
+                Powered by Score99Percentile&apos;s National Test-Prep Excellence
+              </h4>
+              <p className="text-xs text-slate-300 max-w-xl mt-0.5 leading-relaxed">
+                Backed by 25+ years of pedagogical rigor, adaptive testing frameworks, and proven methodologies trusted by 50,000+ competitive exam aspirants.
+              </p>
             </div>
           </div>
 
-          <Link
-            href="/enroll"
-            className="px-6 py-3 rounded-2xl bg-white hover:bg-slate-100 text-slate-900 font-black text-sm whitespace-nowrap shadow-md transition-all hover:scale-105 shrink-0"
+          <a
+            href="https://score99percentile.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold text-xs shadow-lg shadow-red-950/50 transition-all hover:scale-[1.03]"
           >
-            Start Building Your Foundation →
-          </Link>
-        </div> */}
+            <span>Visit Score99Percentile</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </div>
       </div>
     </section>
   );

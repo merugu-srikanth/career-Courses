@@ -8,7 +8,7 @@ export default function CoreSkillsGrid() {
       icon: Calculator,
       number: "01",
       title: "Quantitative Ability",
-      description: "Build rapid calculation speed, shortcut techniques, and accuracy across arithmetic, algebra, geometry, and number systems.",
+      description: "Build rapid calculation speed, shortcut techniques, and accuracy across arithmetic, algebra, geometry, number systems, and many more topics as per syllabus.",
       color: "from-blue-500/10 to-indigo-500/5",
       border: "border-blue-200/80 hover:border-blue-400",
       accentBg: "bg-blue-50 text-blue-600",
@@ -18,7 +18,7 @@ export default function CoreSkillsGrid() {
       icon: MessageSquare,
       number: "02",
       title: "Verbal Ability",
-      description: "Strengthen core grammar rules, root-word vocabulary, error spotting, sentence correction, and verbal reasoning fluency.",
+      description: "Strengthen core grammar rules, root-word vocabulary, error spotting, sentence correction, verbal reasoning fluency, and many more topics as per syllabus.",
       color: "from-purple-500/10 to-pink-500/5",
       border: "border-purple-200/80 hover:border-purple-400",
       accentBg: "bg-purple-50 text-purple-600",
@@ -28,7 +28,7 @@ export default function CoreSkillsGrid() {
       icon: BookOpen,
       number: "03",
       title: "Reading Comprehension",
-      description: "Learn speed-reading methods, critical passage analysis, tone detection, and precise inference extraction under timed pressure.",
+      description: "Learn speed-reading methods, critical passage analysis, tone detection, precise inference extraction under timed pressure, and many more topics as per syllabus.",
       color: "from-emerald-500/10 to-teal-500/5",
       border: "border-emerald-200/80 hover:border-emerald-400",
       accentBg: "bg-emerald-50 text-emerald-600",
@@ -38,7 +38,7 @@ export default function CoreSkillsGrid() {
       icon: Brain,
       number: "04",
       title: "Logical Reasoning & DI",
-      description: "Think critically through puzzles, seating arrangements, syllogisms, and extract insights from tables, pie charts, and bar graphs.",
+      description: "Think critically through puzzles, seating arrangements, syllogisms, and extract insights from tables, pie charts, bar graphs, and many more topics as per syllabus.",
       color: "from-amber-500/10 to-orange-500/5",
       border: "border-amber-200/80 hover:border-amber-400",
       accentBg: "bg-amber-50 text-amber-600",
@@ -48,7 +48,7 @@ export default function CoreSkillsGrid() {
       icon: Monitor,
       number: "05",
       title: "Computer Awareness",
-      description: "Master essential computer fundamentals, hardware, operating systems, MS Office shortcuts, networking, and digital literacy.",
+      description: "Master essential computer fundamentals, hardware, operating systems, MS Office shortcuts, networking, digital literacy, and many more topics as per syllabus.",
       color: "from-cyan-500/10 to-sky-500/5",
       border: "border-cyan-200/80 hover:border-cyan-400",
       accentBg: "bg-cyan-50 text-cyan-600",
@@ -58,7 +58,7 @@ export default function CoreSkillsGrid() {
       icon: Globe,
       number: "06",
       title: "General Awareness (GK & CA)",
-      description: "Comprehensive coverage of Indian Polity, Economy, History, Geography, and daily curated national & international current affairs.",
+      description: "Comprehensive coverage of Indian Polity, Economy, History, Geography, daily curated national & international current affairs, and many more topics as per syllabus.",
       color: "from-rose-500/10 to-red-500/5",
       border: "border-rose-200/80 hover:border-rose-400",
       accentBg: "bg-rose-50 text-rose-600",
@@ -71,13 +71,13 @@ export default function CoreSkillsGrid() {
       <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="inline-block px-3 py-1 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3">
-            The Foundation: 6 Core Skill Areas
+            Indicative List • 6 Core Skill Areas
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-            Five Subjects. <span className="text-emerald-600">One Strong Foundation.</span>
+            Six Subjects. <span className="text-emerald-600">One Strong Foundation.</span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Every competitive examination evaluates a candidate across these identical cognitive pillars. We train you from the absolute basics to mastery level.
+            Indicative syllabus overview across 6 core skill pillars. We train you from ground-level fundamentals to competitive mastery (with many more topics covered as per specific exam syllabus).
           </p>
         </div>
         

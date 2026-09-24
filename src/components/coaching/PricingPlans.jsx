@@ -9,15 +9,8 @@ import {
   Clock,
   ShieldCheck,
   ArrowRight,
-  Layers,
-  Calculator,
-  Brain,
-  Globe,
   Laptop,
-  MessageSquare,
-  Award,
   Star,
-  Zap,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -29,20 +22,24 @@ export default function PricingPlans() {
       tagline: "Live Interactive Classes with Full LMS Backup",
       icon: Monitor,
       badge: "LIVE ONLINE BATCH",
-      badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
+      badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
       hours: "75 Hours Live",
-      price: "9,999",
-      originalPrice: "14,999",
+      price: "7,999",
+      originalPrice: "11,999",
       discount: "Save 33%",
       popular: false,
+      cardTheme: "border-sky-200 bg-white hover:border-sky-400 hover:shadow-xl",
+      iconBg: "bg-sky-50 text-sky-600 border border-sky-200/60",
+      btnTheme: "bg-slate-900 hover:bg-slate-800 text-white",
       features: [
         "75 Hours Live Interactive Online Classes",
         "Direct Live Doubts Clearing during sessions",
-        "Complete coverage of all 5 Core Academic Subjects",
+        "Complete coverage of all 6 Core Academic Subjects",
         "Full 6 Months Unlimited LMS Platform Access",
         "Recorded Class Archives so you never miss a lecture",
         "Topic-wise Practice Tests & Digital PDF Study Notes",
-        "All-India Mock Test Series with Detailed Analytics",
+        "Online Practice Exercises",
+        "Mock Tests with Detailed Analytics",
       ],
       extraFeatures: [],
     },
@@ -57,14 +54,19 @@ export default function PricingPlans() {
       price: "8,999",
       originalPrice: "13,999",
       discount: "Save 36%",
-      popular: false,
+      popular: true,
+      popularLabel: " Most Recommended",
+      cardTheme: "bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white shadow-2xl ring-2 ring-orange-500 scale-[1.02] lg:scale-[1.03]",
+      iconBg: "bg-white/10 text-orange-400 border border-white/10",
+      btnTheme: "bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white shadow-orange-950/40",
       features: [
         "75 Hours Physical In-Person Classroom Coaching",
         "Face-to-face doubts resolution with Senior Faculty",
-        "Complete coverage of all 5 Core Subjects",
-        "6 Months LMS Access (Online backup included)",
+        "Complete coverage of all 6 Core Subjects",
+        "Full 6 Months LMS Access (Online backup included)",
         "Printed Worksheets, Notes & Class Test Drills",
-        "Peer study environment & live classroom simulations",
+        "Online Practice Exercises",
+        "Mock Tests with Detailed Analytics",
         "Dedicated Faculty Mentorship & Strategy Sessions",
       ],
       extraFeatures: [],
@@ -74,120 +76,30 @@ export default function PricingPlans() {
       name: "Foundation Plus Offline",
       tagline: "Complete Coaching + Soft Skills & GD/PI Mastery",
       icon: Laptop,
-      badge: "MOST POPULAR • BEST VALUE",
-      badgeColor: "bg-gradient-to-r from-orange-500 to-amber-500 text-white",
+      badge: "PLUS OFFLINE • SOFT SKILLS",
+      badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
       hours: "90 Hours Total (75h + 15h)",
       price: "9,999",
       originalPrice: "16,999",
       discount: "Save 41%",
-      popular: true,
+      popular: false,
+      cardTheme: "border-purple-200 bg-white hover:border-purple-400 hover:shadow-xl",
+      iconBg: "bg-purple-50 text-purple-600 border border-purple-200/60",
+      btnTheme: "bg-purple-900 hover:bg-purple-800 text-white",
       features: [
         "90 Hours Total Intensive Coaching (75h Core + 15h Extra)",
         "Everything included in Foundation Offline",
+        "Complete coverage of all 6 Core Academic Subjects",
         "Full 6 Months LMS Access & Practice Modules",
-        "All 5 Core Academic Subjects + Printed Worksheets",
-        "Faculty Mentorship & Regular Assessment Tracking",
+        "Online Practice Exercises",
+        "Mock Tests with Detailed Analytics",
+        "Printed Worksheets & Strategy Sessions",
       ],
       extraFeatures: [
         "1-on-1 Mock Interviews & Panel Feedback",
         "Professional Resume Writing & Profile Optimization",
         "Group Discussions (GD) Tactics & Practice",
         "Spoken English, Fluency & Body Language Workshops",
-      ],
-    },
-  ];
-
-  const coveredTopics = [
-    {
-      category: "Quantitative Aptitude & Speed Math",
-      icon: Calculator,
-      color: "bg-blue-50 text-blue-700 border-blue-200",
-      accent: "text-blue-600",
-      topics: [
-        "Vedic & Speed Math Shortcuts",
-        "Number Systems, HCF & LCM",
-        "Percentages, Profit & Loss, Discount",
-        "Simple & Compound Interest",
-        "Ratio, Proportion & Partnerships",
-        "Time & Work, Pipes & Cisterns",
-        "Time, Speed, Distance & Trains",
-        "Averages, Mixtures & Allegations",
-        "Algebra, Geometry & Mensuration 2D/3D",
-      ],
-    },
-    {
-      category: "Logical Reasoning & Data Interpretation",
-      icon: Brain,
-      color: "bg-amber-50 text-amber-700 border-amber-200",
-      accent: "text-amber-600",
-      topics: [
-        "Seating Arrangements (Linear & Circular)",
-        "Complex Puzzles & Floor Arrangements",
-        "Syllogisms & Logical Deductions",
-        "Blood Relations & Direction Sense",
-        "Coding-Decoding & Series Completion",
-        "Statement-Assumption & Critical Logic",
-        "Data Interpretation: Tables & Bar Graphs",
-        "Pie Charts, Line Graphs & Caselets",
-      ],
-    },
-    {
-      category: "Verbal English & Reading Comprehension",
-      icon: MessageSquare,
-      color: "bg-purple-50 text-purple-700 border-purple-200",
-      accent: "text-purple-600",
-      topics: [
-        "Core English Grammar Rules & Syntax",
-        "Error Spotting & Sentence Correction",
-        "Root Word Vocabulary & Phrasal Verbs",
-        "Idioms, Synonyms & Antonyms",
-        "Reading Comprehension (Speed & Tone)",
-        "Para Jumbles & Sentence Rearrangement",
-        "Cloze Tests & Fill in the Blanks",
-        "Formal Letter & Descriptive Writing Basics",
-      ],
-    },
-    {
-      category: "General Knowledge & Current Affairs",
-      icon: Globe,
-      color: "bg-emerald-50 text-emerald-700 border-emerald-200",
-      accent: "text-emerald-600",
-      topics: [
-        "Indian Constitution & Polity Basics",
-        "Indian Economy, Budget & Banking Awareness",
-        "Indian History, Geography & Culture",
-        "General Science (Physics, Chem, Bio)",
-        "National & International Current Affairs",
-        "Government Schemes & Important Days",
-        "Awards, Sports & Environmental Science",
-      ],
-    },
-    {
-      category: "Computer Awareness & Digital Skills",
-      icon: Laptop,
-      color: "bg-cyan-50 text-cyan-700 border-cyan-200",
-      accent: "text-cyan-600",
-      topics: [
-        "Computer Hardware & Operating Systems",
-        "MS Office Suite (Word, Excel, PowerPoint)",
-        "Networking Concepts & Internet Protocols",
-        "Cybersecurity Fundamentals & Viruses",
-        "Database Basics (DBMS) & Memory Units",
-        "Common Tech Acronyms & Short-Keys",
-      ],
-    },
-    {
-      category: "Soft Skills, Resume & Interview Mastery",
-      icon: Layers,
-      color: "bg-rose-50 text-rose-700 border-rose-200",
-      accent: "text-rose-600",
-      topics: [
-        "1-on-1 Mock Interviews with Panel Feedback",
-        "Group Discussion (GD) Tactics & Practice",
-        "Professional Resume Building & Review",
-        "Spoken English & Communication Fluency",
-        "Body Language & Personality Development",
-        "State PSC & Bank Interview Orientation",
       ],
     },
   ];
@@ -208,7 +120,7 @@ export default function PricingPlans() {
             </span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Every plan includes comprehensive coverage of all 5 core subjects, 6-month LMS platform access, and structured senior faculty mentoring. Choose the learning mode that matches your goals.
+            Every plan includes comprehensive coverage of all 6 core subjects, 6-month LMS platform access, Online Practice Exercises, Mock Tests, and structured senior faculty mentoring. Choose the learning mode that matches your goals.
           </p>
         </div>
 
@@ -219,17 +131,13 @@ export default function PricingPlans() {
             return (
               <div
                 key={plan.id}
-                className={`relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
-                  plan.popular
-                    ? "bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white shadow-2xl ring-2 ring-orange-500 scale-[1.02] lg:scale-[1.03]"
-                    : "bg-white text-slate-900 border border-slate-200/90 shadow-sm hover:shadow-xl"
-                }`}
+                className={`relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 border ${plan.cardTheme}`}
               >
-                {/* Popular Pill */}
+                {/* Most Recommended Pill for Middle Plan */}
                 {plan.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold text-xs uppercase tracking-wider shadow-md flex items-center gap-1.5">
-                    <Star className="w-3.5 h-3.5 fill-white text-white" />
-                    <span>Recommended Choice</span>
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold text-xs uppercase tracking-wider shadow-md flex items-center gap-1.5 whitespace-nowrap">
+                    <Star className="w-3.5 h-3.5 fill-white text-white shrink-0" />
+                    <span>{plan.popularLabel || "⭐ Most Recommended"}</span>
                   </div>
                 )}
 
@@ -258,11 +166,7 @@ export default function PricingPlans() {
                   {/* Plan Name & Tagline */}
                   <div className="flex items-center gap-3 mb-2">
                     <div
-                      className={`w-10 h-10 rounded-2xl flex items-center justify-center shrink-0 ${
-                        plan.popular
-                          ? "bg-white/10 text-orange-400 border border-white/10"
-                          : "bg-orange-50 text-orange-600 border border-orange-200/60"
-                      }`}
+                      className={`w-10 h-10 rounded-2xl flex items-center justify-center shrink-0 ${plan.iconBg}`}
                     >
                       <Icon className="w-5 h-5" />
                     </div>
@@ -344,18 +248,18 @@ export default function PricingPlans() {
 
                   {/* Extra Features (Only in Plus) */}
                   {plan.extraFeatures.length > 0 && (
-                    <div className="p-4 rounded-2xl bg-orange-500/10 border border-orange-400/25 mb-6 space-y-2">
-                      <div className="text-xs font-bold text-orange-300 uppercase tracking-wider flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-orange-400" />
+                    <div className="p-4 rounded-2xl bg-purple-50 border border-purple-200/80 mb-6 space-y-2">
+                      <div className="text-xs font-bold text-purple-900 uppercase tracking-wider flex items-center gap-1.5">
+                        <Sparkles className="w-3.5 h-3.5 text-purple-600" />
                         <span>Exclusive Plus Offline Additions:</span>
                       </div>
                       <div className="space-y-1.5 pt-1">
                         {plan.extraFeatures.map((ex, eIdx) => (
                           <div
                             key={eIdx}
-                            className="flex items-start gap-2 text-xs text-orange-100 font-medium leading-tight"
+                            className="flex items-start gap-2 text-xs text-purple-800 font-medium leading-tight"
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-orange-400 shrink-0 mt-1.5" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-purple-500 shrink-0 mt-1.5" />
                             <span>{ex}</span>
                           </div>
                         ))}
@@ -368,17 +272,13 @@ export default function PricingPlans() {
                 <div className="pt-4 border-t border-slate-100/20 space-y-2.5">
                   <Link
                     href="/enroll"
-                    className={`w-full py-3.5 px-5 rounded-2xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md ${
-                      plan.popular
-                        ? "bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white shadow-orange-950/40 hover:scale-[1.02]"
-                        : "bg-slate-900 hover:bg-slate-800 text-white hover:scale-[1.02]"
-                    }`}
+                    className={`w-full py-3.5 px-5 rounded-2xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md hover:scale-[1.02] ${plan.btnTheme}`}
                   >
-                    <span>Enroll Now / Book Counseling</span>
+                    <span>Enquiry</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
 
-                  <a
+                  {/* <a
                     href="https://wa.me/917794045533?text=Hello%20CareerMitra%20Team!%20I%20am%20interested%20in%20the%20Foundation%20Coaching%20Course."
                     target="_blank"
                     rel="noreferrer"
@@ -386,7 +286,7 @@ export default function PricingPlans() {
                   >
                     <FaWhatsapp className="w-4 h-4 text-emerald-600" />
                     <span>Chat on WhatsApp (+91 77940 45533)</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             );
@@ -394,7 +294,7 @@ export default function PricingPlans() {
         </div>
 
         {/* Reassurance Banner */}
-        <div className="p-5 sm:p-6 rounded-3xl bg-emerald-50 border border-emerald-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4 mb-16">
+        <div className="p-5 sm:p-6 rounded-3xl bg-emerald-50 border border-emerald-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 shadow-2xs">
               <ShieldCheck className="w-5 h-5" />
@@ -404,7 +304,7 @@ export default function PricingPlans() {
                 100% Comprehensive Syllabus Coverage Guarantee
               </div>
               <div className="text-xs text-emerald-800 font-normal">
-                Every plan covers all 5 core subjects with full 6-month LMS access and direct faculty doubt-clearing.
+                Every plan covers all 6 core subjects with full 6-month LMS access, Online Practice Exercises, Mock Tests, and direct faculty doubt-clearing.
               </div>
             </div>
           </div>
@@ -412,68 +312,9 @@ export default function PricingPlans() {
             href="/enroll"
             className="shrink-0 px-5 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs shadow-xs transition-all flex items-center gap-1.5"
           >
-            <span>Request Counselor Callback</span>
+            <span>Enquiry</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
-        </div>
-
-        {/* Detailed Topic Coverage Breakdown Section */}
-        <div>
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-600">
-              Exhaustive Curriculum Modules
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
-              Complete List of Topics Covered in This Course
-            </h3>
-            <p className="text-slate-500 text-xs sm:text-sm mt-1">
-              Every topic is taught from ground-level basics to advanced problem-solving speed techniques.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {coveredTopics.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={idx}
-                  className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div
-                        className={`w-11 h-11 rounded-2xl ${item.color} flex items-center justify-center border shadow-xs shrink-0`}
-                      >
-                        <Icon className="w-5 h-5" />
-                      </div>
-                      <h4 className="text-base font-bold text-slate-900 leading-tight">
-                        {item.category}
-                      </h4>
-                    </div>
-
-                    <ul className="space-y-2 mb-4">
-                      {item.topics.map((topic, tIdx) => (
-                        <li
-                          key={tIdx}
-                          className="flex items-start gap-2 text-xs text-slate-700"
-                        >
-                          <CheckCircle2
-                            className={`w-3.5 h-3.5 ${item.accent} shrink-0 mt-0.5`}
-                          />
-                          <span className="leading-snug">{topic}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
-                    <span>Full Theory + Practice Drills</span>
-                    <span className="font-bold text-emerald-600">Included</span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
