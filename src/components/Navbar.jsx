@@ -328,10 +328,7 @@ export default function Navbar() {
                 <div className="relative w-28 h-6">
                   <Image src={LogoImg} alt="Career Mitra" fill className="object-contain object-left" />
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="text-[10px] font-medium text-slate-500">Career Guidance</span>
-                  <FaExternalLinkAlt className="w-2.5 h-2.5 text-slate-400" />
-                </div>
+                <FaExternalLinkAlt className="w-2.5 h-2.5 text-slate-400" />
               </a>
             </div>
 
