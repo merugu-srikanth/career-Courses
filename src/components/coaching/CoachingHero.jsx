@@ -84,16 +84,16 @@ export default function CoachingHero() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <Link
                 href="/plans-pricing"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-sm shadow-md hover:shadow-lg transition-all text-center"
               >
                 View Plans &amp; Enquiry <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/curriculum"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-sm border border-slate-300 shadow-xs transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-sm border border-slate-300 shadow-xs transition-all text-center"
               >
                 View Exam Coverage Matrix
               </Link>
