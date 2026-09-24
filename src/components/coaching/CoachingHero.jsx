@@ -114,7 +114,7 @@ export default function CoachingHero() {
 
               <Image
                 src={CoursesHeroImg}
-                alt="Government Job Foundation Coaching Program"
+                alt="Career Foundation Programme 26-27"
                 priority
                 className="w-full h-auto object-contain drop-shadow-xl transition-all duration-300 hover:scale-[1.01]"
               />

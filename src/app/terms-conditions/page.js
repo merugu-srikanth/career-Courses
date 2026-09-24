@@ -35,7 +35,7 @@ export default function TermsConditionsPage() {
               <BookOpen className="w-5 h-5 text-orange-500" /> 1. Course Enrollment & Batch Allocation
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Admission into the Government Job Foundation Coaching Program (Live Online or Offline Classroom) is confirmed upon successful registration. Batch timings (Morning, Evening, or Weekend) are allotted based on preference and seat availability.
+              Admission into the Career Foundation Programme 26-27 (Live Online or Offline Classroom) is confirmed upon successful registration. Batch timings (Morning, Evening, or Weekend) are allotted based on preference and seat availability.
             </p>
           </section>
 

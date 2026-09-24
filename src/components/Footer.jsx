@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="bg-slate-950 text-white border-t border-slate-800/80 pt-12 sm:pt-16 pb-10 sm:pb-12">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 mb-10 sm:mb-14">
-          
+
           {/* Brand & Collaboration - 4 cols on large screens */}
           <div className="sm:col-span-2 lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
@@ -47,7 +47,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs sm:text-[13px] text-slate-400 leading-relaxed font-normal max-w-sm">
-              Comprehensive Government Job Foundation Coaching in collaboration with <strong className="text-slate-200 font-semibold">Score 99 Percentile</strong>. One structured gateway for SSC, Banking, Railways, State PSCs &amp; Placements.
+              Comprehensive Career Foundation Programme 26-27 in collaboration with <strong className="text-slate-200 font-semibold">Score 99 Percentile</strong>. One structured gateway for SSC, Banking, Railways, State PSCs &amp; Placements.
             </p>
           </div>
 

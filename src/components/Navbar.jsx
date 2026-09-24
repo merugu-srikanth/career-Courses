@@ -193,7 +193,13 @@ export default function Navbar() {
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="flex items-center gap-3 sm:gap-5 shrink-0 pr-6 sm:pr-8 text-xs">
                 {/* Career Mitra Programme Partner Pill */}
-                <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-slate-200/90 text-slate-800 shadow-2xs shrink-0">
+                <a
+                  href="https://www.careermitra.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white border border-slate-200/90 text-slate-800 shadow-2xs hover:border-orange-300 transition-all shrink-0"
+                  title="Visit Career Mitra"
+                >
                   <div className="relative w-20 h-4">
                     <Image
                       src={LogoImg}
@@ -203,7 +209,7 @@ export default function Navbar() {
                     />
                   </div>
                   <span className="text-[9px] font-bold text-orange-600 uppercase">Programme Partner</span>
-                </div>
+                </a>
 
                 {/* Score 99 Academic Partner Pill */}
                 <a
@@ -312,12 +318,21 @@ export default function Navbar() {
                 <span className="text-[10px] font-bold uppercase text-orange-600">Programme Partner</span>
                 <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">Official</span>
               </div>
-              <div className="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80">
+              <a
+                href="https://www.careermitra.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80 hover:border-orange-300 transition-colors"
+                title="Visit Career Mitra"
+              >
                 <div className="relative w-28 h-6">
                   <Image src={LogoImg} alt="Career Mitra" fill className="object-contain object-left" />
                 </div>
-                <span className="text-[10px] font-medium text-slate-500">Career Guidance</span>
-              </div>
+                <div className="flex items-center gap-1.5">
+                  <span className="text-[10px] font-medium text-slate-500">Career Guidance</span>
+                  <FaExternalLinkAlt className="w-2.5 h-2.5 text-slate-400" />
+                </div>
+              </a>
             </div>
 
             {/* Score 99 Academic Partner Card */}

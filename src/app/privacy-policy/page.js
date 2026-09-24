@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
               <Lock className="w-5 h-5 text-orange-500" /> 1. Information We Collect
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              When you submit an admission inquiry, counseling request, or enroll in the Government Job Foundation Coaching Program, we collect personal information including your full name, email address, phone/WhatsApp number, highest qualification, current year of study, target exams, and selected course preferences.
+              When you submit an admission inquiry, counseling request, or enroll in the Career Foundation Programme 26-27, we collect personal information including your full name, email address, phone/WhatsApp number, highest qualification, current year of study, target exams, and selected course preferences.
             </p>
           </section>
 
