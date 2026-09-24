@@ -16,6 +16,39 @@ import axios from "axios";
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://www.careermitra.in/api";
 
+const HYDERABAD_COLLEGES = [
+  "St. Ann's College for Women",
+  "Kasturba Gandhi Degree and PG College for Women",
+  "Malla Reddy Engineering College",
+  "Osmania University (OU), Hyderabad",
+  "JNTU Hyderabad (JNTUH)",
+  "Chaitanya Bharathi Institute of Technology (CBIT)",
+  "Vasavi College of Engineering",
+  "VNR Vignana Jyothi Institute of Engineering & Technology (VNR VJIET)",
+  "G. Narayanamma Institute of Technology & Science (GNITS)",
+  "BVRIT Hyderabad College of Engineering for Women",
+  "Stanley College of Engineering and Technology for Women",
+  "St. Francis College for Women, Begumpet",
+  "Villa Marie Degree College for Women",
+  "Bhavan's Vivekananda College, Sainikpuri",
+  "Loyola Academy Degree & PG College",
+  "Nizam College, Hyderabad",
+  "Keshav Memorial Institute of Technology (KMIT)",
+  "Gokaraju Rangaraju Institute of Engineering & Technology (GRIET)",
+  "Vardhaman College of Engineering",
+  "Sreenidhi Institute of Science and Technology (SNIST)",
+  "CVR College of Engineering",
+  "Anurag University",
+  "Institute of Aeronautical Engineering (IARE)",
+  "Mahatma Gandhi Institute of Technology (MGIT)",
+  "CMR College of Engineering & Technology",
+  "Badruka College of Commerce and Arts",
+  "AV College of Arts, Science and Commerce",
+  "Aurora's Degree & PG College",
+  "Wesley Degree College",
+  "Other College (Type below)",
+];
+
 export default function EnrollmentForm() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -28,6 +61,7 @@ export default function EnrollmentForm() {
     notes: "",
   });
 
+  const [selectedCollege, setSelectedCollege] = useState("");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -185,18 +219,51 @@ export default function EnrollmentForm() {
                 />
               </div>
 
-              {/* College Name - Text Input */}
-              <div className="sm:col-span-2">
+              {/* College Name - Dropdown Selection */}
+              <div className="sm:col-span-2 space-y-2">
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 flex items-center gap-1.5">
-                  <Building2 className="w-3.5 h-3.5 text-orange-500" /> Enter your college name
+                  <Building2 className="w-3.5 h-3.5 text-orange-500" /> College Name
                 </label>
-                <input
-                  type="text"
-                  placeholder="Enter your college name (e.g. JNTUH, OU, CBIT, Vasavi, etc.)"
-                  value={formData.collegeName}
-                  onChange={(e) => setFormData({ ...formData, collegeName: e.target.value })}
-                  className="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all"
-                />
+                <select
+                  value={selectedCollege}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    setSelectedCollege(val);
+                    if (val !== "Other College (Type below)") {
+                      setFormData((prev) => ({ ...prev, collegeName: val }));
+                    } else {
+                      setFormData((prev) => ({ ...prev, collegeName: "" }));
+                    }
+                  }}
+                  className="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all cursor-pointer"
+                >
+                  <option value="">-- Select Your College --</option>
+                  <optgroup label="⭐ Top Colleges">
+                    <option value="St. Ann's College for Women">1. St. Ann&apos;s College for Women</option>
+                    <option value="Kasturba Gandhi Degree and PG College for Women">2. Kasturba Gandhi Degree and PG College for Women</option>
+                    <option value="Malla Reddy Engineering College">3. Malla Reddy Engineering College</option>
+                  </optgroup>
+                  <optgroup label="Hyderabad &amp; Telangana Colleges">
+                    {HYDERABAD_COLLEGES.slice(3, -1).map((college, idx) => (
+                      <option key={idx} value={college}>
+                        {college}
+                      </option>
+                    ))}
+                  </optgroup>
+                  <option value="Other College (Type below)">Other College (Type your college name)</option>
+                </select>
+
+                {/* If 'Other College' selected, show custom typing input */}
+                {selectedCollege === "Other College (Type below)" && (
+                  <input
+                    type="text"
+                    placeholder="Type your college name here (e.g. Government Degree College, etc.)"
+                    value={formData.collegeName}
+                    onChange={(e) => setFormData((prev) => ({ ...prev, collegeName: e.target.value }))}
+                    className="w-full px-4 py-3 rounded-2xl bg-white border-2 border-orange-400 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
+                    autoFocus
+                  />
+                )}
               </div>
 
               {/* Current Year of Study */}
