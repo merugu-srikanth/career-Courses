@@ -16,7 +16,7 @@ export default function CoachingClient() {
       <FacultyShowcase />
 
       {/* Bottom CTA */}
-      <section className="py-14 bg-slate-900 text-white text-center">
+      <section className="py-8 sm:py-12 md:py-14 bg-slate-900 text-white text-center">
         <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
           <span className="inline-block px-3 py-1 bg-emerald-500/20 border border-emerald-400/30 text-emerald-400 text-xs font-bold uppercase tracking-widest rounded-full mb-4">
             Admissions Open • Flexible Batches

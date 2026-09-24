@@ -146,12 +146,12 @@ export default function EnrollmentForm() {
         <form onSubmit={handleSubmit} className="p-6 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-xl">
           {/* Header */}
           <div className="border-b border-slate-200 pb-6 mb-8">
-            <div className="flex items-center gap-2 text-xs font-bold text-orange-600 uppercase tracking-wider mb-2">
-              <Sparkles className="w-4 h-4" /> Quick Admission &amp; Enquiry Form
-            </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
-              Enquiry
+            <h1 className="flex items-center gap-2 text-xs font-bold text-orange-600 uppercase tracking-wider mb-2">
+              <Sparkles className="w-4 h-4" /> Quick Enquiry Form
             </h1>
+            {/* <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
+              Enquiry
+            </h1> */}
             <p className="text-slate-500 text-xs sm:text-sm mt-1">
               Fill out your details below. Our academic counselor will guide you with personalized study plans and batch details.
             </p>

@@ -67,9 +67,9 @@ export default function CoreSkillsGrid() {
   ];
 
   return (
-    <section className="py-16 bg-slate-50 border-y border-slate-200/60">
+    <section className="py-8 sm:py-12 md:py-16 bg-slate-50 border-y border-slate-200/60">
       <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10 md:mb-12">
           <span className="inline-block px-3 py-1 bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3">
             Indicative List • 6 Core Skill Areas
           </span>

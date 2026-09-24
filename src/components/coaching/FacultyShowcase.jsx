@@ -40,9 +40,9 @@ export default function FacultyShowcase() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white border-t border-slate-200/60">
+    <section className="py-8 sm:py-12 md:py-20 lg:py-24 bg-white border-t border-slate-200/60">
       <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10 md:mb-14">
           <span className="inline-block px-3 py-1 bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-widest rounded-full mb-3">
             Mentorship That Transforms
           </span>

@@ -41,13 +41,13 @@ export default function CoachingHero() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/60 pt-6 pb-14 md:pt-10 md:pb-8 border-b border-slate-200/60">
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/60 pt-4 pb-4 sm:pt-6 sm:pb-8 md:pt-10 md:pb-12 border-b border-slate-200/60">
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         {/* Hero Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-10 md:mb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center mb-4 sm:mb-8 md:mb-14">
           {/* Left Content */}
           <div className="lg:col-span-7 text-left">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-100/70 text-emerald-800 border border-emerald-300/60 mb-5">

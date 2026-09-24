@@ -174,10 +174,10 @@ export default function CareerPathwaysGrid() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-slate-50/50 border-b border-slate-200/60">
+    <section className="py-8 sm:py-12 md:py-20 lg:py-24 bg-slate-50/50 border-b border-slate-200/60">
       <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10 md:mb-14">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-orange-500 shrink-0" />
             1 Single Foundation Course • Covers All 5 Career Domains
