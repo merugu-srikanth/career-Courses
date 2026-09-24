@@ -114,8 +114,8 @@ export default function CoachingHero() {
               />
             </div>
 
-            {/* Free Consultation Card directly under image */}
-            <div className="w-full p-4 sm:p-5 rounded-3xl bg-gradient-to-br from-amber-50/70 via-white to-orange-50/50 border border-amber-200/80 shadow-lg relative overflow-hidden backdrop-blur-md">
+            {/* Free Consultation Card directly under image (hidden on small/stacked screens) */}
+            <div className="hidden lg:block w-full p-4 sm:p-5 rounded-3xl bg-gradient-to-br from-amber-50/70 via-white to-orange-50/50 border border-amber-200/80 shadow-lg relative overflow-hidden backdrop-blur-md">
               {/* Top: Avatar + Title & Description */}
               <div className="flex items-center gap-3.5 mb-3.5 text-left">
                 {/* Counselor Avatar */}
