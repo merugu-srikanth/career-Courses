@@ -110,7 +110,13 @@ export default function FacultyShowcase() {
             <div className="relative z-10">
               {/* Card Top Badges & Logo */}
               <div className="flex items-center justify-between gap-3 mb-4">
-                <div className="px-3.5 py-2 rounded-2xl bg-white shadow-md border border-slate-100 flex items-center shrink-0">
+                <a
+                  href="https://www.careermitra.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3.5 py-2 rounded-2xl bg-white shadow-md border border-slate-100 flex items-center shrink-0 hover:opacity-90 transition-opacity"
+                  title="Visit Career Mitra"
+                >
                   <div className="relative w-28 sm:w-32 h-7 sm:h-8">
                     <Image
                       src={LogoImg}
@@ -121,7 +127,7 @@ export default function FacultyShowcase() {
                       priority
                     />
                   </div>
-                </div>
+                </a>
 
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border border-orange-400/30 bg-orange-500/15 text-orange-300">
                   <Sparkles className="w-3.5 h-3.5 text-orange-400" /> Programme Partner
@@ -164,14 +170,23 @@ export default function FacultyShowcase() {
             </div>
 
             <div className="pt-4 border-t border-slate-800/80 relative z-10 flex items-center justify-between">
-              <span className="text-xs font-medium text-slate-400">careermitra.in</span>
-              <Link
-                href="/enroll"
+              <a
+                href="https://www.careermitra.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-medium text-slate-400 hover:text-orange-400 transition-colors"
+              >
+                careermitra.in
+              </a>
+              <a
+                href="https://www.careermitra.in"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02]"
               >
                 <span>Free Registration</span>
-                <Sparkles className="w-3.5 h-3.5" />
-              </Link>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
 
