@@ -101,67 +101,137 @@ export default function FacultyShowcase() {
           ))}
         </div>
 
-        {/* Score99Percentile & Career Mitra Association Banner */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
-            {/* Co-Branding Partner Logos: Career Mitra (Left) + Score 99 (Right) */}
-            <div className="shrink-0 px-3 sm:px-4 py-2 rounded-2xl bg-white shadow-md border border-slate-100 flex items-center gap-2 sm:gap-3">
-              {/* Career Mitra Logo (Left) */}
-              <div className="relative w-28 sm:w-36 h-9 sm:h-11">
-                <Image
-                  src={LogoImg}
-                  alt="Career Mitra"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 112px, 144px"
-                  priority
-                />
+        {/* Co-Branded Content Cards: Left (Career Mitra) & Right (Score 99) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8 sm:mt-10">
+          {/* Left Card: Career Mitra Programme Partner */}
+          <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white border border-slate-800 shadow-xl flex flex-col justify-between group relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10">
+              {/* Card Top Badges & Logo */}
+              <div className="flex items-center justify-between gap-3 mb-5">
+                <div className="px-3.5 py-2 rounded-2xl bg-white shadow-md border border-slate-100 flex items-center shrink-0">
+                  <div className="relative w-28 sm:w-32 h-7 sm:h-8">
+                    <Image
+                      src={LogoImg}
+                      alt="Career Mitra"
+                      fill
+                      className="object-contain"
+                      sizes="128px"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border border-orange-400/30 bg-orange-500/15 text-orange-300">
+                  <Sparkles className="w-3.5 h-3.5 text-orange-400" /> Programme Partner
+                </span>
               </div>
 
-              {/* Divider / Multiplier */}
-              <span className="h-6 sm:h-8 w-px bg-slate-200 shrink-0" />
+              {/* Content */}
+              <h4 className="text-lg sm:text-xl font-bold text-white mb-2 leading-snug tracking-tight">
+                Career Mitra Student Guidance &amp; Mentorship
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal mb-4">
+                Empowering students with comprehensive foundational preparation, personalized mentorship, and structured multi-domain career guidance to maximize exam selections.
+              </p>
 
-              {/* Score 99 Logo (Right) */}
-              <a
-                href="https://score99percentile.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative w-28 sm:w-36 h-8 sm:h-10 flex items-center hover:opacity-90 transition-opacity"
-                title="Visit Score99Percentile Website"
-              >
-                <Image
-                  src={Score99Logo}
-                  alt="Score 99 Percentile"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 112px, 144px"
-                  priority
-                />
-              </a>
+              <div className="space-y-2 mb-6 text-xs text-slate-300">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0" />
+                  <span>End-to-End Student Support &amp; Admission Counseling</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0" />
+                  <span>Unified Multi-Domain Curriculum &amp; Full LMS Access</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0" />
+                  <span>Live Online &amp; Classroom Training Delivery</span>
+                </div>
+              </div>
             </div>
 
-            <div>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30 mb-1">
-                <Sparkles className="w-3 h-3 text-amber-400" /> Academic Partnership
-              </div>
-              <h4 className="text-base sm:text-lg font-bold text-white leading-snug">
-                Powered by Score99Percentile&apos;s National Test-Prep Excellence
-              </h4>
-              <p className="text-xs text-slate-300 max-w-xl mt-0.5 leading-relaxed">
-                Backed by 25+ years of pedagogical rigor, adaptive testing frameworks, and proven methodologies trusted by 50,000+ competitive exam aspirants.
-              </p>
+            <div className="pt-4 border-t border-slate-800/80 relative z-10 flex items-center justify-between">
+              <span className="text-xs font-medium text-slate-400">Foundation Programme 2026-27</span>
+              <Link
+                href="/enroll"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02]"
+              >
+                <span>Enquire Now</span>
+                <Sparkles className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </div>
 
-          <a
-            href="https://score99percentile.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold text-xs shadow-lg shadow-red-950/50 transition-all hover:scale-[1.03]"
-          >
-            <span>Visit Score99Percentile</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          {/* Right Card: Score 99 Academic Partner */}
+          <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white border border-slate-800 shadow-xl flex flex-col justify-between group relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-rose-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10">
+              {/* Card Top Badges & Logo */}
+              <div className="flex items-center justify-between gap-3 mb-5">
+                <a
+                  href="https://score99percentile.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3.5 py-2 rounded-2xl bg-white shadow-md border border-slate-100 flex items-center shrink-0 hover:opacity-90 transition-opacity"
+                  title="Visit Score99Percentile"
+                >
+                  <div className="relative w-28 sm:w-32 h-7 sm:h-8">
+                    <Image
+                      src={Score99Logo}
+                      alt="Score 99 Percentile"
+                      fill
+                      className="object-contain"
+                      sizes="128px"
+                      priority
+                    />
+                  </div>
+                </a>
+
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold border border-red-400/30 bg-red-500/15 text-red-300">
+                  <Award className="w-3.5 h-3.5 text-red-400" /> Academic Partner
+                </span>
+              </div>
+
+              {/* Content */}
+              <h4 className="text-lg sm:text-xl font-bold text-white mb-2 leading-snug tracking-tight">
+                Powered by Score99Percentile&apos;s Test-Prep Pedagogy
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal mb-4">
+                Backed by 25+ years of pedagogical rigor, speed math shortcuts, adaptive testing frameworks, and proven methodologies trusted by 50,000+ competitive exam aspirants.
+              </p>
+
+              <div className="space-y-2 mb-6 text-xs text-slate-300">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-rose-400 shrink-0" />
+                  <span>25+ Years of National Test-Prep Excellence</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-rose-400 shrink-0" />
+                  <span>Senior Faculty &amp; Speed Math Trick Pioneers</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-rose-400 shrink-0" />
+                  <span>Proven Track Record in CAT, SSC, Banking &amp; CSAT</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-slate-800/80 relative z-10 flex items-center justify-between">
+              <span className="text-xs font-medium text-slate-400">score99percentile.com</span>
+              <a
+                href="https://score99percentile.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02]"
+              >
+                <span>Visit Score99Percentile</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
