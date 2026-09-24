@@ -62,9 +62,9 @@ export default function Navbar() {
         <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
           <div className="flex items-center justify-between h-18 sm:h-20 gap-2">
             {/* Logos Co-Branding */}
-            <div className="flex items-center gap-2.5 sm:gap-4 shrink-0">
+            <div className="flex items-center gap-2 sm:gap-3 md:gap-4 shrink-0">
               <Link href="/" className="flex items-center shrink-0">
-                <div className="relative w-32 sm:w-40 h-12 sm:h-14">
+                <div className="relative w-28 sm:w-36 md:w-40 h-10 sm:h-12 md:h-14">
                   <Image
                     src={LogoImg}
                     alt="Career Mitra"
@@ -75,27 +75,30 @@ export default function Navbar() {
                 </div>
               </Link>
 
-              {/* Divider & Score 99 Logo */}
-              <span className="h-6 sm:h-8 w-px bg-slate-200" />
+              {/* Divider */}
+              <span className="h-6 sm:h-8 w-px bg-slate-200 shrink-0" />
 
+              {/* In Collaboration With label */}
+              <span className="hidden md:inline-block text-[9px] lg:text-[10px] font-semibold uppercase tracking-wider text-slate-400 whitespace-nowrap">
+                IN COLLABORATION WITH
+              </span>
+
+              {/* Score 99 Logo */}
               <a
                 href="https://score99percentile.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-1.5 px-2 sm:px-2.5 py-1 rounded-xl bg-slate-50 hover:bg-slate-100/80 border border-slate-200/70 hover:border-red-200 transition-all"
+                className="flex items-center shrink-0 hover:opacity-90 transition-opacity"
                 title="Academic Partner - Score 99 Percentile"
               >
-                <div className="flex flex-col items-start leading-none">
-                  <span className="text-[8px] sm:text-[9px] font-bold text-slate-400 uppercase tracking-tighter">In Collab With</span>
-                  <div className="relative w-20 sm:w-26 h-5 sm:h-6">
-                    <Image
-                      src={Score99Logo}
-                      alt="Score 99 Percentile"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
+                <div className="relative w-24 sm:w-32 md:w-36 h-6 sm:h-8 md:h-9">
+                  <Image
+                    src={Score99Logo}
+                    alt="Score 99 Percentile"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </a>
             </div>
@@ -167,14 +170,8 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Mobile Hamburger & Quick Enquiry */}
-            <div className="flex lg:hidden items-center gap-2">
-              <Link
-                href="/enroll"
-                className="px-3 py-1.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold shadow-xs transition-colors"
-              >
-                Enquiry
-              </Link>
+            {/* Mobile Hamburger (No enquiry button beside hamburger) */}
+            <div className="flex lg:hidden items-center">
               <button
                 type="button"
                 onClick={() => setDrawerOpen((prev) => !prev)}
