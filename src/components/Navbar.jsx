@@ -184,9 +184,8 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Bottom Sticky Marquee Strip */}
-        <div className="border-t border-slate-100 bg-white/95 backdrop-blur-xs py-1.5 overflow-hidden relative">
-          {/* Subtle gradient edges */}
+        {/* Bottom Sticky Marquee Strip (Commented out) */}
+        {/* <div className="border-t border-slate-100 bg-white/95 backdrop-blur-xs py-1.5 overflow-hidden relative">
           <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
@@ -197,7 +196,6 @@ export default function Navbar() {
                   IN COLLABORATION WITH
                 </span>
 
-                {/* Score 99 Percentile Logo Pill */}
                 <a
                   href="https://score99percentile.com"
                   target="_blank"
@@ -214,12 +212,10 @@ export default function Navbar() {
                   </div>
                 </a>
 
-                {/* Govt Job Foundation */}
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-amber-50/70 text-amber-700 border border-amber-100 whitespace-nowrap shrink-0">
                   ⭐ Govt Job Foundation 2026-27
                 </span>
 
-                {/* Admissions Open */}
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50/70 text-emerald-700 border border-emerald-100 whitespace-nowrap shrink-0">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                   Admissions Open
@@ -229,7 +225,7 @@ export default function Navbar() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </nav>
 
       {/* Mobile Sidebar / Drawer */}
