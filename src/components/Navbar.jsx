@@ -184,25 +184,28 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Bottom Sticky Marquee Strip (Commented out) */}
+        {/* Bottom Sticky Marquee Strip */}
         <div className="border-t border-slate-100 bg-white/95 backdrop-blur-xs py-1.5 overflow-hidden relative">
           <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
           <div className="animate-marquee flex items-center">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="flex items-center gap-4 sm:gap-6 shrink-0 pr-8 sm:pr-10 text-xs">
-                <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-slate-400 whitespace-nowrap">
-                  IN COLLABORATION WITH
-                </span>
+              <div key={i} className="flex items-center gap-3 sm:gap-5 shrink-0 pr-6 sm:pr-8 text-xs">
+                {/* Career Mitra Programme Partner Pill */}
+                <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-900 text-white text-[11px] font-semibold shrink-0 shadow-2xs">
+                  <span className="text-orange-400 font-bold">CAREER MITRA</span>
+                  <span className="text-slate-400 text-[9px] uppercase">• Programme Partner</span>
+                </div>
 
+                {/* Score 99 Academic Partner Pill */}
                 <a
                   href="https://score99percentile.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 px-2 py-0.5 rounded-md bg-white border border-slate-200 shadow-2xs hover:border-red-300 transition-all shrink-0"
+                  className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-50/80 border border-red-200/80 text-red-700 shadow-2xs hover:border-red-300 transition-all shrink-0"
                 >
-                  <div className="relative w-22 h-4">
+                  <div className="relative w-20 h-4">
                     <Image
                       src={Score99Logo}
                       alt="Score 99 Percentile"
@@ -210,12 +213,15 @@ export default function Navbar() {
                       className="object-contain"
                     />
                   </div>
+                  <span className="text-[9px] font-bold text-red-600 uppercase">Academic Partner</span>
                 </a>
 
+                {/* Govt Job Foundation */}
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-amber-50/70 text-amber-700 border border-amber-100 whitespace-nowrap shrink-0">
                   ⭐ Govt Job Foundation 2026-27
                 </span>
 
+                {/* Admissions Open */}
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-emerald-50/70 text-emerald-700 border border-emerald-100 whitespace-nowrap shrink-0">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                   Admissions Open
