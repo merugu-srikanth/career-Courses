@@ -156,8 +156,10 @@ export default function CareerPathwaysGrid() {
       tagStyle: "bg-teal-50 text-teal-900 border-teal-200/80",
       icon: Target,
       iconColor: "text-teal-600",
-      title: "And many more",
-      subtitle: "Aptitude foundation for multiple other career opportunities and competitive exams.",
+      title: "And Many More...",
+      subtitle: "Endless Career Opportunities",
+      description:
+        "Build an unshakeable foundation in quantitative aptitude, logical reasoning, and verbal ability — empowering you to qualify for 50+ central, state, banking, and recruitment exams.",
       cardBorder: "border-teal-200/90 hover:border-teal-400 bg-white",
       cardBgGlow: "from-teal-500/5 via-transparent to-transparent",
       badgePillBg: "bg-teal-50/80 text-teal-800 border-teal-200/60",
@@ -173,14 +175,14 @@ export default function CareerPathwaysGrid() {
   ];
 
   return (
-    <section className="py-8 sm:py-12 md:py-20 lg:py-24 bg-slate-50/50 border-b border-slate-200/60">
+    <section className="py-8 sm:py-12 md:py-20 lg:py-14 bg-slate-50/50 border-b border-slate-200/60">
       <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10 md:mb-14">
-          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
+          {/* <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-orange-50 border border-orange-200/80 text-orange-700 text-xs font-bold uppercase tracking-widest rounded-full mb-3 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-orange-500 shrink-0" />
             1 Single Foundation Course • Covers All 5 Career Domains
-          </span>
+          </span> */}
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-4">
             This Single Foundation Program Covers All{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">
@@ -221,25 +223,49 @@ export default function CareerPathwaysGrid() {
                   {/* Card Body: Title + Checklist (Left) & 3D Artwork (Right) */}
                   <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-center mb-6">
                     <div className="sm:col-span-7">
-                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-0.5 tracking-tight">
-                        {pathway.title}
-                      </h3>
-                      <p className="text-[12px] text-slate-500 font-normal mb-3.5 leading-snug">
-                        {pathway.subtitle}
-                      </p>
+                      {pathway.id === "and-many-more" ? (
+                        <div>
+                          <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-1 tracking-tight leading-tight">
+                            {pathway.title}
+                          </h3>
+                          <p className="text-xs sm:text-sm font-bold text-teal-700 mb-2">
+                            {pathway.subtitle}
+                          </p>
+                          <p className="text-xs sm:text-[12.5px] text-slate-600 leading-relaxed font-normal mb-3.5">
+                            {pathway.description}
+                          </p>
+                          <div className="flex flex-wrap items-center gap-1.5">
+                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-teal-50 text-teal-800 text-[11px] font-bold border border-teal-200/80 shadow-2xs">
+                              <Sparkles className="w-3 h-3 text-teal-600" /> 50+ Exams Covered
+                            </span>
+                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 text-[11px] font-bold border border-emerald-200/80 shadow-2xs">
+                              <CheckCircle2 className="w-3 h-3 text-emerald-600" /> 100% Unified
+                            </span>
+                          </div>
+                        </div>
+                      ) : (
+                        <div>
+                          <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-0.5 tracking-tight">
+                            {pathway.title}
+                          </h3>
+                          <p className="text-[12px] text-slate-500 font-normal mb-3.5 leading-snug">
+                            {pathway.subtitle}
+                          </p>
 
-                      {pathway.items && pathway.items.length > 0 ? (
-                        <ul className="space-y-1.5 text-xs text-slate-700 font-medium">
-                          {pathway.items.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-1.5">
-                              <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${pathway.checkIconColor}`} />
-                              <span className="leading-snug text-[11.5px] sm:text-xs text-slate-700">
-                                {item}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : null}
+                          {pathway.items && pathway.items.length > 0 ? (
+                            <ul className="space-y-1.5 text-xs text-slate-700 font-medium">
+                              {pathway.items.map((item, idx) => (
+                                <li key={idx} className="flex items-start gap-1.5">
+                                  <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${pathway.checkIconColor}`} />
+                                  <span className="leading-snug text-[11.5px] sm:text-xs text-slate-700">
+                                    {item}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : null}
+                        </div>
+                      )}
                     </div>
 
                     <div className="hidden sm:flex sm:col-span-5 flex-col items-center justify-center py-2 sm:py-0">
