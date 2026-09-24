@@ -32,7 +32,7 @@ export default function CareerPathwaysGrid() {
   const allPathways = [
     {
       id: "govt-jobs",
-      domainNum: "DOMAIN #1",
+      domainNum: "Pathway #1",
       tagText: "Most Popular",
       tagIcon: Flame,
       tagIconColor: "text-amber-600",
@@ -61,7 +61,7 @@ export default function CareerPathwaysGrid() {
     },
     {
       id: "psu-sector",
-      domainNum: "DOMAIN #2",
+      domainNum: "Pathway #2",
       tagText: "High Demand",
       tagIcon: TrendingUp,
       tagIconColor: "text-blue-600",
@@ -91,7 +91,7 @@ export default function CareerPathwaysGrid() {
     },
     {
       id: "corporate-sector",
-      domainNum: "DOMAIN #3",
+      domainNum: "Pathway #3",
       tagText: "Growing Opportunities",
       tagIcon: Briefcase,
       tagIconColor: "text-purple-600",
@@ -120,7 +120,7 @@ export default function CareerPathwaysGrid() {
     },
     {
       id: "higher-education",
-      domainNum: "DOMAIN #4",
+      domainNum: "Pathway #4",
       tagText: "Future Focused",
       tagIcon: Compass,
       tagIconColor: "text-orange-600",
@@ -149,7 +149,7 @@ export default function CareerPathwaysGrid() {
     },
     {
       id: "and-many-more",
-      domainNum: "DOMAIN #5",
+      domainNum: "Pathway #5",
       tagText: "Career Advantage",
       tagIcon: Star,
       tagIconColor: "text-teal-600 fill-teal-500",
@@ -157,23 +157,23 @@ export default function CareerPathwaysGrid() {
       icon: Target,
       iconColor: "text-teal-600",
       title: "And many more",
-      subtitle: "Versatile foundational skills for diverse career opportunities",
+      subtitle: "Comprehensive foundational skills for diverse career exams and recruitment drives",
       cardBorder: "border-teal-200/90 hover:border-teal-400 bg-white",
       cardBgGlow: "from-teal-500/5 via-transparent to-transparent",
       badgePillBg: "bg-teal-50/80 text-teal-800 border-teal-200/60",
       checkIconColor: "text-teal-600",
-      subCoverage: "Aptitude + Logic + Communication + Many More",
+      subCoverage: "Aptitude + Logic + English + General Awareness",
       btnStyle: "bg-teal-600 hover:bg-teal-500 text-white shadow-teal-700/20",
+      btnText: "Enquiry",
+      btnLink: "/enroll",
       tagline: "Skills for Endless Opportunities",
       taglineColor: "text-teal-800",
       image: SoftskillsImg,
       items: [
         "State & Autonomous Body Recruitment Tests",
         "Campus Placement Aptitude & Screening",
-        "Defence Services (CDS, AFCAT, INET)",
-        "Professional Certifications & Logical Aptitude",
-        "Job Interview & GD Preparation Mastery",
-        "And many more competitive opportunities",
+        "Defence Services (CDS, AFCAT, Non-Tech)",
+        "And many more exams as per syllabus",
       ],
     },
   ];
@@ -284,10 +284,10 @@ export default function CareerPathwaysGrid() {
                   </div>
 
                   <Link
-                    href="/curriculum"
+                    href={pathway.btnLink || "/curriculum"}
                     className={`shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-[1.03] ${pathway.btnStyle}`}
                   >
-                    <span>View Details</span>
+                    <span>{pathway.btnText || "View Details"}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
