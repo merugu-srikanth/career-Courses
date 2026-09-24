@@ -253,18 +253,10 @@ export default function Navbar() {
           }`}
         >
           <div>
-            {/* Header with Logos and Close Button */}
+            {/* Header with Logo and Close Button */}
             <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
-              <div className="flex flex-col gap-1">
-                <div className="relative w-28 h-8">
-                  <Image src={LogoImg} alt="Career Mitra" fill className="object-contain" />
-                </div>
-                <div className="flex items-center gap-1">
-                  <span className="text-[9px] text-slate-400 font-bold uppercase">with</span>
-                  <div className="relative w-16 h-3.5">
-                    <Image src={Score99Logo} alt="Score 99" fill className="object-contain" />
-                  </div>
-                </div>
+              <div className="relative w-32 h-9">
+                <Image src={LogoImg} alt="Career Mitra" fill className="object-contain object-left" />
               </div>
 
               <button
