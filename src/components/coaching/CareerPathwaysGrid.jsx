@@ -265,29 +265,41 @@ export default function CareerPathwaysGrid() {
                 </div>
 
                 {/* Card Bottom Bar */}
-                <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <div className="w-8 h-8 rounded-xl bg-slate-100/80 flex items-center justify-center shrink-0">
-                      <BookOpen className="w-4 h-4 text-slate-600" />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-xs font-bold text-slate-900 leading-tight">
-                        85–100% Syllabus Covered
-                      </div>
-                      <div className="text-[10px] text-slate-500 truncate leading-tight">
-                        {pathway.subCoverage}
-                      </div>
-                    </div>
+                {pathway.id === "and-many-more" ? (
+                  <div className="pt-4 border-t border-slate-100">
+                    <Link
+                      href="/enroll"
+                      className="w-full inline-flex items-center justify-center gap-2 py-3 px-6 rounded-2xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white font-bold text-sm shadow-md shadow-teal-900/20 hover:shadow-lg transition-all"
+                    >
+                      <span>Enquiry</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
                   </div>
+                ) : (
+                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <div className="w-8 h-8 rounded-xl bg-slate-100/80 flex items-center justify-center shrink-0">
+                        <BookOpen className="w-4 h-4 text-slate-600" />
+                      </div>
+                      <div className="min-w-0">
+                        <div className="text-xs font-bold text-slate-900 leading-tight">
+                          85–100% Syllabus Covered
+                        </div>
+                        <div className="text-[10px] text-slate-500 truncate leading-tight">
+                          {pathway.subCoverage}
+                        </div>
+                      </div>
+                    </div>
 
-                  <Link
-                    href={pathway.btnLink || "/curriculum"}
-                    className={`shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-[1.03] ${pathway.btnStyle}`}
-                  >
-                    <span>{pathway.btnText || "View Details"}</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                </div>
+                    <Link
+                      href={pathway.btnLink || "/curriculum"}
+                      className={`shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold shadow-sm transition-all hover:scale-[1.03] ${pathway.btnStyle}`}
+                    >
+                      <span>{pathway.btnText || "View Details"}</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                )}
               </div>
             );
           })}
