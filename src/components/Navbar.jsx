@@ -301,8 +301,22 @@ export default function Navbar() {
               })}
             </div>
 
+            {/* Career Mitra Programme Partner Card */}
+            <div className="mt-4 p-3 rounded-xl bg-slate-900 text-white border border-slate-800 shadow-xs">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-[10px] font-bold tracking-wider uppercase text-orange-400">CAREER MITRA</span>
+                <span className="text-[9px] font-bold text-emerald-400 bg-emerald-500/20 px-1.5 py-0.5 rounded border border-emerald-400/30">Official</span>
+              </div>
+              <div className="text-xs font-bold text-white leading-tight">
+                Programme Partner
+              </div>
+              <p className="text-[11px] text-slate-300 mt-0.5 leading-snug font-normal">
+                Career Guidance &amp; Student Support
+              </p>
+            </div>
+
             {/* Score 99 Academic Partner Card */}
-            <div className="mt-5 p-3 rounded-xl bg-slate-50 border border-slate-100">
+            <div className="mt-2.5 p-3 rounded-xl bg-slate-50 border border-slate-100">
               <div className="flex items-center justify-between mb-1.5">
                 <span className="text-[10px] font-bold uppercase text-slate-400">Academic Partner</span>
                 <span className="text-[10px] font-bold text-red-600 bg-red-50 px-1.5 py-0.5 rounded border border-red-100">Official</span>
