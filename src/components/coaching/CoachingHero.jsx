@@ -15,9 +15,10 @@ export default function CoachingHero() {
     // "PSUs & Placements",
     // "And many more.."
     "Government Jobs",
-    "PSUs",
+    
     "Corporate Sector",
     "Higher Education Exams",
+    "PSUs",
     "More..."
   ];
 
