@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import LogoImg from "@/assets/NewLogo.png";
 import Score99Logo from "@/assets/score99logo.png";
 import { CheckCircle2, GraduationCap, ExternalLink, Sparkles, Award } from "lucide-react";
 import Link from "next/link";
@@ -100,28 +101,44 @@ export default function FacultyShowcase() {
           ))}
         </div>
 
-        {/* Score99Percentile Association Banner */}
+        {/* Score99Percentile & Career Mitra Association Banner */}
         <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-6">
-            {/* Official Score99Percentile Logo Image */}
-            <a
-              href="https://score99percentile.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 px-4 py-2.5 rounded-2xl bg-white shadow-md border border-slate-100 flex items-center justify-center hover:scale-105 transition-transform"
-              title="Visit Score99Percentile Website"
-            >
-              <div className="relative w-44 sm:w-52 h-12 sm:h-14">
+            {/* Co-Branding Partner Logos: Career Mitra (Left) + Score 99 (Right) */}
+            <div className="shrink-0 px-3 sm:px-4 py-2 rounded-2xl bg-white shadow-md border border-slate-100 flex items-center gap-2 sm:gap-3">
+              {/* Career Mitra Logo (Left) */}
+              <div className="relative w-28 sm:w-36 h-9 sm:h-11">
+                <Image
+                  src={LogoImg}
+                  alt="Career Mitra"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 112px, 144px"
+                  priority
+                />
+              </div>
+
+              {/* Divider / Multiplier */}
+              <span className="h-6 sm:h-8 w-px bg-slate-200 shrink-0" />
+
+              {/* Score 99 Logo (Right) */}
+              <a
+                href="https://score99percentile.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative w-28 sm:w-36 h-8 sm:h-10 flex items-center hover:opacity-90 transition-opacity"
+                title="Visit Score99Percentile Website"
+              >
                 <Image
                   src={Score99Logo}
                   alt="Score 99 Percentile"
                   fill
                   className="object-contain"
-                  sizes="(max-width: 640px) 176px, 208px"
+                  sizes="(max-width: 640px) 112px, 144px"
                   priority
                 />
-              </div>
-            </a>
+              </a>
+            </div>
 
             <div>
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30 mb-1">
