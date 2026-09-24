@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import {
   CheckCircle,
   ShieldCheck,
@@ -9,6 +9,9 @@ import {
   Loader2,
   Building2,
   GraduationCap,
+  ChevronDown,
+  Search,
+  Check,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -62,8 +65,22 @@ export default function EnrollmentForm() {
   });
 
   const [selectedCollege, setSelectedCollege] = useState("");
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const dropdownRef = useRef(null);
+
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -219,39 +236,82 @@ export default function EnrollmentForm() {
                 />
               </div>
 
-              {/* College Name - Dropdown Selection */}
-              <div className="sm:col-span-2 space-y-2">
+              {/* College Name - Custom 70vh Dropdown Selection */}
+              <div className="sm:col-span-2 space-y-2 relative" ref={dropdownRef}>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5 flex items-center gap-1.5">
                   <Building2 className="w-3.5 h-3.5 text-orange-500" /> College Name
                 </label>
-                <select
-                  value={selectedCollege}
-                  onChange={(e) => {
-                    const val = e.target.value;
-                    setSelectedCollege(val);
-                    if (val !== "Other College (Type below)") {
-                      setFormData((prev) => ({ ...prev, collegeName: val }));
-                    } else {
-                      setFormData((prev) => ({ ...prev, collegeName: "" }));
-                    }
-                  }}
-                  className="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all cursor-pointer"
+
+                {/* Dropdown Trigger Button */}
+                <button
+                  type="button"
+                  onClick={() => setDropdownOpen((prev) => !prev)}
+                  className="w-full px-4 py-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-800 focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all flex items-center justify-between text-left cursor-pointer"
                 >
-                  <option value="">-- Select Your College --</option>
-                  <optgroup label="⭐ Top Colleges">
-                    <option value="St. Ann's College for Women">1. St. Ann&apos;s College for Women</option>
-                    <option value="Kasturba Gandhi Degree and PG College for Women">2. Kasturba Gandhi Degree and PG College for Women</option>
-                    <option value="Malla Reddy Engineering College">3. Malla Reddy Engineering College</option>
-                  </optgroup>
-                  <optgroup label="Hyderabad &amp; Telangana Colleges">
-                    {HYDERABAD_COLLEGES.slice(3, -1).map((college, idx) => (
-                      <option key={idx} value={college}>
-                        {college}
-                      </option>
-                    ))}
-                  </optgroup>
-                  <option value="Other College (Type below)">Other College (Type your college name)</option>
-                </select>
+                  <span className={selectedCollege ? "text-slate-900 font-semibold truncate pr-2" : "text-slate-400"}>
+                    {selectedCollege || "Select Your College"}
+                  </span>
+                  <ChevronDown className={`w-4 h-4 text-slate-500 shrink-0 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+
+                {/* Custom 70vh Dropdown Menu */}
+                {dropdownOpen && (
+                  <div className="absolute top-full left-0 w-full mt-1.5 bg-white border border-slate-200 rounded-2xl shadow-2xl z-50 p-2 overflow-hidden animate-fadeIn">
+                    {/* Search Input */}
+                    <div className="relative mb-2">
+                      <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                      <input
+                        type="text"
+                        placeholder="Search college by name..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-full pl-8 pr-3 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
+                        autoFocus
+                      />
+                    </div>
+
+                    {/* Scrollable List with max-h-[70vh] */}
+                    <div className="max-h-[70vh] overflow-y-auto space-y-0.5 divide-y divide-slate-50 pr-1">
+                      {HYDERABAD_COLLEGES.filter((c) =>
+                        c.toLowerCase().includes(searchQuery.toLowerCase())
+                      ).map((college, idx) => {
+                        const isSelected = selectedCollege === college;
+                        return (
+                          <button
+                            key={idx}
+                            type="button"
+                            onClick={() => {
+                              setSelectedCollege(college);
+                              setDropdownOpen(false);
+                              setSearchQuery("");
+                              if (college !== "Other College (Type below)") {
+                                setFormData((prev) => ({ ...prev, collegeName: college }));
+                              } else {
+                                setFormData((prev) => ({ ...prev, collegeName: "" }));
+                              }
+                            }}
+                            className={`w-full px-3 py-2.5 rounded-xl text-left text-xs sm:text-sm font-medium flex items-center justify-between transition-colors ${
+                              isSelected
+                                ? "bg-orange-50 text-orange-600 font-bold"
+                                : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
+                            }`}
+                          >
+                            <span className="truncate pr-2">{college}</span>
+                            {isSelected && <Check className="w-4 h-4 text-orange-600 shrink-0" />}
+                          </button>
+                        );
+                      })}
+
+                      {HYDERABAD_COLLEGES.filter((c) =>
+                        c.toLowerCase().includes(searchQuery.toLowerCase())
+                      ).length === 0 && (
+                        <div className="p-4 text-center text-xs text-slate-400">
+                          No matching college found. You can select &ldquo;Other College&rdquo; below.
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
 
                 {/* If 'Other College' selected, show custom typing input */}
                 {selectedCollege === "Other College (Type below)" && (
@@ -260,7 +320,7 @@ export default function EnrollmentForm() {
                     placeholder="Type your college name here (e.g. Government Degree College, etc.)"
                     value={formData.collegeName}
                     onChange={(e) => setFormData((prev) => ({ ...prev, collegeName: e.target.value }))}
-                    className="w-full px-4 py-3 rounded-2xl bg-white border-2 border-orange-400 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all"
+                    className="w-full px-4 py-3 rounded-2xl bg-white border-2 border-orange-400 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500/20 transition-all mt-2"
                     autoFocus
                   />
                 )}
