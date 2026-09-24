@@ -109,7 +109,7 @@ export default function FacultyShowcase() {
 
             <div className="relative z-10">
               {/* Card Top Badges & Logo */}
-              <div className="flex items-center justify-between gap-3 mb-5">
+              <div className="flex items-center justify-between gap-3 mb-4">
                 <div className="px-3.5 py-2 rounded-2xl bg-white shadow-md border border-slate-100 flex items-center shrink-0">
                   <div className="relative w-28 sm:w-32 h-7 sm:h-8">
                     <Image
@@ -128,37 +128,48 @@ export default function FacultyShowcase() {
                 </span>
               </div>
 
-              {/* Content */}
-              <h4 className="text-lg sm:text-xl font-bold text-white mb-2 leading-snug tracking-tight">
-                Career Mitra Student Guidance &amp; Mentorship
-              </h4>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal mb-4">
-                Empowering students with comprehensive foundational preparation, personalized mentorship, and structured multi-domain career guidance to maximize exam selections.
+              {/* Motto / Slogan */}
+              <p className="text-xs font-semibold text-orange-400 italic mb-2 tracking-tight">
+                &ldquo;Let your career be, an informed choice… not a forced decision&rdquo;
               </p>
 
-              <div className="space-y-2 mb-6 text-xs text-slate-300">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0" />
-                  <span>End-to-End Student Support &amp; Admission Counseling</span>
+              {/* Content */}
+              <h4 className="text-lg sm:text-xl font-bold text-white mb-2 leading-snug tracking-tight">
+                Welcome to Careermitra • Student Dashboard
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal mb-4">
+                Register and stay updated with profile-based job alerts on email and your dashboard.
+              </p>
+
+              <div className="space-y-2.5 mb-6 text-xs text-slate-300">
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white font-semibold">Free Registration:</strong> Profile-based job alerts on email &amp; dashboard
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0" />
-                  <span>Unified Multi-Domain Curriculum &amp; Full LMS Access</span>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white font-semibold">Latest Govt Jobs:</strong> Explore the latest jobs &amp; apply instantly
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0" />
-                  <span>Live Online &amp; Classroom Training Delivery</span>
+                <div className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-orange-400 shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white font-semibold">Internships:</strong> Explore internships to accelerate your career
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="pt-4 border-t border-slate-800/80 relative z-10 flex items-center justify-between">
-              <span className="text-xs font-medium text-slate-400">Foundation Programme 2026-27</span>
+              <span className="text-xs font-medium text-slate-400">careermitra.in</span>
               <Link
                 href="/enroll"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs shadow-md transition-all hover:scale-[1.02]"
               >
-                <span>Enquire Now</span>
+                <span>Free Registration</span>
                 <Sparkles className="w-3.5 h-3.5" />
               </Link>
             </div>
