@@ -6,9 +6,10 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import LogoImg from "@/assets/NewLogo.png";
+import Score99Logo from "@/assets/score99logo.png";
 import {
   FaHome, FaLayerGroup, FaCreditCard, FaUserCheck,
-  FaSignInAlt, FaSignOutAlt, FaWhatsapp, FaBars, FaTimes, FaPhoneAlt
+  FaSignInAlt, FaSignOutAlt, FaWhatsapp, FaBars, FaTimes, FaPhoneAlt, FaEnvelope, FaExternalLinkAlt
 } from "react-icons/fa";
 import { Sparkles, Layers, BookOpen, User, UserCheck } from "lucide-react";
 
@@ -27,6 +28,18 @@ export default function Navbar() {
   useEffect(() => {
     setDrawerOpen(false);
   }, [pathname]);
+
+  // Lock body scroll when drawer is open
+  useEffect(() => {
+    if (drawerOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [drawerOpen]);
 
   const navLinks = [
     { name: "Program Overview", path: "/", icon: Sparkles },
@@ -47,19 +60,45 @@ export default function Navbar() {
         <div className="h-0.5 w-full bg-gradient-to-r from-orange-400 via-amber-500 to-emerald-500" />
 
         <div className="w-full max-w-[90%] mx-auto px-[2%] md:px-0">
-          <div className="flex items-center justify-between h-18 sm:h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 shrink-0">
-              <div className="relative w-36 sm:w-44 h-15">
-                <Image
-                  src={LogoImg}
-                  alt="Career Mitra"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </Link>
+          <div className="flex items-center justify-between h-18 sm:h-20 gap-2">
+            {/* Logos Co-Branding */}
+            <div className="flex items-center gap-2.5 sm:gap-4 shrink-0">
+              <Link href="/" className="flex items-center shrink-0">
+                <div className="relative w-32 sm:w-40 h-12 sm:h-14">
+                  <Image
+                    src={LogoImg}
+                    alt="Career Mitra"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+              </Link>
+
+              {/* Divider & Score 99 Logo */}
+              <span className="h-6 sm:h-8 w-px bg-slate-200" />
+
+              <a
+                href="https://score99percentile.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-1.5 px-2 sm:px-2.5 py-1 rounded-xl bg-slate-50 hover:bg-slate-100/80 border border-slate-200/70 hover:border-red-200 transition-all"
+                title="Academic Partner - Score 99 Percentile"
+              >
+                <div className="flex flex-col items-start leading-none">
+                  <span className="text-[8px] sm:text-[9px] font-bold text-slate-400 uppercase tracking-tighter">In Collab With</span>
+                  <div className="relative w-20 sm:w-26 h-5 sm:h-6">
+                    <Image
+                      src={Score99Logo}
+                      alt="Score 99 Percentile"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
 
             {/* Desktop Nav Links */}
             <div className="hidden lg:flex items-center gap-2">
@@ -111,7 +150,7 @@ export default function Navbar() {
                   </span>
                   <button
                     onClick={() => logout()}
-                    className="p-2 rounded-xl bg-slate-100 hover:bg-red-50 text-slate-600 hover:text-red-600 text-xs font-bold transition-all"
+                    className="p-2 rounded-xl bg-slate-100 hover:bg-red-50 text-slate-600 hover:text-red-600 text-xs font-bold transition-all cursor-pointer"
                     title="Logout"
                   >
                     <FaSignOutAlt className="w-3.5 h-3.5" />
@@ -128,18 +167,19 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* Mobile Hamburger */}
+            {/* Mobile Hamburger & Quick Enquiry */}
             <div className="flex lg:hidden items-center gap-2">
               <Link
                 href="/enroll"
-                className="px-3 py-1.5 rounded-xl bg-orange-500 text-white text-xs font-bold sm:hidden"
+                className="px-3 py-1.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white text-xs font-bold shadow-xs transition-colors"
               >
                 Enquiry
               </Link>
               <button
-                onClick={() => setDrawerOpen(!drawerOpen)}
-                className="p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all"
-                aria-label="Toggle menu"
+                type="button"
+                onClick={() => setDrawerOpen((prev) => !prev)}
+                className="p-2.5 rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200 transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-orange-500/30"
+                aria-label="Toggle navigation menu"
               >
                 {drawerOpen ? <FaTimes size={18} /> : <FaBars size={18} />}
               </button>
@@ -160,13 +200,22 @@ export default function Navbar() {
                   IN COLLABORATION WITH
                 </span>
 
-                {/* Score 99 Percentile */}
-                <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-red-50/80 border border-red-100 text-red-600 whitespace-nowrap shrink-0">
-                  <span className="w-4 h-4 rounded bg-red-500 text-white text-[9px] font-bold flex items-center justify-center">
-                    99
-                  </span>
-                  <span className="text-[11px] font-semibold tracking-tight">SCORE 99 PERCENTILE</span>
-                </div>
+                {/* Score 99 Percentile Logo Pill */}
+                <a
+                  href="https://score99percentile.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 px-2 py-0.5 rounded-md bg-white border border-slate-200 shadow-2xs hover:border-red-300 transition-all shrink-0"
+                >
+                  <div className="relative w-22 h-4">
+                    <Image
+                      src={Score99Logo}
+                      alt="Score 99 Percentile"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </a>
 
                 {/* Govt Job Foundation */}
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-amber-50/70 text-amber-700 border border-amber-100 whitespace-nowrap shrink-0">
@@ -186,87 +235,149 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Drawer */}
-      {drawerOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div
-            className="fixed inset-0 bg-black/40 backdrop-blur-xs"
-            onClick={() => setDrawerOpen(false)}
-          />
-          <div className="fixed top-0 right-0 w-[80vw] max-w-xs h-full bg-white shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
-            <div>
-              <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
-                <div className="relative w-32 h-10">
+      {/* Mobile Sidebar / Drawer */}
+      <div
+        className={`fixed inset-0 z-[100] lg:hidden transition-opacity duration-300 ${
+          drawerOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        {/* Backdrop */}
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-xs transition-opacity duration-300"
+          onClick={() => setDrawerOpen(false)}
+        />
+
+        {/* Drawer panel */}
+        <div
+          className={`fixed top-0 right-0 w-[85vw] max-w-xs h-full bg-white shadow-2xl p-5 sm:p-6 flex flex-col justify-between overflow-y-auto transform transition-transform duration-300 ease-in-out ${
+            drawerOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div>
+            {/* Header with Logos and Close Button */}
+            <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
+              <div className="flex flex-col gap-1">
+                <div className="relative w-28 h-8">
                   <Image src={LogoImg} alt="Career Mitra" fill className="object-contain" />
                 </div>
-                <button
-                  onClick={() => setDrawerOpen(false)}
-                  className="p-2 rounded-xl bg-slate-100 text-slate-500"
-                >
-                  <FaTimes size={16} />
-                </button>
+                <div className="flex items-center gap-1">
+                  <span className="text-[9px] text-slate-400 font-bold uppercase">with</span>
+                  <div className="relative w-16 h-3.5">
+                    <Image src={Score99Logo} alt="Score 99" fill className="object-contain" />
+                  </div>
+                </div>
               </div>
 
-              <div className="space-y-1.5">
-                {navLinks.map((link) => {
-                  const active = isActive(link.path);
-                  return (
-                    <Link
-                      key={link.name}
-                      href={link.path}
-                      onClick={() => setDrawerOpen(false)}
-                      className={`flex items-center justify-between p-3 rounded-xl text-sm font-semibold transition-all ${active ? "bg-orange-50 text-orange-600 font-bold" : "text-slate-700 hover:bg-slate-50"
-                        }`}
-                    >
-                      <span>{link.name}</span>
-                      {link.badge && (
-                        <span className="px-2 py-0.5 text-[9px] font-bold rounded-full bg-orange-500 text-white">
-                          {link.badge}
-                        </span>
-                      )}
-                    </Link>
-                  );
-                })}
-              </div>
+              <button
+                type="button"
+                onClick={() => setDrawerOpen(false)}
+                className="p-2 rounded-xl bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900 transition-all cursor-pointer"
+                aria-label="Close menu"
+              >
+                <FaTimes size={16} />
+              </button>
             </div>
 
-            <div className="pt-6 border-t border-slate-100 space-y-3">
+            {/* Nav Links */}
+            <div className="space-y-1.5">
+              {navLinks.map((link) => {
+                const active = isActive(link.path);
+                const Icon = link.icon;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.path}
+                    onClick={() => setDrawerOpen(false)}
+                    className={`flex items-center justify-between p-3 rounded-xl text-sm font-semibold transition-all ${
+                      active
+                        ? "bg-orange-50 text-orange-600 font-bold border-l-4 border-orange-500"
+                        : "text-slate-700 hover:bg-slate-50"
+                    }`}
+                  >
+                    <div className="flex items-center gap-2.5">
+                      {Icon && <Icon className={`w-4 h-4 ${active ? "text-orange-500" : "text-slate-400"}`} />}
+                      <span>{link.name}</span>
+                    </div>
+                    {link.badge && (
+                      <span className="px-2 py-0.5 text-[9px] font-bold rounded-full bg-orange-500 text-white">
+                        {link.badge}
+                      </span>
+                    )}
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* Score 99 Academic Partner Card */}
+            <div className="mt-5 p-3 rounded-xl bg-slate-50 border border-slate-100">
+              <div className="flex items-center justify-between mb-1.5">
+                <span className="text-[10px] font-bold uppercase text-slate-400">Academic Partner</span>
+                <span className="text-[10px] font-bold text-red-600 bg-red-50 px-1.5 py-0.5 rounded border border-red-100">Official</span>
+              </div>
               <a
-                href="https://wa.me/917794045533?text=Hi%20CareerMitra%20Team!%20I%20have%20an%20inquiry%20regarding%20the%20Foundation%20Coaching%20Course."
+                href="https://score99percentile.com"
                 target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl bg-emerald-600 text-white font-bold text-xs shadow-sm"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-2 rounded-lg bg-white border border-slate-200/80 hover:border-red-300 transition-colors"
               >
-                <FaWhatsapp className="w-4 h-4" /> +91 77940 45533 (WhatsApp)
+                <div className="relative w-24 h-5">
+                  <Image src={Score99Logo} alt="Score 99" fill className="object-contain" />
+                </div>
+                <FaExternalLinkAlt className="w-2.5 h-2.5 text-slate-400" />
               </a>
-
-              <a
-                href="mailto:info@careermitra.in"
-                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-colors"
-              >
-                <FaEnvelope className="w-3.5 h-3.5 text-orange-500" /> info@careermitra.in
-              </a>
-
-              {token ? (
-                <button
-                  onClick={() => { logout(); setDrawerOpen(false); }}
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl bg-red-50 text-red-600 font-bold text-xs"
-                >
-                  <FaSignOutAlt className="w-3.5 h-3.5" /> Logout
-                </button>
-              ) : (
-                <Link
-                  href="/login"
-                  onClick={() => setDrawerOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-2xl bg-orange-500 text-white font-bold text-xs"
-                >
-                  <FaSignInAlt className="w-3.5 h-3.5" /> Student Login / Register
-                </Link>
-              )}
             </div>
           </div>
+
+          {/* Bottom Actions */}
+          <div className="pt-5 border-t border-slate-100 space-y-2.5">
+            <Link
+              href="/enroll"
+              onClick={() => setDrawerOpen(false)}
+              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold text-xs shadow-md transition-all"
+            >
+              <UserCheck className="w-4 h-4" />
+              <span>Submit Enquiry</span>
+            </Link>
+
+            <a
+              href="https://wa.me/917794045533?text=Hi%20CareerMitra%20Team!%20I%20have%20an%20inquiry%20regarding%20the%20Foundation%20Coaching%20Course."
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs transition-colors"
+            >
+              <FaWhatsapp className="w-4 h-4" /> +91 77940 45533 (WhatsApp)
+            </a>
+
+            <a
+              href="mailto:info@careermitra.in"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-colors"
+            >
+              <FaEnvelope className="w-3.5 h-3.5 text-orange-500" /> info@careermitra.in
+            </a>
+
+            {token ? (
+              <button
+                type="button"
+                onClick={() => {
+                  logout();
+                  setDrawerOpen(false);
+                }}
+                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-red-50 hover:bg-red-100 text-red-600 font-bold text-xs transition-colors cursor-pointer"
+              >
+                <FaSignOutAlt className="w-3.5 h-3.5" /> Logout
+              </button>
+            ) : (
+              <Link
+                href="/login"
+                onClick={() => setDrawerOpen(false)}
+                className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs transition-colors"
+              >
+                <FaSignInAlt className="w-3.5 h-3.5" /> Student Login / Register
+              </Link>
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </>
   );
 }

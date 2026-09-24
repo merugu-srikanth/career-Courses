@@ -53,7 +53,7 @@ export default function CareerPathwaysGrid() {
       items: [
         "UPSC CSAT (Civil Services Aptitude)",
         "SSC (CGL, CHSL, MTS, CPO)",
-        "State PSCs (CSAT & Aptitude Papers)",
+        
         "Railways (RRB NTPC, Group D)",
         "Defence Services (CDS, AFCAT)",
         "Central & State Selection Commissions",
@@ -83,6 +83,7 @@ export default function CareerPathwaysGrid() {
         "Banking (IBPS PO/Clerk, SBI, RBI)",
         "ONGC (Oil & Natural Gas Corp)",
         "IOCL, BHEL, NTPC, SAIL",
+        "State PSCs (CSAT & Aptitude Papers)",
         "State & Central PSU Recruitment Tests",
         "Insurance PSUs (LIC, NIACL, GIC)",
         "Regional Rural Banks & Apex Bodies",
@@ -167,12 +168,12 @@ export default function CareerPathwaysGrid() {
       taglineColor: "text-teal-800",
       image: SoftskillsImg,
       items: [
-        "Job Interview Mastery & Mock Interviews",
-        "Group Discussion (GD) Simulations",
-        "Professional Resume Writing & Review",
-        "Communication & Spoken English Fluency",
-        "State & Autonomous Body Aptitude Tests",
-        "And many more topics as per syllabus",
+        "State & Autonomous Body Recruitment Tests",
+        "Campus Placement Aptitude & Screening",
+        "Defence Services (CDS, AFCAT, INET)",
+        "Professional Certifications & Logical Aptitude",
+        "Job Interview & GD Preparation Mastery",
+        "And many more competitive opportunities",
       ],
     },
   ];
