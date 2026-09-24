@@ -100,8 +100,8 @@ export default function CoachingHero() {
             </div>
           </div>
 
-          {/* Right Hero Image (courses1.png) + Consultation Card right at the bottom of the image */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center gap-4">
+          {/* Right Hero Image (courses1.png) + Consultation Card (hidden on small/mobile screens) */}
+          <div className="hidden lg:flex lg:col-span-5 flex-col items-center justify-center gap-4">
             <div className="relative w-full max-w-md lg:max-w-lg">
               {/* Soft backdrop glow */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-orange-300/20 via-amber-200/20 to-emerald-300/20 rounded-3xl blur-2xl -z-10" />
