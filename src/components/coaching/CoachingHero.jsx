@@ -57,7 +57,7 @@ export default function CoachingHero() {
           <div className="lg:col-span-7 text-left">
             <div className="inline-flex items-center gap-2 px-2 md:px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-100/70 text-emerald-800 border border-emerald-300/60 mb-5">
               <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
-              GOVERNMENT JOB FOUNDATION PROGRAMME
+              Career Foundation Programme 26-27
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight leading-[1.15] mb-4">
@@ -68,9 +68,9 @@ export default function CoachingHero() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6 font-normal">
-One Foundation. Multiple Career Pathways.
-Build core skills that open doors to Government Jobs, Banking & PSUs, Corporate Placements and Higher Education Entrance Exams - all through one comprehensive foundation programme.
-Learn Once. Prepare for Many.            </p>
+              One Foundation. Multiple Career Pathways.
+              Build core skills that open doors to Government Jobs, Banking & PSUs, Corporate Placements and Higher Education Entrance Exams - all through one comprehensive foundation programme.
+              Learn Once. Prepare for Many.            </p>
 
             {/* Target Exam Chips */}
             <div className="mb-8">
@@ -128,15 +128,15 @@ Learn Once. Prepare for Many.            </p>
                 <div className="relative shrink-0">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-amber-100/90 border border-amber-300/80 flex items-center justify-center shadow-inner relative overflow-hidden">
                     <svg className="w-10 h-10 text-slate-800" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="32" cy="24" r="12" fill="#FCD34D"/>
-                      <path d="M20 23C20 16.3726 25.3726 11 32 11C38.6274 11 44 16.3726 44 23V27C44 27 41 24 32 24C23 24 20 27 20 27V23Z" fill="#1E293B"/>
-                      <path d="M16 54C16 44.0589 23.1634 36 32 36C40.8366 36 48 44.0589 48 54V56H16V54Z" fill="#1E293B"/>
-                      <path d="M26 36L32 44L38 36H26Z" fill="#FCD34D"/>
-                      <path d="M18 24C18 16.268 24.268 10 32 10C39.732 10 46 16.268 46 24V28" stroke="#EA580C" strokeWidth="2.5" strokeLinecap="round"/>
-                      <rect x="16" y="22" width="4" height="8" rx="2" fill="#EA580C"/>
-                      <rect x="44" y="22" width="4" height="8" rx="2" fill="#EA580C"/>
-                      <path d="M46 28V32C46 33.1046 45.1046 34 44 34H38" stroke="#EA580C" strokeWidth="2" strokeLinecap="round"/>
-                      <circle cx="37" cy="34" r="2" fill="#EA580C"/>
+                      <circle cx="32" cy="24" r="12" fill="#FCD34D" />
+                      <path d="M20 23C20 16.3726 25.3726 11 32 11C38.6274 11 44 16.3726 44 23V27C44 27 41 24 32 24C23 24 20 27 20 27V23Z" fill="#1E293B" />
+                      <path d="M16 54C16 44.0589 23.1634 36 32 36C40.8366 36 48 44.0589 48 54V56H16V54Z" fill="#1E293B" />
+                      <path d="M26 36L32 44L38 36H26Z" fill="#FCD34D" />
+                      <path d="M18 24C18 16.268 24.268 10 32 10C39.732 10 46 16.268 46 24V28" stroke="#EA580C" strokeWidth="2.5" strokeLinecap="round" />
+                      <rect x="16" y="22" width="4" height="8" rx="2" fill="#EA580C" />
+                      <rect x="44" y="22" width="4" height="8" rx="2" fill="#EA580C" />
+                      <path d="M46 28V32C46 33.1046 45.1046 34 44 34H38" stroke="#EA580C" strokeWidth="2" strokeLinecap="round" />
+                      <circle cx="37" cy="34" r="2" fill="#EA580C" />
                     </svg>
                   </div>
                   {/* Chat dots */}
