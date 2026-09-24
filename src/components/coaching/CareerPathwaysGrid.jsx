@@ -157,7 +157,7 @@ export default function CareerPathwaysGrid() {
       icon: Target,
       iconColor: "text-teal-600",
       title: "And many more",
-      subtitle: "Comprehensive foundational skills for diverse career exams and recruitment drives",
+      subtitle: "Aptitude foundation for multiple other career opportunities and competitive exams.",
       cardBorder: "border-teal-200/90 hover:border-teal-400 bg-white",
       cardBgGlow: "from-teal-500/5 via-transparent to-transparent",
       badgePillBg: "bg-teal-50/80 text-teal-800 border-teal-200/60",
@@ -169,12 +169,7 @@ export default function CareerPathwaysGrid() {
       tagline: "Skills for Endless Opportunities",
       taglineColor: "text-teal-800",
       image: SoftskillsImg,
-      items: [
-        "State & Autonomous Body Recruitment Tests",
-        "Campus Placement Aptitude & Screening",
-        "Defence Services (CDS, AFCAT, Non-Tech)",
-        "And many more exams as per syllabus",
-      ],
+      items: [],
     },
   ];
 
@@ -234,16 +229,18 @@ export default function CareerPathwaysGrid() {
                         {pathway.subtitle}
                       </p>
 
-                      <ul className="space-y-1.5 text-xs text-slate-700 font-medium">
-                        {pathway.items.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-1.5">
-                            <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${pathway.checkIconColor}`} />
-                            <span className="leading-snug text-[11.5px] sm:text-xs text-slate-700">
-                              {item}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
+                      {pathway.items && pathway.items.length > 0 ? (
+                        <ul className="space-y-1.5 text-xs text-slate-700 font-medium">
+                          {pathway.items.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-1.5">
+                              <CheckCircle2 className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${pathway.checkIconColor}`} />
+                              <span className="leading-snug text-[11.5px] sm:text-xs text-slate-700">
+                                {item}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
                     </div>
 
                     <div className="hidden sm:flex sm:col-span-5 flex-col items-center justify-center py-2 sm:py-0">
