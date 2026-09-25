@@ -57,6 +57,7 @@ export default function CareerPathwaysGrid() {
         "Railways (RRB NTPC, Group D)",
         "Defence Services (CDS, AFCAT)",
         "Central & State Selection Commissions",
+        "Many more..."
       ],
     },
     {
@@ -87,6 +88,7 @@ export default function CareerPathwaysGrid() {
         "State & Central PSU Recruitment Tests",
         "Insurance PSUs (LIC, NIACL, GIC)",
         "Regional Rural Banks & Apex Bodies",
+        "Many more..."
       ],
     },
     {
@@ -116,6 +118,7 @@ export default function CareerPathwaysGrid() {
         // "Deloitte, PwC, Accenture Assessments",
         "Banking & Financial Services (BFSI)",
         "Core Analytical Problem Solving",
+        "Many more..."
       ],
     },
     {
@@ -145,6 +148,7 @@ export default function CareerPathwaysGrid() {
         "CMAT (AICTE Approved Colleges)",
         "GRE & GMAT (International Studies)",
         "Central Universities Entrance (CUET-PG)",
+        "Many more..."
       ],
     },
     {
