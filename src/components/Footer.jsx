@@ -15,8 +15,24 @@ export default function Footer() {
 
           {/* Brand & Collaboration - 4 cols on large screens */}
           <div className="sm:col-span-2 lg:col-span-4 space-y-4">
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-orange-400 bg-orange-500/10 px-2.5 py-0.5 rounded-full border border-orange-500/20">
+                Programme Partner
+              </span>
+              <span className="text-slate-600 text-xs">•</span>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-red-400 bg-red-500/10 px-2.5 py-0.5 rounded-full border border-red-500/20">
+                Academic Partner
+              </span>
+            </div>
+
             <div className="flex items-center gap-3 sm:gap-4 flex-wrap">
-              <Link href="/" className="inline-block group focus:outline-hidden">
+              <a
+                href="https://www.careermitra.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block group focus:outline-hidden hover:opacity-95 transition-opacity"
+                title="Career Mitra - Programme Partner"
+              >
                 <div className="relative w-36 sm:w-44 h-11 sm:h-13">
                   <Image
                     src={LogoImg}
@@ -26,14 +42,14 @@ export default function Footer() {
                     priority
                   />
                 </div>
-              </Link>
+              </a>
               <span className="h-6 sm:h-7 w-px bg-slate-800" />
               <a
                 href="https://score99percentile.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block hover:opacity-90 transition-opacity"
-                title="Score 99 Percentile"
+                title="Score 99 Percentile - Academic Partner"
               >
                 <div className="relative w-28 sm:w-32 h-6 sm:h-7">
                   <Image
