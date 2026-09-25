@@ -8,7 +8,7 @@ export default function CoreSkillsGrid() {
       icon: Calculator,
       number: "01",
       title: "Quantitative Ability",
-      description: "Build rapid calculation speed, shortcut techniques, and accuracy across arithmetic, algebra, geometry, number systems, and many more topics as per syllabus.",
+      description: "Build rapid calculation speed, shortcut techniques, and accuracy across arithmetic, algebra, geometry, number systems,",
       color: "from-blue-500/10 to-indigo-500/5",
       border: "border-blue-200/80 hover:border-blue-400",
       accentBg: "bg-blue-50 text-blue-600",
@@ -18,7 +18,7 @@ export default function CoreSkillsGrid() {
       icon: MessageSquare,
       number: "02",
       title: "Verbal Ability",
-      description: "Strengthen core grammar rules, root-word vocabulary, error spotting, sentence correction, verbal reasoning fluency, and many more topics as per syllabus.",
+      description: "Strengthen core grammar rules, root-word vocabulary, error spotting, sentence correction, verbal reasoning fluency, ",
       color: "from-purple-500/10 to-pink-500/5",
       border: "border-purple-200/80 hover:border-purple-400",
       accentBg: "bg-purple-50 text-purple-600",
@@ -28,7 +28,7 @@ export default function CoreSkillsGrid() {
       icon: BookOpen,
       number: "03",
       title: "Reading Comprehension",
-      description: "Learn speed-reading methods, critical passage analysis, tone detection, precise inference extraction under timed pressure, and many more topics as per syllabus.",
+      description: "Learn speed-reading methods, critical passage analysis, tone detection, precise inference extraction under timed pressure,",
       color: "from-emerald-500/10 to-teal-500/5",
       border: "border-emerald-200/80 hover:border-emerald-400",
       accentBg: "bg-emerald-50 text-emerald-600",
@@ -38,7 +38,7 @@ export default function CoreSkillsGrid() {
       icon: Brain,
       number: "04",
       title: "Logical Reasoning & DI",
-      description: "Think critically through puzzles, seating arrangements, syllogisms, and extract insights from tables, pie charts, bar graphs, and many more topics as per syllabus.",
+      description: "Think critically through puzzles, seating arrangements, syllogisms, and extract insights from tables, pie charts, bar graphs,",
       color: "from-amber-500/10 to-orange-500/5",
       border: "border-amber-200/80 hover:border-amber-400",
       accentBg: "bg-amber-50 text-amber-600",
@@ -48,7 +48,7 @@ export default function CoreSkillsGrid() {
       icon: Monitor,
       number: "05",
       title: "Computer Awareness",
-      description: "Master essential computer fundamentals, hardware, operating systems, MS Office shortcuts, networking, digital literacy, and many more topics as per syllabus.",
+      description: "Master essential computer fundamentals, hardware, operating systems, MS Office shortcuts, networking, digital literacy,",
       color: "from-cyan-500/10 to-sky-500/5",
       border: "border-cyan-200/80 hover:border-cyan-400",
       accentBg: "bg-cyan-50 text-cyan-600",
@@ -58,7 +58,7 @@ export default function CoreSkillsGrid() {
       icon: Globe,
       number: "06",
       title: "General Awareness (GK & CA)",
-      description: "Comprehensive coverage of Indian Polity, Economy, History, Geography, daily curated national & international current affairs, and many more topics as per syllabus.",
+      description: "Comprehensive coverage of Indian Polity, Economy, History, Geography, daily curated national & international current affairs,",
       color: "from-rose-500/10 to-red-500/5",
       border: "border-rose-200/80 hover:border-rose-400",
       accentBg: "bg-rose-50 text-rose-600",
@@ -107,6 +107,8 @@ export default function CoreSkillsGrid() {
 
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
                     {skill.description}
+                    <br/>
+                    <span className="text-green-500">and many more topics as per syllabus.</span>
                   </p>
                 </div>
 

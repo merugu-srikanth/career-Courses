@@ -90,7 +90,7 @@ export default function ExamSkillCoverageTable() {
       icon: Briefcase,
       iconColor: "text-purple-600 bg-purple-50 border-purple-200",
       name: "Corporate & Campus Placements",
-      subtext: "TCS, Infosys, Wipro, Deloitte, BFSI",
+      subtext: "IT Companies or non-IT companies",
       quant: 95,
       verbal: 90,
       rc: 85,

@@ -134,7 +134,7 @@ export default function Navbar() {
             </div>
 
             {/* Right Actions */}
-            <div className="hidden sm:flex items-center gap-3">
+            {/* <div className="hidden sm:flex items-center gap-3"> */}
               {/* <a
                 href="https://wa.me/917794045533?text=Hi%20CareerMitra%20Team!%20I%20have%20an%20inquiry%20regarding%20the%20Foundation%20Coaching%20Course."
                 target="_blank"
@@ -145,7 +145,7 @@ export default function Navbar() {
                 <span>+91 77940 45533</span>
               </a> */}
 
-              {token ? (
+              {/* {token ? (
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
                     <User className="w-3.5 h-3.5 text-slate-500" />
@@ -167,8 +167,8 @@ export default function Navbar() {
                   <FaSignInAlt className="w-3 h-3" />
                   <span>Login / Register</span>
                 </Link>
-              )}
-            </div>
+              )} */}
+            {/* </div> */}
 
             {/* Mobile Hamburger (No enquiry button beside hamburger) */}
             <div className="flex lg:hidden items-center">
@@ -379,7 +379,7 @@ export default function Navbar() {
               <FaEnvelope className="w-3.5 h-3.5 text-orange-500" /> info@careermitra.in
             </a>
 
-            {token ? (
+            {/* {token ? (
               <button
                 type="button"
                 onClick={() => {
@@ -398,7 +398,7 @@ export default function Navbar() {
               >
                 <FaSignInAlt className="w-3.5 h-3.5" /> Student Login / Register
               </Link>
-            )}
+            )} */}
           </div>
         </div>
       </div>

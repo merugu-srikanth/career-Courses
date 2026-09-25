@@ -40,7 +40,7 @@ export default function CareerPathwaysGrid() {
       icon: Landmark,
       iconColor: "text-emerald-600",
       title: "Government Jobs",
-      subtitle: "CSAT basics & stable public sector recruitment",
+      subtitle: "",
       cardBorder: "border-emerald-200/90 hover:border-emerald-400 bg-white",
       cardBgGlow: "from-emerald-500/5 via-transparent to-transparent",
       badgePillBg: "bg-emerald-50/80 text-emerald-800 border-emerald-200/60",
@@ -51,13 +51,14 @@ export default function CareerPathwaysGrid() {
       taglineColor: "text-emerald-800",
       image: GovtImg,
       items: [
-        "UPSC CSAT (Civil Services Aptitude)",
+        "UPSC CSAT Basics",
         "SSC (CGL, CHSL, MTS, CPO)",
-        
+        "State Government's Various Department Recruitements Including Group Exams ",
+        "State Level Various Police Recruitements",
         "Railways (RRB NTPC, Group D)",
         "Defence Services (CDS, AFCAT)",
         "Central & State Selection Commissions",
-        "Many more..."
+        "And Many More..."
       ],
     },
     {
@@ -70,7 +71,7 @@ export default function CareerPathwaysGrid() {
       icon: Factory,
       iconColor: "text-blue-600",
       title: "Public Sector Companies (PSUs)",
-      subtitle: "Banking & lucrative executive PSU roles",
+      subtitle: "Banking & Lucrative Executive PSU Roles",
       cardBorder: "border-blue-200/90 hover:border-blue-400 bg-white",
       cardBgGlow: "from-blue-500/5 via-transparent to-transparent",
       badgePillBg: "bg-blue-50/80 text-blue-800 border-blue-200/60",
@@ -81,13 +82,15 @@ export default function CareerPathwaysGrid() {
       taglineColor: "text-blue-800",
       image: PsuImg,
       items: [
-        "Banking (IBPS PO/Clerk, SBI, RBI)",
-        "ONGC (Oil & Natural Gas Corp)",
-        "IOCL, BHEL, NTPC, SAIL",
-        "State PSCs (CSAT & Aptitude Papers)",
-        "State & Central PSU Recruitment Tests",
-        "Insurance PSUs (LIC, NIACL, GIC)",
+        "Banking Recruitement  Including IBPS clerical and Officer Exam , SBI clerical and PO Exam",
+        // "ONGC (Oil and Natural Gas Corporation)",
+        // "IOCL, BHEL, NTPC, SAIL",
+        // "State PSCs (CSAT & Aptitude Papers)",
         "Regional Rural Banks & Apex Bodies",
+        "State & Central PSU Recruitment",
+
+        "Insurance (LIC, Oriental Insurence, United India Insurence, National Insurence etc)",
+
         "Many more..."
       ],
     },

@@ -22,10 +22,10 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || "https://www.careermitra.in/
 const HYDERABAD_COLLEGES = [
   "St. Ann's College for Women",
   "Kasturba Gandhi Degree and PG College for Women",
-  "Malla Reddy Engineering College",
-  "Osmania University (OU), Hyderabad",
-  "JNTU Hyderabad (JNTUH)",
-  "Chaitanya Bharathi Institute of Technology (CBIT)",
+ 
+  // "Osmania University (OU), Hyderabad",
+  // "JNTU Hyderabad (JNTUH)",
+  // "Chaitanya Bharathi Institute of Technology (CBIT)",
   "Vasavi College of Engineering",
   "VNR Vignana Jyothi Institute of Engineering & Technology (VNR VJIET)",
   "G. Narayanamma Institute of Technology & Science (GNITS)",
@@ -36,6 +36,7 @@ const HYDERABAD_COLLEGES = [
   "Bhavan's Vivekananda College, Sainikpuri",
   "Loyola Academy Degree & PG College",
   "Nizam College, Hyderabad",
+   "Malla Reddy Engineering College",
   "Keshav Memorial Institute of Technology (KMIT)",
   "Gokaraju Rangaraju Institute of Engineering & Technology (GRIET)",
   "Vardhaman College of Engineering",
