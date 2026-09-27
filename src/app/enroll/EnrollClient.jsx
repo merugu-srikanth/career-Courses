@@ -89,11 +89,11 @@ export default function EnrollClient() {
                 </a>
 
                 <a
-                  href="mailto:info@careermitra.in"
+                  href="mailto:info@careersconnect.in"
                   className="flex items-center gap-2.5 p-3 rounded-2xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs font-bold transition-all"
                 >
                   <FaEnvelope className="w-4 h-4 text-orange-500 shrink-0" />
-                  <span>info@careermitra.in</span>
+                  <span>info@careersconnect.in</span>
                 </a>
               </div>
             </div>

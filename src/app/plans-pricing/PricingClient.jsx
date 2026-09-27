@@ -4,7 +4,7 @@ import PricingPlans from "@/components/coaching/PricingPlans";
 import FacultyShowcase from "@/components/coaching/FacultyShowcase";
 import Link from "next/link";
 import { Sparkles, HelpCircle } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
 export default function PricingClient() {
   const faqs = [
@@ -81,10 +81,10 @@ export default function PricingClient() {
                 Talk to our senior academic counselor right now.
               </div>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="w-full sm:w-auto flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3">
               <Link
                 href="/enroll"
-                className="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs shadow-xs"
+                className="px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-bold text-xs shadow-xs text-center"
               >
                 Request Callback
               </Link>
@@ -92,9 +92,15 @@ export default function PricingClient() {
                 href="https://wa.me/917794045533?text=Hi%20CareerMitra,%20I%20have%20questions%20about%20Foundation%20Coaching%20pricing"
                 target="_blank"
                 rel="noreferrer"
-                className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-1.5 shadow-xs"
+                className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs"
               >
                 <FaWhatsapp className="w-4 h-4" /> WhatsApp (+91 77940 45533)
+              </a>
+              <a
+                href="mailto:info@careersconnect.in"
+                className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs flex items-center justify-center gap-1.5 break-all"
+              >
+                <FaEnvelope className="w-3.5 h-3.5 text-orange-500 shrink-0" /> info@careersconnect.in
               </a>
             </div>
           </div>

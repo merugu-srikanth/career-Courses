@@ -130,8 +130,8 @@ export default function Footer() {
             <div className="space-y-3 text-xs sm:text-[13px] text-slate-400">
               <div className="flex items-center gap-2.5">
                 <FaEnvelope className="text-orange-400 shrink-0 w-3.5 h-3.5" />
-                <a href="mailto:info@careermitra.in" className="hover:text-white transition-colors duration-150">
-                  info@careermitra.in
+                <a href="mailto:info@careersconnect.in" className="hover:text-white transition-colors duration-150 break-all">
+                  info@careersconnect.in
                 </a>
               </div>
               <div className="flex items-center gap-2.5">

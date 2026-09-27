@@ -91,7 +91,7 @@ export default function CareerPathwaysGrid() {
 
         "Insurance (LIC, Oriental Insurence, United India Insurence, National Insurence etc)",
 
-        "Many more..."
+        "And Many More..."
       ],
     },
     {
@@ -121,7 +121,7 @@ export default function CareerPathwaysGrid() {
         // "Deloitte, PwC, Accenture Assessments",
         "Banking & Financial Services (BFSI)",
         "Core Analytical Problem Solving",
-        "Many more..."
+        "And Many More..."
       ],
     },
     {
@@ -151,7 +151,7 @@ export default function CareerPathwaysGrid() {
         "CMAT (AICTE Approved Colleges)",
         "GRE & GMAT (International Studies)",
         "Central Universities Entrance (CUET-PG)",
-        "Many more..."
+        "And Many More..."
       ],
     },
     {

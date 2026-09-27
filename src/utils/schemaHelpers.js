@@ -43,7 +43,7 @@ export function generateOrganizationSchema(customData = {}) {
     "contactPoint": customData.contactPoint || {
       "@type": "ContactPoint",
       "telephone": "+91 7794045533",
-      "email": "info@careermitra.in",
+      "email": "info@careersconnect.in",
       "contactType": "customer service"
     },
     "address": {

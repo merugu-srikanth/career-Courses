@@ -13,7 +13,7 @@ import {
   Search,
   Check,
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { toast } from "react-toastify";
 import axios from "axios";
 
@@ -407,6 +407,12 @@ export default function EnrollmentForm() {
             <span className="flex items-center gap-1.5">
               <GraduationCap className="w-4 h-4 text-blue-600" /> Senior Faculty Mentorship
             </span>
+            <a
+              href="mailto:info@careersconnect.in"
+              className="flex items-center gap-1.5 hover:text-orange-600 transition-colors break-all"
+            >
+              <FaEnvelope className="w-3.5 h-3.5 text-orange-500 shrink-0" /> info@careersconnect.in
+            </a>
           </div>
         </form>
       )}

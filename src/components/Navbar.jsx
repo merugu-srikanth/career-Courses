@@ -373,10 +373,10 @@ export default function Navbar() {
             </a>
 
             <a
-              href="mailto:info@careermitra.in"
+              href="mailto:info@careersconnect.in"
               className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition-colors"
             >
-              <FaEnvelope className="w-3.5 h-3.5 text-orange-500" /> info@careermitra.in
+              <FaEnvelope className="w-3.5 h-3.5 text-orange-500" /> info@careersconnect.in
             </a>
 
             {/* {token ? (
